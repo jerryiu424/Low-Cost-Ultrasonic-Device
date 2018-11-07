@@ -24,6 +24,7 @@ Sensors::Sensors(){
         std::string temperature;
         getline(ss,temperature,' ');
 
+	
         //if there is data, set attributes accordingly
         if(!duration.empty() && !temperature.empty()){
             SDuration = duration;
@@ -36,5 +37,18 @@ Sensors::Sensors(){
 }
 
 std::string Sensors::to_string(){
-    return "Sensor number "+SensorID+" currently has duration "+SDuration+" and temperature "+STemperature;
+    return "Sensor number "+SensorID+" currently has duration "+SDuration+" and temperature "+STemperature;  
+}
+
+std::string Sensors::getSensorID(){
+    return sensorID;  
+}
+
+
+std::string Sensors::getTemperature(){
+    return STemperature;  
+}
+
+std::string Sensors::getDuration(){
+    return SDuration;  
 }

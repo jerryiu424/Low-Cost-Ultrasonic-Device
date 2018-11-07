@@ -15,6 +15,12 @@ class Sensors{
         std::string getDuration(){return SDuration;}
         std::string getTemperature(){return STemperature;}
         std::string to_string();
+        std::string getSensorID();
+        std::string getTemperature();
+        std::string getDuration();
+        
+
+
 };
 //initialize number of sensors NumSensors to 0
 int Sensors::NumSensors = 0;
