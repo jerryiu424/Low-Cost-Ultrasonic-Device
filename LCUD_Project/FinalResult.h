@@ -6,16 +6,16 @@
 class FinalResult{
 
 	private:
-		std::float speedOfSoundM, speedOfSoundCM;
-		std::float level, distance, volume;
-		std::Container vessel;
+		float speedOfSoundM, speedOfSoundCM;
+		float level, distance, volume;
+		Container vessel;
 		
 	
 	public:
 		FinalResult();
-		std::float calculateVolume(){return volume};
-		std::float calculateLevel(){return level};
-		std::float calculateDistance(){return distance};
+		float calculateVolume(){return volume};
+		float calculateLevel(){return level};
+		float calculateDistance(){return distance};
 		std::string to_string();
 
 
