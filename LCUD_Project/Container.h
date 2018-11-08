@@ -16,7 +16,6 @@ class Container{
         int getDistance();
         int gertemperature();
         int getVolume();
-        std::string to_string();
         
 };
 #endif

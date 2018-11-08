@@ -21,6 +21,3 @@ std::string Container::getID(){
 int Container::getVolume(){
     return volume;
 }
-
-std::string Container::to_string(){
-}
