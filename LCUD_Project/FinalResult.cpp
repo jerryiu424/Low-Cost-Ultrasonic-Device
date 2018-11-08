@@ -4,12 +4,8 @@
 #include <bits/stdc++.h>
 #include <math.h>
 #include "FinalResult.h"
-#include "Container.cpp"
+
 FinalResult::FinalResult(){
-
-
-	
-	
 	speedOfSoundM = 331+0.6*sensor.getTemperature();
 	speedOfSoundCM = SpeedOfSoundM*100;
 	vessel.getSensor().updateLine();

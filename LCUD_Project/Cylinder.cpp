@@ -8,5 +8,5 @@ Cylinder::Cylinder(int radius, int heigth){
 }
 
 std::string Cylinder::to_string(){
-    "Type Cylinder with volume: " + getMaxVolume();
+    return "Type Cylinder with volume: " + getMaxVolume();
 }

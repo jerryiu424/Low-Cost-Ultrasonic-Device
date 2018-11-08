@@ -1,6 +1,6 @@
 #ifndef CYLINDER_H
 #define CYLINDER_H
-#include "Container.cpp"
+#include "Container.h"
      
 class Cylinder : public Container{
     private:
@@ -8,6 +8,5 @@ class Cylinder : public Container{
         Cylinder(int radius, int height);
         ~Cylinder(){;}
         std::string to_string();
-        
 };
 #endif

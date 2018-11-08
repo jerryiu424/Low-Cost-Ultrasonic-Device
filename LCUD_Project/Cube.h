@@ -1,7 +1,6 @@
 #ifndef CUBE_H
 #define CUBE_H
-#include "Container.cpp" 
-
+#include "Container.h" 
      
 class Cube : public Container{
     private:

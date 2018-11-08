@@ -7,5 +7,5 @@ Cuboid::Cuboid(int width,int length,int heigth){
 }
 
 std::string Cuboid::to_string(){
-    "Type Cuboid with volume: " + getMaxVolume();
+    return "Type Cuboid with volume: " + getMaxVolume();
 }

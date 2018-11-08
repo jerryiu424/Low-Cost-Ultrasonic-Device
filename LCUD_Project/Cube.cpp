@@ -7,5 +7,5 @@ Cube::Cube(int side){
 }
 
 std::string Cube::to_string(){
-    "Type cube with volume: " + getMaxVolume();
+    return "Type cube with volume: " + getMaxVolume();
 }
