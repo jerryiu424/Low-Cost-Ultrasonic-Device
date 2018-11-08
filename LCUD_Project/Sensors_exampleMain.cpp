@@ -7,7 +7,7 @@ int main(){
     Sensors first;
     Sensors second;
     cout << "first sensor has ID: " + first.getSensorID() << endl;
-    cout << "first sensor has ID: " + first.getSensorID() << endl;
+    cout << "second sensor has ID: " + second.getSensorID() << endl;
     cout << "current number of sensors: " + Sensors::getNumberOfSensors() << endl; //should be 2
 
     //print info of first sensor in 1 second increments 10 times
