@@ -16,7 +16,10 @@ Sensors::Sensors(){
 //destructor
 Sensors::~Sensors(){
     inFile.close();    //before object gets destroyed, close file
+<<<<<<< HEAD
     NumSensors--;    //one less sensor
+=======
+>>>>>>> 859b84991d2c4365b3e9f5e4054e792bc01dbe2f
 }
 
 //read line output by arduino and store info in respective attributes
@@ -38,9 +41,15 @@ void Sensors::updateLine(){
     }
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 859b84991d2c4365b3e9f5e4054e792bc01dbe2f
 //tostring
 std::string Sensors::to_string(){
     return "Sensor number "+SensorID+" currently has duration "+SDuration+" and temperature "+STemperature;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 859b84991d2c4365b3e9f5e4054e792bc01dbe2f
