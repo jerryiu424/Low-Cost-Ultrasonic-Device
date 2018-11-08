@@ -3,7 +3,7 @@
 #include <iostream>
 #include <bits/stdc++.h>
 #include "Sensors.h"
-
+   
 //constructor
 Sensors::Sensors(){
     //get number of current sensors
