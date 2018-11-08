@@ -1,7 +1,7 @@
 #include "Sensors.cpp"
 #define SLEEP 1500000
 using namespace std;
-
+     
 int main(){
     cout << "current number of sensors: " + to_string(Sensors::getNumberOfSensors())<< endl;    //should be 0
     Sensors first;
