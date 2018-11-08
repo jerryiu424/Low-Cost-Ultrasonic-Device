@@ -12,8 +12,8 @@ Sensors::Sensors(){
     try{
 	    inFile.open("/dev/ttyACM" + SensorID);    //open file where sensor is located
     }
-    catch(exception e){
-        throw "problem opening file!";
+    catch(std::exception e){
+        throw "Problem opening file!";
     }
     NumSensors++;    //increment total number of sensors by 1
 }
