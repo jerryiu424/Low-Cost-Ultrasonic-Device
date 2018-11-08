@@ -1,16 +1,18 @@
 #ifndef CUBE_H
 #define CUBE_H
 #include <string>
-#include <fstream>
 #include "Container.cpp"
 
      
 class Cube : public Container{
     private:
+        int volume;
+        
         
     public:
-        Cube();
+        Cube(float side);
         ~Cube(){;}
+        int getVolume();
         std::string to_string();
         
 };

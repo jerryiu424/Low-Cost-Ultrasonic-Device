@@ -1,17 +1,18 @@
-#include <unistd.h>
-#include <dirent.h>
-#include <iostream>
-#include <bits/stdc++.h>
 #include "Container.h"
    
 //constructor
-Container::Container(){
-    
+Container::Container(){}
+
+int Container::getDistance(){
+    int speed = 331.1 + stoi(s.getTemperature())*0.6;
+    distance = speed*stoi(s.getDuration())/2;
 }
 
-//destructor
-Container::~Container(){
+int Container::gertemperature(){
+    
+    return stoi(s.getTemperature());
 }
+
 
 std::string Container::to_string(){
 }
