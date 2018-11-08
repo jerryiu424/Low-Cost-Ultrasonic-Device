@@ -2,14 +2,12 @@
 #define FINALRESULT_H
 #include <string>
 #include "Container.cpp"
-#include "Sensors.cpp"
 
 class FinalResult{
 
 	private:
 		std::float speedOfSoundM, speedOfSoundCM;
 		std::float level, distance, volume;
-		std::Sensors sensor;
 		std::Container vessel;
 		
 	

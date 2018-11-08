@@ -3,15 +3,15 @@
 #include <iostream>
 #include <bits/stdc++.h>
 #include <math.h>
-#include "FinalResult.cpp"
+#include "FinalResult.h"
 #include "Container.cpp"
 #include "Sensors.cpp"
 FinalResult::FinalResult(){
 
 
-	sensor.updateLine();
+	
 	vessel.getConfiguration();
-	speedOfSoundM = 331+06*sensor.getTemperature();
+	speedOfSoundM = 331+0.6*sensor.getTemperature();
 	speedOfSoundCM = SpeedOfSoundM*100;
 
 	if(vessel.getShapeID() == "Cube")
