@@ -2,11 +2,10 @@
    
 //constructor
 Cube::Cube(float side){
+    ID = s.getSensorID();
     volume = side*side*side;
 }
 
-int Cube::getVolume(){
-    return volume;
-}
 std::string Cube::to_string(){
+    "Type cube with volume: " + getVolume();
 }

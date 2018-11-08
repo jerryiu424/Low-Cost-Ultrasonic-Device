@@ -18,6 +18,9 @@ std::string Container::getID(){
     return ID;
 }
 
+int Container::getVolume(){
+    return volume;
+}
 
 std::string Container::to_string(){
 }

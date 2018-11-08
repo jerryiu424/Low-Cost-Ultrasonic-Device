@@ -3,17 +3,19 @@
 #include "Sensors.cpp"
      
 class Container{
-    private:
+    protected:
         Sensors s;
         std::string ID;
         int distance;
         int temperature;
+        int volume;
     public:
         Container();
         ~Container(){;}
         std::string getID();
         int getDistance();
         int gertemperature();
+        int getVolume();
         std::string to_string();
         
 };
