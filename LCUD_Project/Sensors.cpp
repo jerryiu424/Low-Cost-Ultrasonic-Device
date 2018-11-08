@@ -3,15 +3,19 @@
 #include <iostream>
 #include <bits/stdc++.h>
 #include "Sensors.h"
-
+   
 //constructor
 Sensors::Sensors(){
     //get number of current sensors
 	int ID = NumSensors;
     SensorID = std::to_string(ID);    //convert int to string
-	inFile.open("/dev/ttyACM" + SensorID);    //open file where sensor is located
+    try{
+	    inFile.open("/dev/ttyACM" + SensorID);    //open file where sensor is located
+    }
+    catch(std::exception e){
+        throw "Problem opening file!";
+    }
     NumSensors++;    //increment total number of sensors by 1
-
 }
 
 //destructor

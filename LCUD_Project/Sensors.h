@@ -2,7 +2,7 @@
 #define SENSORS_H
 #include <string>
 #include <fstream>
-
+     
 class Sensors{
     private:
         std::string SensorID, SDuration, STemperature;    //attributes ID, duration, and temperature
@@ -22,4 +22,3 @@ class Sensors{
 //initialize number of sensors NumSensors to 0
 int Sensors::NumSensors = 0;
 #endif
-
