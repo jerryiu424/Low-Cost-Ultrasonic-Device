@@ -5,7 +5,7 @@
 class Cylinder : public Container{
     private:
     public:
-        Cylinder(int radius, int heigth);
+        Cylinder(int radius, int height);
         ~Cylinder(){;}
         std::string to_string();
         

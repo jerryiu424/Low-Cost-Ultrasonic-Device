@@ -13,6 +13,7 @@ class Container{
         Container();
         ~Container(){;}
         std::string getID();
+        void update();
         int getDistance();
         int gertemperature();
         int getVolume();

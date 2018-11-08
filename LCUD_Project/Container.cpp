@@ -21,3 +21,7 @@ std::string Container::getID(){
 int Container::getVolume(){
     return volume;
 }
+
+void Container::update(){
+    s.updateLine();
+}

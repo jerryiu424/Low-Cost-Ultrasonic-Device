@@ -1,7 +1,7 @@
 #include "Cube.h"
    
 //constructor
-Cube::Cube(float side){
+Cube::Cube(int side){
     ID = s.getSensorID();
     volume = side*side*side;
 }
