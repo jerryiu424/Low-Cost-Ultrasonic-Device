@@ -6,7 +6,7 @@
 class FinalResult{
 	private:
 		float speedOfSoundM, speedOfSoundCM;
-		float levesl, distance, volume;
+		float level, distance, volume;
 		Container vessel;
 			
 	public:
