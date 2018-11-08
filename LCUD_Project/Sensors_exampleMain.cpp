@@ -3,12 +3,12 @@
 using namespace std;
 
 int main(){
-    cout << "current number of sensors: " + Sensors::getNumberOfSensors() << endl;    //should be 0
+    cout << "current number of sensors: " + to_string(Sensors::getNumberOfSensors())<< endl;    //should be 0
     Sensors first;
     Sensors second;
     cout << "first sensor has ID: " + first.getSensorID() << endl;
     cout << "second sensor has ID: " + second.getSensorID() << endl;
-    cout << "current number of sensors: " + Sensors::getNumberOfSensors() << endl; //should be 2
+    cout << "current number of sensors: " + to_string(Sensors::getNumberOfSensors()) << endl; //should be 2
 
     //print info of first sensor in 1 second increments 10 times
     for (int i = 0; i<10;i++){
