@@ -5,35 +5,33 @@
 #include <math.h>
 #include "FinalResult.h"
 #include "Container.cpp"
-#include "Sensors.cpp"
 FinalResult::FinalResult(){
 
 
 	
-	vessel.getConfiguration();
+	
 	speedOfSoundM = 331+0.6*sensor.getTemperature();
 	speedOfSoundCM = SpeedOfSoundM*100;
-
+	vessel.getSensor().updateLine();
 	if(vessel.getShapeID() == "Cube")
 	{
-		distance = (sensor.getDuration()/2)*speedOfSoundCM;
-		level = vessel.getLength() - cubeDistance;
-		volume = vessel.getWidth()*vessel.getLength()*cubeLevel; 
-
+		distance = (vessel.getSensor().getDuration()/2)*speedOfSoundCM;
+		level = vessel.getSide() - distance;
+		volume = vessel.getSide()*vessel.getSide()*level;
 	}
 	
 	else if(vessel.getShapeID() == "Cuboid")
 	{
-		distance = (sensor.getDuration()/2)*speedOfSoundCM;
-		level = vessel.getHeight() - cuboidDistance;
-		volume = vessel.getWidth()*vessel.getLength()*cuboidLevel;
+		distance = (vessel.getSensor().getDuration()/2)*speedOfSoundCM;
+		level = vessel.getHeight() - distance;
+		volume = vessel.getWidth()*vessel.getLength()*level;
 	
 	} 
 	else if(vessel.getShapeID() == "Cylinder")
 	{
-		distance = (sensor.getDuration()/2)*speedOfSoundCM;
-		level = vessel.getHeight() - cylinderDistance;
-		volume = M_PI*(vessel.getRadius*vessel.getRadius)*cylinderLevel;
+		distance = (vessel.getSensor().getDuration()/2)*speedOfSoundCM;
+		level = vessel.getHeight() - distance;
+		volume = M_PI*(vessel.getRadius()*vessel.getRadius())*level;
 
 
 	}

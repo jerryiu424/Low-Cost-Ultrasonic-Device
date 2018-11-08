@@ -6,26 +6,14 @@ Container::Container(){
 }
 
 int Container::getDistance(){
-    int speed = 331.1 + stoi(s.getTemperature())*0.6;
-    distance = speed*stoi(s.getDuration())/2;
 }
 
-int Container::gertemperature(){
-    return stoi(s.getTemperature());
-}
 
 std::string Container::getID(){
     return ID;
 }
 
-int Container::getVolume(){
-    return volume;
-}
 
 int Container::getMaxVolume(){
     return MaxVolume;
-}
-
-void Container::update(){
-    s.updateLine();
 }
