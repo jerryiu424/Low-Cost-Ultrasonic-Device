@@ -5,9 +5,9 @@ using namespace std;
 int main(){
     cout << "current number of sensors: " + to_string(Sensors::getNumberOfSensors())<< endl;    //should be 0
     Sensors first;
-    Sensors second;
+    //Sensors second;
     cout << "first sensor has ID: " + first.getSensorID() << endl;
-    cout << "second sensor has ID: " + second.getSensorID() << endl;
+    //cout << "second sensor has ID: " + second.getSensorID() << endl;
     cout << "current number of sensors: " + to_string(Sensors::getNumberOfSensors()) << endl; //should be 2
 
     //print info of first sensor in 1 second increments 10 times
@@ -18,10 +18,12 @@ int main(){
     }
     
     //print info of second sensor in 1 second increments 
+    /*
     for (int i = 0; i<10;i++){
         second.updateLine();
         cout << "second sensor has duration: " + second.getDuration() + " and temp: "+second.getTemperature() << endl;
         usleep(SLEEP);//pause for 1 second
     }
+    */
     return 0;
 }
