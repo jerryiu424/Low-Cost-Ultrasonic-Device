@@ -2,7 +2,7 @@
 #define SENSORS_H
 #include <string>
 #include <fstream>
-
+     
 class Sensors{
     private:
         std::string SensorID, SDuration, STemperature;    //attributes ID, duration, and temperature
