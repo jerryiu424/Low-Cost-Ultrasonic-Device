@@ -11,6 +11,7 @@ int main(){
     cout << "current number of sensors: " + to_string(Sensors::getNumberOfSensors()) << endl; 
 
     //print info of first sensor in 1 second increments 10 times
+    usleep(1500000);
     for (int i = 0; i<10;i++){
         first.updateLine();    //read line, which updates duration and temp
         cout << "first sensor has duration: " + first.getDuration() + " and temp: "+first.getTemperature() << endl;

@@ -22,4 +22,3 @@ class Sensors{
 //initialize number of sensors NumSensors to 0
 int Sensors::NumSensors = 0;
 #endif
-
