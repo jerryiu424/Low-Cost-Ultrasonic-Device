@@ -22,6 +22,10 @@ int Container::getVolume(){
     return volume;
 }
 
+int Container::getMaxVolume(){
+    return MaxVolume;
+}
+
 void Container::update(){
     s.updateLine();
 }

@@ -3,7 +3,8 @@
 //constructor
 Cube::Cube(int side){
     ID = s.getSensorID();
-    volume = side*side*side;
+    MaxVolume = side*side*side;
+    volume = side*side*getDistance();
 }
 
 std::string Cube::to_string(){

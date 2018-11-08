@@ -3,7 +3,8 @@
 //constructor
 Cuboid::Cuboid(int width,int length,int heigth){
     ID = s.getSensorID();
-    volume = width*length*heigth;
+    MaxVolume = width*length*heigth;
+    volume = width*length*getDistance();
 }
 
 std::string Cuboid::to_string(){

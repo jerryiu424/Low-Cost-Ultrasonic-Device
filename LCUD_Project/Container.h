@@ -9,6 +9,7 @@ class Container{
         int distance;
         int temperature;
         int volume;
+        int MaxVolume;
     public:
         Container();
         ~Container(){;}
@@ -17,6 +18,7 @@ class Container{
         int getDistance();
         int gertemperature();
         int getVolume();
+        int getMaxVolume();
         
 };
 #endif

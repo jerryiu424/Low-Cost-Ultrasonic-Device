@@ -9,6 +9,5 @@ class Cube : public Container{
         Cube(int side);
         ~Cube(){;}
         std::string to_string();
-        
 };
 #endif
