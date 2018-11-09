@@ -9,7 +9,6 @@ FinalResult::FinalResult(){
 
 
 	
-	
 	speedOfSoundM = 331+0.6*sensor.getTemperature();
 	speedOfSoundCM = SpeedOfSoundM*100;
 	vessel.getSensor().updateLine();
