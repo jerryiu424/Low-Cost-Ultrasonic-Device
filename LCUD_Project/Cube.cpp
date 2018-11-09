@@ -7,6 +7,7 @@ Cube::Cube(int side){
     ShapeID = "Cube";
 }
 
+//get sides
 int Cube::getSide(){
     return side;
 }

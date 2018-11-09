@@ -4,6 +4,7 @@
 
      
 class Cuboid : public Container{
+    //attribute dimensions
     private:
         int Cwidth,Clength,Cheigth;
     public:

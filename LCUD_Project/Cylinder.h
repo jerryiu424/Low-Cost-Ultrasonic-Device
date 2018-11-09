@@ -3,6 +3,7 @@
 #include "Container.h"
      
 class Cylinder : public Container{
+    //attributes
     private:
         int Cradius, Cheigth;
     public:

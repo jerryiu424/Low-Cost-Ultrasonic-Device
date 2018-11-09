@@ -2,8 +2,8 @@
 #define CUBE_H
 #include "Container.h" 
 
-     
 class Cube : public Container{
+    //attribute side
     private:
         int side;
     public:

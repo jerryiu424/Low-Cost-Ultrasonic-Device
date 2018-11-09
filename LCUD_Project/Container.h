@@ -4,11 +4,13 @@
      
 class Container{
     protected:
+        //attributes
         Sensors s;
         std::string ID;
         int MaxVolume;
         std::string ShapeID;
     public:
+        //methods
         Container();
         ~Container(){;}
         std::string getID();

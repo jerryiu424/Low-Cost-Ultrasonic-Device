@@ -9,6 +9,7 @@ Cylinder::Cylinder(int radius, int heigth){
     ShapeID = "Cylinder";
 }
 
+//get dimensions
 int Cylinder::getRadius(){
     return Cradius;
 }

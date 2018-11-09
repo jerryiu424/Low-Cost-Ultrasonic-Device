@@ -11,6 +11,7 @@ Cuboid::Cuboid(int width,int length,int heigth){
     ShapeID = "Cuboid";
 }
 
+//get dimensions
 int Cuboid::getWidth(){
     return Cwidth;
 }
