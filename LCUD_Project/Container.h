@@ -14,6 +14,8 @@ class Container{
         std::string getID();
         int getMaxVolume();
         std::string getShapeID();
-        Sensors getSensor();
+        int getDuration();
+        int getTemperature();
+        void update();
 };
 #endif

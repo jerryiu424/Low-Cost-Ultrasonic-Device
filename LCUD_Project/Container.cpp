@@ -9,6 +9,7 @@ std::string Container::getID(){
     return ID;
 }
 
+
 int Container::getMaxVolume(){
     return MaxVolume;
 }
@@ -17,6 +18,15 @@ std::string Container::getShapeID(){
     return ShapeID;
 }
 
-Sensors Container::getSensor(){
-    return s;
+int Container::getDuration(){
+    return stoi(s.getDuration());
 }
+
+int Container::getTemperature(){
+    return stoi(s.getTemperature());
+}
+
+void Container::update(){
+    s.updateLine();
+}
+
