@@ -30,9 +30,8 @@ int main(){
 		distance = (vessel.getDuration()/2)*speedOfSoundCM;
 		level = vessel.getHeight() - distance;
 		volume = PI*(vessel.getRadius()*vessel.getRadius())*level;
-
-
 	}
-
+    cout <<"this is a "+vessel.getShapeID()+" Container with a volume of "+ volume+" and has a water level of "+level <<endl;
+    return 0;
 }
 
