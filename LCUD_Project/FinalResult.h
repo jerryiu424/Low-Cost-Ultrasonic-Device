@@ -4,7 +4,6 @@
 #include "Container.cpp"
 
 class FinalResult{
-
 	private:
 		float speedOfSoundM, speedOfSoundCM;
 		float level, distance, volume;
@@ -18,6 +17,5 @@ class FinalResult{
 		float calculateDistance(){return distance};
 		std::string to_string();
 
-
-//
-}
+};
+#endif
