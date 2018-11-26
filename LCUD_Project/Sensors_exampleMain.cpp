@@ -22,7 +22,6 @@ int main(){
         usleep(SLEEP);//pause for 1 second
         position++;
         position = position % 10;
-        temp[position] = first.getDuration();
         draw(temp);
     }
     return 0;
@@ -40,7 +39,7 @@ void draw(int a[]){
 string multiply(int t){
     string res = "";
     for (int i = 0;i<=t;i++){
-        res = res+"ooo";
+        res = res+"o";
     }
     return res;
 }
