@@ -13,6 +13,12 @@ int main(){
     cout << "first sensor has ID: " + first.getSensorID() << endl;
     cout << "current number of sensors: " + to_string(Sensors::getNumberOfSensors()) << endl; 
 
+
+    while(true){
+        cout << "info: "+first.returnAllinfo()+"\n" << endl;
+    }
+
+    /*
     //print info duration of first sensor in 1 second increments 10 times
     int temp[] ={0,0,0,0,0,0,0,0,0,0};
     int position = 0;
@@ -24,8 +30,10 @@ int main(){
         position = position % 10;
         draw(temp);
     }
+    */
     return 0;
 }
+/*
 void draw(int a[]){
     ofstream newFile;
     newFile.open("drawing.txt");
@@ -43,3 +51,4 @@ string multiply(int t){
     }
     return res;
 }
+*/

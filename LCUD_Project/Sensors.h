@@ -13,6 +13,7 @@ class Sensors{
         float SDuration, STemperature;    //attributes ID, duration, and temperature
         std::ifstream inFile;    //read from file
         static int NumSensors;    //static class varible NumSensors that keeps track of the total number of sensors 
+        std::string allinfo;
     public:
         //constructor, destructor, getters, and toString methods
         Sensors();
@@ -23,6 +24,7 @@ class Sensors{
         float getDuration(){return SDuration;}
         float getTemperature(){return STemperature;}
         std::string to_string();
+        std::string returnAllinfo(){return allinfo;}
 };
 //initialize number of sensors NumSensors to 0
 int Sensors::NumSensors = 0;
