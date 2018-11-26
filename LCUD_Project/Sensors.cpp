@@ -7,8 +7,7 @@ Sensors::Sensors(){
 	int ID = NumSensors;
     NumSensors++;
     SensorID = std::to_string(ID);    //convert int to string
-	//inFile.open("/dev/ttyACM" + SensorID);    //open file where sensor is located
-    inFile.open("testTest"+SensorID+".txt");
+	inFile.open("/dev/ttyACM" + SensorID);    //open file where sensor is located
     if(!inFile){
         throw std::runtime_error("Could not open file");
     }
