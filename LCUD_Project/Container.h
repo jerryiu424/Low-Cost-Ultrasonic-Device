@@ -6,18 +6,14 @@ class Container{
     protected:
         //attributes
         Sensors s;
-        std::string ID;
-        int MaxVolume;
+        float MaxVolume;
         std::string ShapeID;
     public:
         //methods
         Container();
         ~Container(){;}
-        std::string getID();
-        int getMaxVolume();
-        std::string getShapeID();
-        int getDuration();
-        int getTemperature();
-        void update();
+        float getMaxVolume(){return MaxVolume;}
+        std::string getShapeID(){return ShapeID;}
+        Sensors * returnSensor();
 };
 #endif

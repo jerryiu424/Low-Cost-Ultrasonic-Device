@@ -5,11 +5,11 @@
 class Cube : public Container{
     //attribute side
     private:
-        int side;
+        float side;
     public:
-        Cube(int side);
+        Cube(float s);
         ~Cube(){;}
         std::string to_string();
-        int getSide();
+        float getSide();
 };
 #endif

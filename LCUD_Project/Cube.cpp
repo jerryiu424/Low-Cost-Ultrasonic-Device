@@ -1,17 +1,18 @@
 #include "Cube.h"
    
 //constructor
-Cube::Cube(int side){
-    ID = s.getSensorID();
-    MaxVolume = side*side*side;
+Cube::Cube(float s){
+    MaxVolume = s*s*s;
     ShapeID = "Cube";
+    side  = s;
 }
 
 //get sides
-int Cube::getSide(){
+float Cube::getSide(){
     return side;
 }
 
 std::string Cube::to_string(){
-    return "Type cube with volume: " + getMaxVolume();
+    return "Type cube with volume: " + std::to_string(MaxVolume) + " and side: " + std::to_string(side);
 }
+
