@@ -48,7 +48,10 @@ void Sensors::update(){
     getline(ss,duration, ' ');
     std::string temperature;
     getline(ss,temperature,' ');
-    allinfo = duration+temperature;
+
+    std::cout << duration; 
+    std::cout << temperature;
+
     /*
     SDuration = stof(duration);
     STemperature = stof(temperature);

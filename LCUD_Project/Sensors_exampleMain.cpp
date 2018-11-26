@@ -16,7 +16,7 @@ int main(){
 
     while(true){
         usleep(SLEEP);
-        cout << "info: "+first.returnAllinfo()+"\n" << endl;
+        first.update();
     }
 
     /*
