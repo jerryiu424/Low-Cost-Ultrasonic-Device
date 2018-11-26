@@ -17,8 +17,6 @@ int main(){
         usleep(SLEEP);//pause for 1 second
     }
     
-
-
     /*
     //print info duration of first sensor in 1 second increments 10 times
     int temp[] ={0,0,0,0,0,0,0,0,0,0};
