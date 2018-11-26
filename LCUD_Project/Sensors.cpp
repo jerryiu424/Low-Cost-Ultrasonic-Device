@@ -1,16 +1,21 @@
+#include <unistd.h>
+#include <dirent.h>
+#include <iostream>
+#include <bits/stdc++.h>
 #include "Sensors.h"
-
+   
 //constructor
 Sensors::Sensors(){
-    usleep(1500000);
-    //get number of current sensors, and increment total number of sensors by 1
+    //get number of current sensors
 	int ID = NumSensors;
-    NumSensors++;
     SensorID = std::to_string(ID);    //convert int to string
-	inFile.open("/dev/ttyACM" + SensorID);    //open file where sensor is located
-    if(!inFile){
-        throw std::runtime_error("Could not open file");
+    try{
+	    inFile.open("/dev/ttyACM" + SensorID);    //open file where sensor is located
     }
+    catch(std::exception e){
+        throw "Problem opening file!";
+    }
+    NumSensors++;    //increment total number of sensors by 1
 }
 
 //destructor
@@ -21,6 +26,7 @@ Sensors::~Sensors(){
 
 //read line output by arduino and store info in respective attributes
 void Sensors::update(){
+    //if threres a line, read it and split
     std::string line;
     if (getline(inFile, line)){
         std::stringstream ss(line);
@@ -33,15 +39,11 @@ void Sensors::update(){
         if(!duration.empty() && !temperature.empty()){
             SDuration = stof(duration);
             STemperature = stof(temperature);
-             std::cout << duration; 
-            std::cout << temperature;
         }
     }
 }
-
 
 //tostring
 std::string Sensors::to_string(){
     return "Sensor number "+SensorID+" currently has duration "+std::to_string(SDuration)+" and temperature "+std::to_string(STemperature);
 }
-
