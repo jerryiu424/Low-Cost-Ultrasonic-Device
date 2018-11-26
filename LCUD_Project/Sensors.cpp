@@ -48,13 +48,8 @@ void Sensors::update(){
     getline(ss,duration, ' ');
     std::string temperature;
     getline(ss,temperature,' ');
-    try{
-        SDuration = stof(duration);
-        STemperature = stof(temperature);
-    }
-    catch (std::invalid_argument e) {
-        std::cerr << "Invalid argument in file!" << std::endl;
-    }
+    SDuration = stof(duration);
+    STemperature = stof(temperature);
 }
 
 
