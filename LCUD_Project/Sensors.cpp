@@ -24,6 +24,7 @@ Sensors::~Sensors(){
     NumSensors--;    //one less sensor
 }
 
+
 void Sensors::update(){
     inFile.seekg(-1,std::ios_base::end);       //go to the last character in the file         
     bool boolLoop = true;
@@ -54,10 +55,10 @@ void Sensors::update(){
     getline(ss,temperature,' ');
 
     //if there is data, set attributes accordingly
-        if(!duration.empty() && !temperature.empty()){
-            SDuration = stof(duration);
-            STemperature = stof(temperature);
-        }
+    if(!duration.empty() && !temperature.empty()){
+        SDuration = stof(duration);
+        STemperature = stof(temperature);
+    }
 }
 
 //tostring
