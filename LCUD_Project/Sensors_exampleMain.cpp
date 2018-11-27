@@ -2,8 +2,6 @@
 #define SLEEP 1500000
 using namespace std;
 
-void draw(int []);
-string multiply(int t);
 
 int main(){
     cout << "current number of sensors: " + to_string(Sensors::getNumberOfSensors())<< endl;    //should be 0
