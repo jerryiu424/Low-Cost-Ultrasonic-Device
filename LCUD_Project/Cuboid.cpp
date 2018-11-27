@@ -1,7 +1,7 @@
 #include "Cuboid.h"
    
 //constructor
-Cuboid::Cuboid(int width,int length,int heigth){
+Cuboid::Cuboid(float width,float length,float heigth){
     Cwidth = width;
     Clength = length;
     Cheigth = heigth;
