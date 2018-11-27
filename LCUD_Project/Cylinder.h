@@ -5,9 +5,9 @@
 class Cylinder : public Container{
     //attributes
     private:
-        int Cradius, Cheigth;
+        float Cradius, Cheigth;
     public:
-        Cylinder(int radius, int height);
+        Cylinder(float radius, float height);
         ~Cylinder(){;}
         std::string to_string();
         float getCylinderRadius();

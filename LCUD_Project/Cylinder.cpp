@@ -1,7 +1,7 @@
 #include "Cylinder.h"
    
 //constructor
-Cylinder::Cylinder(int radius, int heigth){
+Cylinder::Cylinder(float radius, float heigth){
     Cradius = radius;
     Cheigth = heigth;
     MaxVolume = 2*3.14*radius*heigth;
