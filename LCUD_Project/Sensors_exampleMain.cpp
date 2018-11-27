@@ -14,7 +14,9 @@ int main(){
     usleep(SLEEP);
     for (int i = 0; i<10;i++){
         first.update();    //read line, which updates duration and temp
+        /*
         cout << "first sensor has duration: " + to_string(first.getDuration()) + " and temp: " + to_string(first.getTemperature()) << endl;
+        */
         usleep(SLEEP);//pause for 1 second
     }
     

@@ -49,6 +49,8 @@ void Sensors::update(){
     }
     std::string line;
     getline(inFile,line);
+    std::cout << line << std::endl;
+    /*
     std::stringstream ss(line);
     std::cout << "LINE:" << ss.str() << std::endl;
     std::string duration;
@@ -63,6 +65,7 @@ void Sensors::update(){
         SDuration = stof(duration);
         STemperature = stof(temperature);
     }
+    */
 }
 
 //tostring
