@@ -9,8 +9,6 @@ int main(){
     cout << "first sensor has ID: " + first.getSensorID() << endl;
     cout << "current number of sensors: " + to_string(Sensors::getNumberOfSensors()) << endl; 
 
-    cout << "First data: " << endl;
-    cout << "BRUH !!!!" << first.getDuration() << endl;
 
     //print info of first sensor in 1 second increments 10 times
     usleep(SLEEP);

@@ -51,8 +51,10 @@ void Sensors::update(){
     std::stringstream ss(line);
     std::string duration;
     getline(ss,duration, ' ');
+    cout << "Duration!!!!!!: " << duration << endl;
     std::string temperature;
     getline(ss,temperature,' ');
+    cout << "temperature!!!!!!: " << temperature << endl;
 
     //if there is data, set attributes accordingly
     if(!duration.empty() && !temperature.empty()){
