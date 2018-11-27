@@ -12,7 +12,7 @@ Sensors::Sensors(){
     try{
 	    inFile.open("/dev/ttyACM" + SensorID);    //open file where sensor is located
         string duh;
-        std::getline(inFile,duh);
+        getline(inFile,duh);
         std::cout << duh << std::endl;
     }
     catch(std::exception e){
