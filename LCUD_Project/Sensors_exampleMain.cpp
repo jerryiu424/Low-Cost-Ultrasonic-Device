@@ -11,29 +11,21 @@ int main(){
 
 
     //print info of first sensor in 1 second increments 10 times
+    int temp[] ={0,0,0,0,0,0,0,0,0,0};
+    int position = 0;
     usleep(SLEEP);
     for (int i = 0; i<10;i++){
         first.update();    //read line, which updates duration and temp
         cout << "first sensor has duration: " + to_string(first.getDuration()) + " and temp: " + to_string(first.getTemperature()) << endl;
-        usleep(SLEEP);//pause for 1 second
-    }
-    
-    /*
-    //print info duration of first sensor in 1 second increments 10 times
-    int temp[] ={0,0,0,0,0,0,0,0,0,0};
-    int position = 0;
-    usleep(SLEEP);
-    for (int i = 0; i<100;i++){
-        first.update();    //read line, which updates duration and temp
-        usleep(SLEEP);//pause for 1 second
         position++;
         position = position % 10;
         draw(temp);
+        usleep(SLEEP);//pause for 1 second
     }
-    */
+    
     return 0;
 }
-/*
+
 void draw(int a[]){
     ofstream newFile;
     newFile.open("drawing.txt");
@@ -51,4 +43,3 @@ string multiply(int t){
     }
     return res;
 }
-*/
