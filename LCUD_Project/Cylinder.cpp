@@ -9,11 +9,11 @@ Cylinder::Cylinder(int radius, int heigth){
 }
 
 //get dimensions
-float Cylinder::getRadius(){
+float Cylinder::getCylinderRadius(){
     return Cradius;
 }
 
-float Cylinder::getHeight(){
+float Cylinder::getCylinderHeight(){
     return Cheigth;
 }
 

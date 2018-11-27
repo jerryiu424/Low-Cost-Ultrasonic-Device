@@ -11,15 +11,15 @@ Cuboid::Cuboid(int width,int length,int heigth){
 }
 
 //get dimensions
-float Cuboid::getWidth(){
+float Cuboid::getCuboidWidth(){
     return Cwidth;
 }
 
-float Cuboid::getLength(){
+float Cuboid::getCuboidLength(){
     return Clength;
 }
 
-float Cuboid::getHeight(){
+float Cuboid::getCuboidHeight(){
     return Cheigth;
 }
 std::string Cuboid::to_string(){

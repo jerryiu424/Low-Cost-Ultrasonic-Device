@@ -10,7 +10,7 @@ class Cylinder : public Container{
         Cylinder(int radius, int height);
         ~Cylinder(){;}
         std::string to_string();
-        float getRadius();
-        float getHeight();        
+        float getCylinderRadius();
+        float getCylinderHeight();        
 };
 #endif

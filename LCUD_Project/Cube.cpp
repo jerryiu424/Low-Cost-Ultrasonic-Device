@@ -8,7 +8,7 @@ Cube::Cube(float s){
 }
 
 //get sides
-float Cube::getSide(){
+float Cube::getCubeSide(){
     return side;
 }
 

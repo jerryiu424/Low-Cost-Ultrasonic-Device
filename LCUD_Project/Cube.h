@@ -10,6 +10,6 @@ class Cube : public Container{
         Cube(float s);
         ~Cube(){;}
         std::string to_string();
-        float getSide();
+        float getCubeSide();
 };
 #endif
