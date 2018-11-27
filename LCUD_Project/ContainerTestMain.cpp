@@ -27,14 +27,14 @@ void doEverything(Cube *p){
     cout<< "Sensor ID: " + (*s).getSensorID() << endl;
     cout << "Vessel has maximum volume of: "+to_string((*p).getMaxVolume()) << endl;
     cout << "This is a "+(*p).getShapeID() << endl;
-    cout << "It has a side of: "+to_string((*p).getSide()) << endl;
+    cout << "It has a side of: "+to_string((*p).getCubeSide()) << endl;
 
     (*s).update();
     float speedOfSoundM = 331+0.6*(*s).getTemperature();
 	float speedOfSoundCM = speedOfSoundM*100;
 	float distance = ((*s).getDuration()/2/1000000)*speedOfSoundCM;
-	float level = (*p).getSide() - distance;
-	float volume = (*p).getSide()*(*p).getSide()*level;
+	float level = (*p).getCubeSide() - distance;
+	float volume = (*p).getCubeSide()*(*p).getCubeSide()*level;
     cout << (*p).getShapeID()+" Container with a volume of "+ to_string(volume)+" and has a water level of "+to_string(level) <<endl;
     cout << "current number of cubes: " + to_string(Sensors::getNumberOfSensors()) << endl;
     cout <<"\n";
