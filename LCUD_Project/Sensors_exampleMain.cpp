@@ -17,6 +17,7 @@ int main(){
     for (int i = 0; i<10;i++){
         first.update();    //read line, which updates duration and temp
         cout << "first sensor has duration: " + to_string(first.getDuration()) + " and temp: " + to_string(first.getTemperature()) << endl;
+        temp[position] = ceil(first.getDuration())/10.0;
         position++;
         position = position % 10;
         draw(temp);
