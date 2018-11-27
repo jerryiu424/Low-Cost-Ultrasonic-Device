@@ -2,7 +2,6 @@
    
 //constructor
 Cylinder::Cylinder(int radius, int heigth){
-    ID = s.getSensorID();
     Cradius = radius;
     Cheigth = heigth;
     MaxVolume = 2*3.14*radius*heigth;
@@ -10,15 +9,15 @@ Cylinder::Cylinder(int radius, int heigth){
 }
 
 //get dimensions
-int Cylinder::getRadius(){
+float_t Cylinder::getRadius(){
     return Cradius;
 }
 
-int Cylinder::getHeight(){
+float Cylinder::getHeight(){
     return Cheigth;
 }
 
 
 std::string Cylinder::to_string(){
-    return "Type Cylinder with volume: " + getMaxVolume();
+    return "Type Cylinder with volume: " + std::to_string(MaxVolume);
 }

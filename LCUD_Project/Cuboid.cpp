@@ -23,5 +23,5 @@ float Cuboid::getHeight(){
     return Cheigth;
 }
 std::string Cuboid::to_string(){
-    return "Type Cuboid with volume: " + getMaxVolume();
+    return "Type Cuboid with volume: " + std::to_string(MaxVolume);
 }
