@@ -11,7 +11,9 @@ Sensors::Sensors(){
     SensorID = std::to_string(ID);    //convert int to string
     try{
 	    inFile.open("/dev/ttyACM" + SensorID);    //open file where sensor is located
-        std::cout << "HELLO I'm HERE" << std::endl;
+        string duh;
+        std::getline(inFile,duh);
+        std::cout << duh << std::endl;
     }
     catch(std::exception e){
         throw "Problem opening file!";
@@ -27,7 +29,8 @@ Sensors::~Sensors(){
 
 
 void Sensors::update(){
-    inFile.seekg(-1,std::ios_base::end);       //go to the last character in the file         
+    inFile.seekg(-1,std::ios_base::end);       //go to the last character in the file
+
     int boolLoop = 0;
     //keeps looping back, looking at characters until it finds the newline character
     while(boolLoop != 2){
