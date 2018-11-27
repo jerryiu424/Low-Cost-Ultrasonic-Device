@@ -2,7 +2,6 @@
    
 //constructor
 Cuboid::Cuboid(int width,int length,int heigth){
-    ID = s.getSensorID();
     Cwidth = width;
     Clength = length;
     Cheigth = heigth;
@@ -12,15 +11,15 @@ Cuboid::Cuboid(int width,int length,int heigth){
 }
 
 //get dimensions
-int Cuboid::getWidth(){
+float Cuboid::getWidth(){
     return Cwidth;
 }
 
-int Cuboid::getLength(){
+float Cuboid::getLength(){
     return Clength;
 }
 
-int Cuboid::getHeight(){
+float Cuboid::getHeight(){
     return Cheigth;
 }
 std::string Cuboid::to_string(){

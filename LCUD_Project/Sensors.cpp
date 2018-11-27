@@ -11,6 +11,7 @@ Sensors::Sensors(){
     SensorID = std::to_string(ID);    //convert int to string
     try{
 	    inFile.open("/dev/ttyACM" + SensorID);    //open file where sensor is located
+        std::cout << "HELLO I'm HERE" << std::endl;
     }
     catch(std::exception e){
         throw "Problem opening file!";

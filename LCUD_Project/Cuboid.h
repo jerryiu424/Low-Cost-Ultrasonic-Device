@@ -11,8 +11,8 @@ class Cuboid : public Container{
         Cuboid(int width,int length,int heigth);
         ~Cuboid(){;}
         std::string to_string();
-        int Cuboid::getWidth();
-        int Cuboid::getLength();
-        int Cuboid::getHeight();
+        float Cuboid::getWidth();
+        float Cuboid::getLength();
+        float Cuboid::getHeight();
 };
 #endif
