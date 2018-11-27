@@ -28,20 +28,20 @@ Sensors::~Sensors(){
 
 void Sensors::update(){
     inFile.seekg(-1,std::ios_base::end);       //go to the last character in the file         
-    bool boolLoop = true;
+    int boolLoop = 0;
     //keeps looping back, looking at characters until it finds the newline character
-    while(boolLoop){
+    while(boolLoop != 2){
         char ch;
         inFile.get(ch);
         //if it loops to the very beginning without ever 
         //seeing a newline character, the last line is the first line
         if((int)inFile.tellg() <= 1) {             // If the data was at or before the 0th byte
             inFile.seekg(0);                       // The first line is the last line
-            boolLoop = false;                // So stop there
+            boolLoop = 2;                // So stop there
         }
         //if newline found, we've found our last line
         else if(ch == '\n'){
-            boolLoop = false;
+            boolLoop ++;
         }
         else{
             inFile.seekg(-2,std::ios_base::cur);
