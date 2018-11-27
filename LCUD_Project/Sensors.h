@@ -11,8 +11,8 @@ class Sensors{
     private:
         std::string SensorID;
         float SDuration, STemperature;    //attributes ID, duration, and temperature
-        std::ifstream inFile;    //read from file
         static int NumSensors;    //static class varible NumSensors that keeps track of the total number of sensors 
+        std::string file;
     public:
         //constructor, destructor, getters, and toString methods
         Sensors();
