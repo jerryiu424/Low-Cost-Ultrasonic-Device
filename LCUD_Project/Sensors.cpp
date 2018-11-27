@@ -49,7 +49,7 @@ void Sensors::update(){
     std::string line;
     getline(inFile,line);
     std::stringstream ss(line);
-    std::cout << "LINE:" << ss << std::endl;
+    std::cout << "LINE:" << ss.str() << std::endl;
     std::string duration;
     getline(ss,duration, ' ');
     //std::cout << "Duration!!!!!!: " << duration << std::endl;
