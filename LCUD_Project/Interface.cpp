@@ -65,7 +65,7 @@ int main(){
         if(shape.compare("Cube")){
             Cube cube = createCube();
             float side = cube.getCubeSide();
-            outFile << to_string(shape) + "\n";
+            outFile << shape + "\n";
             outFile << to_string(side) + "\n";
             outFile.close()
             CubeFunc(cube);
@@ -74,7 +74,7 @@ int main(){
             Cylinder cylinder = createCylinder();
             float height = cylinder.getCylinderHeight();
             float radius = cylinder.getCylinderRadius();
-            outFile << to_string(shape) + "\n";
+            outFile << shape + "\n";
             outFile << to_string(height) + "\n";
             outFile << to_string(radius) + "\n";
             outFile.close();
@@ -85,7 +85,7 @@ int main(){
             float length = cuboid.getCuboidLength();
             float width = cuboid.getCuboidWidth();
             float height = cuboid.getCuboidHeight();
-            outFile << to_string(shape) + "\n";
+            outFile << shape + "\n";
             outFile << to_string(length) + "\n";
             outFile << to_string(width) + "\n";
             outFile << to_string(height) + "\n";
