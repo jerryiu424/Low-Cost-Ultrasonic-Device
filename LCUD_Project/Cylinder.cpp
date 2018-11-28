@@ -12,10 +12,7 @@ Cylinder::Cylinder(float radius, float heigth){
 float Cylinder::getCylinderRadius(){
     return Cradius;
 }
-//get dimensions
-float Cylinder::getCylinderRadius(){
-    return Cradius;
-}
+
 
 float Cylinder::getCylinderHeight(){
     return Cheigth;
