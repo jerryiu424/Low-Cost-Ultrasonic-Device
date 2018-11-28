@@ -67,7 +67,7 @@ int main(){
             float side = cube.getCubeSide();
             outFile << shape + "\n";
             outFile << to_string(side) + "\n";
-            outFile.close()
+            outFile.close();
             CubeFunc(cube);
         }
         else if(shape.compare("Cylinder")){
