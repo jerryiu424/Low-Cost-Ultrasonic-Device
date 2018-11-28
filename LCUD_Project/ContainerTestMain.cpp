@@ -15,8 +15,6 @@ int main(){
     float side_1 = 35.3;
     Cube vessel_1 (side_1);
     doEverything(vessel_1);
-
-    
 }
 
 void doEverything(Cube c){
