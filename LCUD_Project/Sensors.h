@@ -11,13 +11,13 @@ class Sensors{
     private:
         std::string SensorID;
         float SDuration, STemperature;    //attributes ID, duration, and temperature
-        int NumSensors;    //static class varible NumSensors that keeps track of the total number of sensors 
+        static int NumSensors;    //static class varible NumSensors that keeps track of the total number of sensors 
         std::string file;
     public:
         //constructor, destructor, getters, and toString methods
         Sensors();
         ~Sensors();
-        int getNumberOfSensors(){return NumSensors;}
+        static int getNumberOfSensors(){return NumSensors;}
         void update();
         std::string getSensorID(){return SensorID;}
         float getDuration(){return SDuration;}
