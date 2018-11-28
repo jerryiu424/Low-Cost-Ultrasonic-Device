@@ -172,7 +172,7 @@ void CylinderFunc(Cylinder c){
     cout<< "Sensor ID: " + s.getSensorID() << endl;
     cout << "Vessel has maximum volume of: " + to_string(c.getMaxVolume()) << endl;
     cout << "This is a " + c.getShapeID() << endl;
-    cout << "It has a height, radius of: " << to_string(c.getCylinderHeight()) + " cm, " + to_string(c.getCylinderRadius) + "cm" << endl;
+    cout << "It has a height, radius of: " << to_string(c.getCylinderHeight()) + " cm, " + to_string(c.getCylinderRadius()) + "cm" << endl;
 
     while(true){
         s.update();
