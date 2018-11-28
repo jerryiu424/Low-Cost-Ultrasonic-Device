@@ -11,7 +11,7 @@ class Sensors{
     private:
         std::string SensorID;
         float SDuration, STemperature;    //attributes ID, duration, and temperature
-        static int NumSensors;    //static class varible NumSensors that keeps track of the total number of sensors 
+        int NumSensors;    //static class varible NumSensors that keeps track of the total number of sensors 
         std::string file;
     public:
         //constructor, destructor, getters, and toString methods
@@ -25,5 +25,5 @@ class Sensors{
         std::string to_string();
 };
 //initialize number of sensors NumSensors to 0
-int Sensors::NumSensors = 0;
+//int Sensors::NumSensors = 0;
 #endif
