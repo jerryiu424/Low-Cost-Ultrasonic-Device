@@ -213,7 +213,7 @@ void CylinderFunc(Cylinder c){
 		cout << mysql_error(connection) << endl;
 		
 		}
-	}
+	
 	mysql_close(&mysql);
     }
 }
