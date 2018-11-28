@@ -4,8 +4,6 @@
 Container::Container(){
 }
 
-Sensors * Container::returnSensor(){
-    Sensors *p;
-    p = &s;
-    return p;
+Sensors Container::returnSensor(){
+    return s;
 }

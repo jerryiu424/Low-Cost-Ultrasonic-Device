@@ -14,6 +14,6 @@ class Container{
         ~Container(){;}
         float getMaxVolume(){return MaxVolume;}
         std::string getShapeID(){return ShapeID;}
-        Sensors * returnSensor();
+        Sensors returnSensor();
 };
 #endif
