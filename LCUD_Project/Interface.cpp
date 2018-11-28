@@ -1,5 +1,5 @@
 #include "Interface.h"
-#include <mysql/mysql.h>
+#include <mysql.h>
 
 using namespace std;
 ifstream inFile;
