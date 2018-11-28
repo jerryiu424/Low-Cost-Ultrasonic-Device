@@ -5,6 +5,9 @@
 #include "Cylinder.h"
 #include "Cuboid.h"
 //#include "Sensors.h"
+
+# define M_PI 3.14159265358979323846  /* pi */
+
 using namespace std;
 
 void CubeFunc(Cube);
@@ -164,9 +167,43 @@ void CubeFunc(Cube c){
 }
 
 void CylinderFunc(Cylinder c){
+    Sensors s = c.returnSensor();
 
+    cout<< "Sensor ID: " + s.getSensorID() << endl;
+    cout << "Vessel has maximum volume of: " + to_string(c.getMaxVolume()) << endl;
+    cout << "This is a " + c.getShapeID() << endl;
+    cout << "It has a height, radius of: " << to_string(c.getCylinderHeight()) + " cm, " + to_string(c.getCylinderRadius) + "cm" << endl;
+
+    while(true){
+        s.update();
+        float speedOfSoundM = 331+0.6*s.getTemperature();
+        float speedOfSoundCM = speedOfSoundM*100;
+        float distance = (s.getDuration()/2/1000000)*speedOfSoundCM;
+        float level = c.getCylinderHeight() - distance;
+        float volume = c.getCylinderHeight() * (M_PI * c.getCylinderRadius() * c.getCylinderRadius()) * level;
+        cout << c.getShapeID()+" Container with a volume of "+ to_string(volume)+" and has a water level of "+to_string(level) <<endl;
+      //  cout << "current number of cubes: " + to_string(Sensors::getNumberOfSensors()) << endl;
+        cout <<"\n";
+    }
 }
 
 void CuboidFunc(Cuboid c){
+    Sensors s = c.returnSensor();
 
+    cout << "Sensor ID: " + s.getSensorID() << endl;
+    cout << "Vessel has maximum volume of: " + to_string(c.getMaxVolume()) << endl;
+    cout << "This is a " + c.getShapeID() << endl;
+    cout << "It has a height, width and length of: " << to_string(c.getCuboidHeight()) + " cm, " + to_string(c.getCuboidWidth()) + " cm, " + to_string(c.getCuboidLength()) + "cm" << endl;
+
+    while(true){
+        s.update();
+        float speedOfSoundM = 331+0.6*s.getTemperature();
+        float speedOfSoundCM = speedOfSoundM*100;
+        float distance = (s.getDuration()/2/1000000)*speedOfSoundCM;
+        float level = c.getCuboidHeight() - distance;
+        float volume = c.getCuboidHeight() * c.getCuboidLength() * c.getCuboidWidth() * level;
+        cout << c.getShapeID()+" Container with a volume of "+ to_string(volume)+" and has a water level of "+to_string(level) <<endl;
+      //  cout << "current number of cubes: " + to_string(Sensors::getNumberOfSensors()) << endl;
+        cout <<"\n";
+    }
 }
