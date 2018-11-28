@@ -10,12 +10,12 @@ Sensors::Sensors(){
 	int ID = NumSensors;
     SensorID = std::to_string(ID);    //convert int to string
     file = "/dev/ttyACM" + SensorID;
-    NumSensors++;    //increment total number of sensors by 1
+    //NumSensors++;    //increment total number of sensors by 1
 }
 
 //destructor
 Sensors::~Sensors(){
-    NumSensors--;    //one less sensor
+    //NumSensors--;    //one less sensor
 }
 
 
