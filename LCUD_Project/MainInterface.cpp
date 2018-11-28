@@ -13,17 +13,17 @@ int main(){
 
     if(shape.compare("Cube")){
         string input;
-        cout << "Please enter the side of the cube" << endl;
+        cout << "Please enter the length for the sides of the cube (cm):" << endl;
         cin >> input;
         float side = stof(input);
         Cube cubeObj (side);
     }
     else if(shape.compare("Cylinder")){
         string inputR;
-        cout << "Please enter the radius of the cylinder" << endl;
+        cout << "Please enter the radius of the cylinder (cm):" << endl;
         cin >> inputR;
         string inputH;
-        cout << "Please enter the height of the cylinder" << endl;
+        cout << "Please enter the height of the cylinder (cm):" << endl;
         cin >> inputH;
         float radius = stof(inputR);
         float height = stof(inputH);
@@ -31,13 +31,13 @@ int main(){
     }
     else if(shape.compare("Cuboid")){
         string inputW;
-        cout << "Please enter the width of the cuboid" << endl;
+        cout << "Please enter the width of the cuboid (cm):" << endl;
         cin >> inputW;
         string inputL;
-        cout << "Please enter the length of the cuboid" << endl;
+        cout << "Please enter the length of the cuboid (cm):" << endl;
         cin >> inputL;
         string inputH;
-        cout << "Please enter the height of the cuboid" << endl;
+        cout << "Please enter the height of the cuboid (cm):" << endl;
         cin >> inputH;
         float width = stof(inputW);
         float length = stof(inputL);

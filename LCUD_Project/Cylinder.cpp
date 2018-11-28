@@ -12,6 +12,10 @@ Cylinder::Cylinder(float radius, float heigth){
 float Cylinder::getCylinderRadius(){
     return Cradius;
 }
+//get dimensions
+float Cylinder::getCylinderRadius(){
+    return Cradius;
+}
 
 float Cylinder::getCylinderHeight(){
     return Cheigth;
@@ -21,3 +25,4 @@ float Cylinder::getCylinderHeight(){
 std::string Cylinder::to_string(){
     return "Type Cylinder with volume: " + std::to_string(MaxVolume);
 }
+    
