@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <boost/algorithm/string.hpp>
 //#include "Container.h"
 #include "Cube.h"
 #include "Cylinder.h"
@@ -23,14 +24,14 @@ int main(){
     inFile.open("data.txt");
     if(inFile){
         getline(inFile,shape);
-        if(shape == "Cube"){
+        if(shape.compare("CUBE") == 0){
             string side;
             getline(inFile,side);
             float s = stof(side);
             Cube cube (s);
             CubeFunc(cube);
         }
-        else if(shape == "Cylinder"){
+        else if(shape.compare("CYLINDER") == 0){
             string radius;
             getline(inFile,radius);
             string height;
@@ -40,7 +41,7 @@ int main(){
             Cylinder cylinder (r,h);   
             CylinderFunc(cylinder);    
         }
-        else{
+        else if (shape.compare("CUBOID") == 0){
             string width;
             getline(inFile,width);
             string length;
@@ -61,8 +62,8 @@ int main(){
         string shape;
         cout << "Please enter the shape of the container" << endl;
         cin >> shape;
-
-        if(shape.compare("Cube")){
+        shape = boost::to_upper(shape);
+        if(shape.compare("CUBE") == 0){
             Cube cube = createCube();
             float side = cube.getCubeSide();
             outFile << shape + "\n";
@@ -70,7 +71,7 @@ int main(){
             outFile.close();
             CubeFunc(cube);
         }
-        else if(shape.compare("Cylinder")){
+        else if(shape.compare("CYLINDER") == 0){
             Cylinder cylinder = createCylinder();
             float height = cylinder.getCylinderHeight();
             float radius = cylinder.getCylinderRadius();
@@ -80,7 +81,7 @@ int main(){
             outFile.close();
             CylinderFunc(cylinder);
         }
-        else if(shape.compare("Cuboid")){
+        else if(shape.compare("CUBOID") == 0){
             Cuboid cuboid = createCuboid();
             float length = cuboid.getCuboidLength();
             float width = cuboid.getCuboidWidth();
