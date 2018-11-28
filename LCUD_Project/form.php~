@@ -16,7 +16,5 @@
 	<?php 
 		echo "UM hello?";
 	?>
-	
-	<h1>Something!!!</h1>
 </body>
 </html>

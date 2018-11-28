@@ -13,7 +13,7 @@
   <link rel="icon" href="favicon.ico"></head><body style="color: black; background-color: rgb(229, 229, 229); background-image: url(images/bg.jpg);" alink="#000099" link="#000099" vlink="#a700a7">&nbsp;
 <br>
 
-<a href="./index.php"><img style="border: 0px solid ; width: 64px; height: 23px;" onmouseover="document.Home.src='images/Home1.png'" onmouseup="document.Home.src='images/Home2.png'" onmouseout="document.Home.src='images/Home2.png'" name="Home" alt="Home - LCUD" title="Home - LCUD" src="images/Home2.png"></a><br>
+<a href="index.php"><img style="border: 0px solid ; width: 64px; height: 23px;" onmouseover="document.Home.src='images/Home1.png'" onmouseup="document.Home.src='images/Home2.png'" onmouseout="document.Home.src='images/Home2.png'" name="Home" alt="Home - LCUD" title="Home - LCUD" src="images/Home2.png"></a><br>
 
 <div style="text-align: center;"><big style="font-weight: bold;"><big><big><span style="font-family: American Typewriter;">CS3307A Project - Group 10 -
 LCUD</span></big></big></big><big style="font-weight: bold;"><big><big><span style="font-family: American Typewriter;"><br>
