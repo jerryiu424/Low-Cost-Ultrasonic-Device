@@ -169,7 +169,8 @@ void CubeFunc(Cube c){
 
 	else
 	{
-        string query = "INSERT into sensor VALUES ('" + s.getSensorID() + "','" + to_string(s.getDuration()) + "','" + to_string(s.getTemperature()) + "','" + to_string(distance) + "','" + to_string(volume) + "');";
+        string q = "INSERT into sensor VALUES ('" + s.getSensorID() + "','" + to_string(s.getDuration()) + "','" + to_string(s.getTemperature()) + "','" + to_string(distance) + "','" + to_string(volume) + "');";
+       const char* query = q.c_str();  
        mysql_query(connection,query);        
          if (query_state !=0) {
 		cout << mysql_error(connection) << endl;
@@ -210,7 +211,8 @@ void CylinderFunc(Cylinder c){
 
 	else
 	{
-        string query = "INSERT into sensor VALUES ('" + s.getSensorID() + "','" + to_string(s.getDuration()) + "','" + to_string(s.getTemperature()) + "','" + to_string(distance) + "','" + to_string(volume) + "');";
+        string q = "INSERT into sensor VALUES ('" + s.getSensorID() + "','" + to_string(s.getDuration()) + "','" + to_string(s.getTemperature()) + "','" + to_string(distance) + "','" + to_string(volume) + "');";
+         const char* query = q.c_str();  
          mysql_query(connection,query);         
          if (query_state !=0) {
             cout << mysql_error(connection) << endl;
@@ -251,7 +253,8 @@ void CuboidFunc(Cuboid c){
 
 	else
 	{
-        string query = "INSERT into sensor VALUES ('" + s.getSensorID() + "','" + to_string(s.getDuration()) + "','" + to_string(s.getTemperature()) + "','" + to_string(distance) + "','" + to_string(volume) + "');";
+        string q = "INSERT into sensor VALUES ('" + s.getSensorID() + "','" + to_string(s.getDuration()) + "','" + to_string(s.getTemperature()) + "','" + to_string(distance) + "','" + to_string(volume) + "');";
+        const char* query = q.c_str();   
        mysql_query(connection,query);
          if (query_state !=0) {
 		cout << mysql_error(connection) << endl;
