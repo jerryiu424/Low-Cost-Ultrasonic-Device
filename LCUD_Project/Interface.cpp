@@ -155,7 +155,7 @@ void CubeFunc(Cube c){
         float level = c.getCubeSide() - distance;
         float volume = c.getCubeSide()*c.getCubeSide()*level;
         cout << c.getShapeID()+" Container with a volume of "+ to_string(volume)+" and has a water level of "+to_string(level) <<endl;
-        cout << "current number of cubes: " + to_string(Sensors::getNumberOfSensors()) << endl;
+      //  cout << "current number of cubes: " + to_string(Sensors::getNumberOfSensors()) << endl;
         cout <<"\n";
     }
 }
