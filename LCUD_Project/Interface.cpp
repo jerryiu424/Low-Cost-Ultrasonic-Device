@@ -62,7 +62,10 @@ int main(){
         string shape;
         cout << "Please enter the shape of the container" << endl;
         cin >> shape;
-        shape = boost::to_upper(shape);
+        
+        for (int i=0; i<strlen(shape); i++)
+        shape[i] = toupper(shape[i]);
+
         if(shape.compare("CUBE") == 0){
             Cube cube = createCube();
             float side = cube.getCubeSide();
