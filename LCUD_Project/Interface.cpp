@@ -180,7 +180,7 @@ void CylinderFunc(Cylinder c){
         float speedOfSoundCM = speedOfSoundM*100;
         float distance = (s.getDuration()/2/1000000)*speedOfSoundCM;
         float level = c.getCylinderHeight() - distance;
-        float volume = c.getCylinderHeight() * (M_PI * c.getCylinderRadius() * c.getCylinderRadius()) * level;
+        float volume = (M_PI * c.getCylinderRadius() * c.getCylinderRadius()) * level;
         cout << c.getShapeID()+" Container with a volume of "+ to_string(volume)+" and has a water level of "+to_string(level) <<endl;
       //  cout << "current number of cubes: " + to_string(Sensors::getNumberOfSensors()) << endl;
         cout <<"\n";
@@ -201,8 +201,8 @@ void CuboidFunc(Cuboid c){
         float speedOfSoundCM = speedOfSoundM*100;
         float distance = (s.getDuration()/2/1000000)*speedOfSoundCM;
         float level = c.getCuboidHeight() - distance;
-        float volume = c.getCuboidHeight() * c.getCuboidLength() * c.getCuboidWidth() * level;
-        cout << c.getShapeID()+" Container with a volume of "+ to_string(volume)+" and has a water level of "+to_string(level) <<endl;
+        float volume = c.getCuboidLength() * c.getCuboidWidth() * level;
+        cout << c.getShapeID()+" Container with a volume of "+ to_string(volume)+" cm cubed and has a water level of "+to_string(level) <<endl;
       //  cout << "current number of cubes: " + to_string(Sensors::getNumberOfSensors()) << endl;
         cout <<"\n";
     }
