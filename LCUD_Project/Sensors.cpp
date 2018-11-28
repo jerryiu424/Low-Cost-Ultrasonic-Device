@@ -7,7 +7,7 @@
 //constructor
 Sensors::Sensors(){
     //get number of current sensors
-	int ID = NumSensors;
+	int ID = 0; //NumSensors;
     SensorID = std::to_string(ID);    //convert int to string
     file = "/dev/ttyACM" + SensorID;
     //NumSensors++;    //increment total number of sensors by 1
