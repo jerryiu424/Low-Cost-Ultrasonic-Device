@@ -48,7 +48,7 @@ Sensor Number:</span><br>
 <br>
 <?php
  include "connectdb.php"
-?>
+?> 
 <button type="button" class="btn btn-primary" action="form.php">Set up</button>
 
 <br>
