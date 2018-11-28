@@ -56,19 +56,41 @@ int main(){
     }
 
     else{
+        ofstream outFile;
+        outFile.open("data.txt");
         string shape;
         cout << "Please enter the shape of the container" << endl;
         cin >> shape;
 
         if(shape.compare("Cube")){
             Cube cube = createCube();
+            float side = cube.getCubeSide();
+            outFile << shape + "\n";
+            outFile << side + "\n";
+            outFile.close()
             CubeFunc(cube);
         }
         else if(shape.compare("Cylinder")){
             Cylinder cylinder = createCylinder();
+            float height = cylinder.getCylinderHeight();
+            float radius = cylinder.getCylinderRadius();
+            outFile << shape + "\n";
+            outFile << height + "\n";
+            outFile << radius + "\n";
+            outFile.close();
+            CylinderFunc(cylinder);
         }
         else if(shape.compare("Cuboid")){
             Cuboid cuboid = createCuboid();
+            float length = cuboid.getCuboidLength();
+            float width = cuboid.getCuboidWidth();
+            float height = cuboid.getCuboidHeight();
+            outFile << shape + "\n";
+            outFile << length + "\n";
+            outFile << width + "\n";
+            outFile << height + "\n";
+            outFile.close();
+            CuboidFunc(cuboid);
         }
         else{
             cout << "Invalid shape" << endl;
