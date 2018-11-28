@@ -4,9 +4,21 @@
 #include "Cylinder.h"
 #include "Cuboid.h"
 #include "Sensors.h"
-
 using namespace std;
+
+void inputFunc();
+void CubeFunc(Container);
+void CylinderFunc();
+void CuboidFunc();
+
 int main(){
+
+
+
+    return 0;
+}
+
+void inputFunc(){
     string shape;
     cout << "Please enter the shape of the container" << endl;
     cin >> shape;
@@ -47,7 +59,4 @@ int main(){
     else{
         cout << "Invalid shape" << endl;
     }
-
-
-    return 0;
 }
