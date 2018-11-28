@@ -12,9 +12,30 @@
 
 	<title>Set Up form</title>
 </head>
-<body>
-	<?php 
-		echo "UM hello?";
-	?>
+<body style="color: black; background-color: rgb(229, 229, 229); background-image: url(images/bg.jpg);" alink="#000099" link="#000099" vlink="#a700a7">
+	<br><br><br><br>
+	<div class="container">
+  		<div class="row">
+  		<p>Select a shape: <br></p>
+    		<div class="col-lg">
+				<div class="dropdown">
+  					<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					----------    		
+  					</button>
+  					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+ 						<a class="dropdown-item" href="./cubeform.php">Cube</a>
+  						<a class="dropdown-item" href="./cuboidform.php">Cuboid</a>
+   					<a class="dropdown-item" href="./cylinderform.php">Cylinder</a>
+  					</div>
+				</div>
+			</div>
+		</div>
+		<br><br><br><br>
+		<div class="row">
+			<div class = "col-lg">
+				<a href="./index.php"> <button type="button" class="btn btn-primary">Go Back</button></a>
+			</div>		
+		</div>
+	</div>
 </body>
 </html>

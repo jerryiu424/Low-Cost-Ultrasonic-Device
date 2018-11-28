@@ -19,7 +19,7 @@
 
 <body style="color: black; background-color: rgb(229, 229, 229); background-image: url(images/bg.jpg);" alink="#000099" link="#000099" vlink="#a700a7">
 <br>
-<a href="Group%2010.html"><img style="border: 0px solid ; width: 86px; height: 25px;" name="GI" alt="Group Info" title="Group Info" src="images/GI1.png" onmouseover="document.GI.src='images/GI2.png'" onmouseup="document.GI.src='images/GI1.png'" onmouseout="document.GI.src='images/GI1.png'"></a><br>
+<a href="Group&#32;10.html"><img style="border: 0px solid ; width: 86px; height: 25px;" name="GI" alt="Group Info" title="Group Info" src="images/GI1.png" onmouseover="document.GI.src='images/GI2.png'" onmouseup="document.GI.src='images/GI1.png'" onmouseout="document.GI.src='images/GI1.png'"></a><br>
 
 <div style="text-align: center;"><big style="font-weight: bold;"><big><big><span style="font-family: American Typewriter;">Low Cost Ultrasonic Device</span></big></big></big><br>
 <table style="text-align: left; width: 963px; height: 48px; margin-left: auto; margin-right: auto;" border="1" cellpadding="2" cellspacing="2">
