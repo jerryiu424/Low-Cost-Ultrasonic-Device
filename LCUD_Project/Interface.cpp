@@ -1,7 +1,19 @@
 #include "Interface.h"
+#include <mysql.h>
 
 using namespace std;
 ifstream inFile;
+
+MYSQL mysql,*connection;
+MYSQL_RES result;
+MYSQL_ROW row;
+
+char * ip = (char*)"127.0.0.1";
+char * usr = (char*)"root";
+char * pass = (char*)"group10";
+char * db = (char*)"group10";
+
+int query_state;
 
 int main(){
     string shape;
@@ -145,6 +157,25 @@ void CubeFunc(Cube c){
         cout << c.getShapeID()+" Container with a volume of "+ to_string(volume)+" and has a water level of "+to_string(level) <<endl;
       //  cout << "current number of cubes: " + to_string(Sensors::getNumberOfSensors()) << endl;
         cout <<"\n";
+
+        mysql_init(&mysql);
+
+	connection = mysql_real_connect(&mysql, ip, usr, pass, db, 0, NULL, 0);
+
+	if (connection==NULL)
+	{
+		cout<<mysql_error(&mysql)<<endl;
+	}
+
+	else
+	{
+		(mysql_query(connection, "INSERT into sensor VALUES ("<<s.getSensorID() << "," << s.getDuration() << "," << s.getTemperature() << "," << distance << "," << volume << ");");
+		if (query_state !=0) {
+		cout << mysql_error(connection) << endl;
+		return 1;
+		}
+	}
+	mysql_close(&mysql);
     }
 }
 
@@ -166,6 +197,25 @@ void CylinderFunc(Cylinder c){
         cout << c.getShapeID()+" Container with a volume of "+ to_string(volume)+" and has a water level of "+to_string(level) <<endl;
       //  cout << "current number of cubes: " + to_string(Sensors::getNumberOfSensors()) << endl;
         cout <<"\n";
+
+        mysql_init(&mysql);
+
+	connection = mysql_real_connect(&mysql, ip, usr, pass, db, 0, NULL, 0);
+
+	if (connection==NULL)
+	{
+		cout<<mysql_error(&mysql)<<endl;
+	}
+
+	else
+	{
+		(mysql_query(connection, "INSERT into sensor VALUES ("<<s.getSensorID() << "," << s.getDuration() << "," << s.getTemperature() << "," << distance << "," << volume << ");");
+		if (query_state !=0) {
+		cout << mysql_error(connection) << endl;
+		return 1;
+		}
+	}
+	mysql_close(&mysql);
     }
 }
 
@@ -187,5 +237,24 @@ void CuboidFunc(Cuboid c){
         cout << c.getShapeID()+" Container with a volume of "+ to_string(volume)+" cm cubed and has a water level of "+to_string(level) <<endl;
       //  cout << "current number of cubes: " + to_string(Sensors::getNumberOfSensors()) << endl;
         cout <<"\n";
+
+        mysql_init(&mysql);
+
+	connection = mysql_real_connect(&mysql, ip, usr, pass, db, 0, NULL, 0);
+
+	if (connection==NULL)
+	{
+		cout<<mysql_error(&mysql)<<endl;
+	}
+
+	else
+	{
+		(mysql_query(connection, "INSERT into sensor VALUES ("<<s.getSensorID() << "," << s.getDuration() << "," << s.getTemperature() << "," << distance << "," << volume << ");");
+		if (query_state !=0) {
+		cout << mysql_error(connection) << endl;
+		return 1;
+		}
+	}
+	mysql_close(&mysql);
     }
 }
