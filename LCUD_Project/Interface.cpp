@@ -62,7 +62,7 @@ int main(){
         cout << "Please enter the shape of the container" << endl;
         cin >> shape;
         
-        for (int i=0; i<strlen(shape); i++)
+        for (int i=0; i<shape.length(); i++)
         shape[i] = toupper(shape[i]);
 
         if(shape.compare("CUBE") == 0){
