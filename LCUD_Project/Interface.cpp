@@ -1,23 +1,4 @@
-#include <iostream>
-#include <fstream>
-#include <math.h>
-//#include "Container.h"
-#include "Cube.h"
-#include "Cylinder.h"
-#include "Cuboid.h"
-//#include "Sensors.h"
-
-# define M_PI 3.14159265358979323846  /* pi */
-
-using namespace std;
-
-void CubeFunc(Cube);
-void CylinderFunc(Cylinder);
-void CuboidFunc(Cuboid);
-
-Cube createCube();
-Cylinder createCylinder();
-Cuboid createCuboid();
+#include "Interface.h"
 
 using namespace std;
 ifstream inFile;
