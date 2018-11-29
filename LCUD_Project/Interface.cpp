@@ -23,7 +23,7 @@ int main(){
     inFile.open("data.txt");
 
     if(inFile){
-        cout << "Data.txt exists!"
+        cout << "Data.txt exists!";
         getline(inFile,shape);
 
         if(shape.compare("CUBE") == 0){
