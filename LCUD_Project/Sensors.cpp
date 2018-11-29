@@ -9,7 +9,7 @@ Sensors::Sensors(){
     //get number of current sensors
 	int ID = 0; //NumSensors;
     SensorID = std::to_string(ID);    //convert int to string
-    file = "/dev/ttyACM0"; //+ SensorID;
+    file = "/dev/ttyACM" + SensorID;
     //NumSensors++;    //increment total number of sensors by 1
 }
 
