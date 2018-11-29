@@ -23,6 +23,7 @@ int main(){
     inFile.open("data.txt");
 
     if(inFile){
+        cout << "Data.txt exists!"
         getline(inFile,shape);
 
         if(shape.compare("CUBE") == 0){
@@ -40,8 +41,11 @@ int main(){
             getline(inFile,height);
             float r = stof(radius);
             float h = stof(height);
-            Cylinder cylinder (r,h);   
-            CylinderFunc(cylinder);    
+            cout << "Set values";
+            Cylinder cylinder (r,h);
+            cout << "Value Created";   
+            CylinderFunc(cylinder); 
+            cout << "Never will be seen!";   
         }
 
         else if (shape.compare("CUBOID") == 0){
