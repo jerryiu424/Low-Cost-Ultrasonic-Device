@@ -234,8 +234,6 @@ void CylinderFunc(Cylinder c){
         float distance = (s.getDuration()/2/1000000)*speedOfSoundCM;
         float level = c.getCylinderHeight() - distance;
         float volume = (M_PI * c.getCylinderRadius() * c.getCylinderRadius()) * level;
-       
-    
 
         if(volume >= c.getMaxVolume() || volume < 0)
         {
@@ -270,7 +268,7 @@ void CylinderFunc(Cylinder c){
                 cout << "Sending to db\n" << endl;
             }
             
-            counter = avgVolume = avgDistance = avgLevel = 0;
+            counter = avgVolume = avgDistance = avgLevel = 0; //change back?
         }
         
     }
@@ -296,7 +294,7 @@ void CuboidFunc(Cuboid c){
         float level = c.getCuboidHeight() - distance;
         float volume = c.getCuboidLength() * c.getCuboidWidth() * level;
 
-         if(volume >= c.getMaxVolume() || volume < 0)
+        if(volume >= c.getMaxVolume() || volume < 0)
         {
             continue;
         }

@@ -1,7 +1,3 @@
-#include <unistd.h>
-#include <dirent.h>
-#include <iostream>
-#include <bits/stdc++.h>
 #include "Sensors.h"
    
 //constructor
