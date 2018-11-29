@@ -201,7 +201,7 @@ void CubeFunc(Cube c){
                 }
                 cout << "Sending to db\n" << endl;
             }
-            mysql_close(&mysql);
+            mysql_close(connection);
             counter = 0;
             avgVolume = 0;
             avgDistance = 0;
@@ -268,7 +268,7 @@ void CylinderFunc(Cylinder c){
                 cout << "Sending to db\n" << endl;
             }
             
-            mysql_close(&mysql);
+            mysql_close(connection);
             counter = 0;
             avgVolume = 0;
             avgDistance = 0;
@@ -331,7 +331,7 @@ void CuboidFunc(Cuboid c){
                 cout << "Sending to db\n" << endl;
             }
 
-            mysql_close(&mysql);
+            mysql_close(connection);
             counter = 0;
             avgVolume = 0;
             avgDistance = 0;
