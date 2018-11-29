@@ -1,12 +1,28 @@
 /**
- * /brief Sensors class methods
+ * \brief Sensors class methods
  * 
- * 
+ * \details
+ *          This file implements the Sensors class member methods;
+ *          It consists of the constructor, the destructor, the update function,
+ *          and a toString method
  *
+ * 
+ * \author Vance Gullberg
+ * \author Marco Manuel
+ * \author Morgan O'Brien
  */
 #include "Sensors.h"
    
-//constructor
+/**
+ * \brief Sensors constructor
+ * 
+ * \details
+ *          
+ *
+ * @param
+ * @return
+ * \author Vance Gullberg
+ */
 Sensors::Sensors(){
 	int ID = 0; //sensorID;
     SensorID = std::to_string(ID);    //convert int to string
