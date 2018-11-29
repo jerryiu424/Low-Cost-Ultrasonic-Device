@@ -15,7 +15,7 @@
  *              The attributes of the class are the ID of the sensor, the duration, temperature and a string
  *              that contains the data from the physical sensor.
  * 
- *  @author    Vance Gullberg
+ *  @author     Vance Gullberg
  */
 class Sensors{
     private:
