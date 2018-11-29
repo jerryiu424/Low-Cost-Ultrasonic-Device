@@ -230,6 +230,7 @@ void CylinderFunc(Cylinder c){
         float distance = (s.getDuration()/2/1000000)*speedOfSoundCM;
         float level = c.getCylinderHeight() - distance;
         float volume = (M_PI * c.getCylinderRadius() * c.getCylinderRadius()) * level;
+        cout << "\nHello 3\n" << endl;
 
         if(volume >= c.getMaxVolume() || volume < 0)
         {

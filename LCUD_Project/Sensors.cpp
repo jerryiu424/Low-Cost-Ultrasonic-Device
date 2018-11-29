@@ -25,6 +25,7 @@ void Sensors::update(){
     //if threres a line, read it and split
     std::string line;
     if (getline(inFile, line)){
+        std::cout << "\nHello from Sensors::update()\n" << std::endl;
         std::stringstream ss(line);
         std::string duration;
         getline(ss,duration, ' ');
