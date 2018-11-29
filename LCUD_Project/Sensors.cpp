@@ -24,10 +24,9 @@
  * @author Vance Gullberg
  */
 Sensors::Sensors(){
-	int ID = 0; //sensorID;
+	int ID = 0;                       //sensorID;
     SensorID = std::to_string(ID);    //convert int to string
-    file = "/dev/ttyACM" + SensorID;
-    //NumSensors++;    //increment total number of sensors by 1
+    file = "/dev/ttyACM" + SensorID;  //setting file attribute to directory
 }
 
 //destructor
