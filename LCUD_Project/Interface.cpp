@@ -88,8 +88,8 @@ int main(){
             float height = cylinder.getCylinderHeight();
             float radius = cylinder.getCylinderRadius();
             outFile << shape + "\n";
-            outFile << to_string(height) + "\n";
             outFile << to_string(radius) + "\n";
+            outFile << to_string(height) + "\n";
             outFile.close();
             CylinderFunc(cylinder);
         }
@@ -100,8 +100,8 @@ int main(){
             float width = cuboid.getCuboidWidth();
             float height = cuboid.getCuboidHeight();
             outFile << shape + "\n";
-            outFile << to_string(length) + "\n";
             outFile << to_string(width) + "\n";
+            outFile << to_string(length) + "\n";
             outFile << to_string(height) + "\n";
             outFile.close();
             CuboidFunc(cuboid);
