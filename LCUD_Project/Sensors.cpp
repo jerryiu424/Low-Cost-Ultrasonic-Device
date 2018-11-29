@@ -17,10 +17,7 @@
  * @brief Sensors constructor
  * 
  * @details
- *          
- *
- * @param
- * @return
+ *          sets the sensor ID and the file address attribute
  * 
  * @author Vance Gullberg
  */
@@ -32,24 +29,27 @@ Sensors::Sensors(){
 }
 
 /**
- * @brief Sensors constructor
+ * @brief updates sensor data
  * 
  * @details
+ *          Reads a line of the file, which consists of duration and temperature,
+ *          splits it on the space, and stores it in the respective attributes,
+ *          thereby updating the information
  *          
- *
- * @param
- * @return
  * 
  * @author Marco Manuel
  * @author Morgan O'Brien
  */
 void Sensors::update(){
     std::ifstream inFile;
+    //open file
     inFile.open(file);
     //if threres a line, read it and split
     std::string line;
     if (getline(inFile, line)){
-        //std::cout << "Hello from Sensors::update()" << std::endl; //remove me!
+        /*
+        uses string stream to split the line on the space
+        */
         std::stringstream ss(line);
         std::string duration;
         getline(ss,duration, ' ');
@@ -61,7 +61,6 @@ void Sensors::update(){
             SDuration = stof(duration);
             STemperature = stof(temperature);
         }
-        //std::cout << duration + '\t' + temperature << std::endl; //remove me!
     }
     inFile.close();
 }
@@ -70,10 +69,9 @@ void Sensors::update(){
  * @brief Sensors toString method
  * 
  * @details
+ *          returns string of sensor ID, current duration, and temperature
  *          
- *
- * @param
- * @return
+ * @return returns string of data
  * 
  * @author Vance Gullberg
  */
