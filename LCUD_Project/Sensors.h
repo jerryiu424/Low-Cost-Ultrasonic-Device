@@ -16,7 +16,7 @@ class Sensors{
     public:
         //constructor, destructor, getters, and toString methods
         Sensors();
-        ~Sensors();
+        ~Sensors(){;}
         void update();
         std::string getSensorID(){return SensorID;}
         float getDuration(){return SDuration;}
