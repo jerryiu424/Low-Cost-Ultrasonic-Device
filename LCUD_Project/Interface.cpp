@@ -1,7 +1,6 @@
-#include "Interface.h"
-#include <mysql/mysql.h>
+//g++ -o main_interface Interface.cpp Cube.cpp Cylinder.cpp Cuboid.cpp Container.cpp Sensors.cpp -L/usr/include/mysql -lmysqlclient -I/usr/include/mysql
 
-using namespace std;
+#include "Interface.h"
 ifstream inFile;
 
 MYSQL mysql,*connection;
@@ -14,12 +13,19 @@ char * pass = (char*)"group10";
 char * db = (char*)"group10";
 
 int query_state;
+float avgVolume;
+float avgDistance;
+float avgLevel;
+int counter = 0;
 
 int main(){
     string shape;
     inFile.open("data.txt");
+
     if(inFile){
+        cout << "Data.txt exists!";
         getline(inFile,shape);
+
         if(shape.compare("CUBE") == 0){
             string side;
             getline(inFile,side);
@@ -27,6 +33,7 @@ int main(){
             Cube cube (s);
             CubeFunc(cube);
         }
+
         else if(shape.compare("CYLINDER") == 0){
             string radius;
             getline(inFile,radius);
@@ -34,9 +41,13 @@ int main(){
             getline(inFile,height);
             float r = stof(radius);
             float h = stof(height);
-            Cylinder cylinder (r,h);   
-            CylinderFunc(cylinder);    
+            cout << "Set values";
+            Cylinder cylinder (r,h);
+            cout << "Value Created";   
+            CylinderFunc(cylinder); 
+            cout << "Never will be seen!";   
         }
+
         else if (shape.compare("CUBOID") == 0){
             string width;
             getline(inFile,width);
@@ -50,6 +61,7 @@ int main(){
             Cuboid cuboid (w,l,h);
             CuboidFunc(cuboid);
         }
+
     }
 
     else{
@@ -70,31 +82,35 @@ int main(){
             outFile.close();
             CubeFunc(cube);
         }
+
         else if(shape.compare("CYLINDER") == 0){
             Cylinder cylinder = createCylinder();
             float height = cylinder.getCylinderHeight();
             float radius = cylinder.getCylinderRadius();
             outFile << shape + "\n";
-            outFile << to_string(height) + "\n";
             outFile << to_string(radius) + "\n";
+            outFile << to_string(height) + "\n";
             outFile.close();
             CylinderFunc(cylinder);
         }
+
         else if(shape.compare("CUBOID") == 0){
             Cuboid cuboid = createCuboid();
             float length = cuboid.getCuboidLength();
             float width = cuboid.getCuboidWidth();
             float height = cuboid.getCuboidHeight();
             outFile << shape + "\n";
-            outFile << to_string(length) + "\n";
             outFile << to_string(width) + "\n";
+            outFile << to_string(length) + "\n";
             outFile << to_string(height) + "\n";
             outFile.close();
             CuboidFunc(cuboid);
         }
+
         else{
             cout << "Invalid shape" << endl;
         }
+
     }
 
     return 0;
@@ -141,11 +157,13 @@ Cuboid createCuboid(){
 
 void CubeFunc(Cube c){
     Sensors s = c.returnSensor();
-
     cout<< "Sensor ID: " + s.getSensorID() << endl;
     cout << "Vessel has maximum volume of: " + to_string(c.getMaxVolume()) << endl;
     cout << "This is a " + c.getShapeID() << endl;
     cout << "It has a side of: " + to_string(c.getCubeSide()) << endl;
+
+    mysql_init(&mysql);
+    connection = mysql_real_connect(&mysql, ip, usr, pass, db, 0, NULL, 0);
 
     while(true){
         s.update();
@@ -154,29 +172,46 @@ void CubeFunc(Cube c){
         float distance = (s.getDuration()/2/1000000)*speedOfSoundCM;
         float level = c.getCubeSide() - distance;
         float volume = c.getCubeSide()*c.getCubeSide()*level;
+
+        if(volume >= c.getMaxVolume() || volume < 0)
+        {
+            continue;
+        }
+    
         cout << c.getShapeID()+" Container with a volume of "+ to_string(volume)+" and has a water level of "+to_string(level) <<endl;
-      //  cout << "current number of cubes: " + to_string(Sensors::getNumberOfSensors()) << endl;
         cout <<"\n";
 
-        mysql_init(&mysql);
+        avgVolume = avgVolume + volume;
+        avgDistance = avgDistance + distance;
+        avgLevel = avgLevel + level;
+        counter++;
 
-	connection = mysql_real_connect(&mysql, ip, usr, pass, db, 0, NULL, 0);
+        if(counter == 10){
+            avgVolume = avgVolume/counter;
+            avgDistance = avgDistance/counter;
+            avgLevel = avgLevel/counter;
+        
+            if (connection==NULL){
+                cout<<mysql_error(&mysql)<<endl;
+            }
 
-	if (connection==NULL)
-	{
-		cout<<mysql_error(&mysql)<<endl;
-	}
-
-	else
-	{
-		(mysql_query(connection, "INSERT into sensor VALUES (" . s.getSensorID() . "," . s.getDuration() . "," . s.getTemperature() << "," . distance . "," . volume . ");"));
-		if (query_state !=0) {
-		cout << mysql_error(connection) << endl;
-		
-		}
-	}
-	mysql_close(&mysql);
+            else{
+                string q = "INSERT into sensor VALUES ('" + s.getSensorID() + "','" + to_string(s.getDuration()) + "','" + to_string(s.getTemperature()) + "','" + to_string(avgDistance) + "','" + to_string(avgVolume) + "','" + c.getShapeID() + "',CURRENT_TIMESTAMP());";
+                const char* query = q.c_str();  
+                mysql_query(connection,query);        
+                if (query_state !=0) {
+                    cout << mysql_error(connection) << endl;
+                }
+                cout << "Sending to db\n" << endl;
+            }
+            counter = 0;
+            avgVolume = 0;
+            avgDistance = 0;
+            avgLevel = 0;
+        }
+    
     }
+    mysql_close(&mysql);
 }
 
 void CylinderFunc(Cylinder c){
@@ -187,35 +222,62 @@ void CylinderFunc(Cylinder c){
     cout << "This is a " + c.getShapeID() << endl;
     cout << "It has a height, radius of: " << to_string(c.getCylinderHeight()) + " cm, " + to_string(c.getCylinderRadius()) + "cm" << endl;
 
+    cout << "\nHello!\n" << endl;
+
+    mysql_init(&mysql);
+    connection = mysql_real_connect(&mysql, ip, usr, pass, db, 0, NULL, 0);
+
     while(true){
+       // cout << "Hello before update" << endl; //remove me!
         s.update();
+       // cout << "Hello after update" << endl;  //remove me!
         float speedOfSoundM = 331+0.6*s.getTemperature();
         float speedOfSoundCM = speedOfSoundM*100;
         float distance = (s.getDuration()/2/1000000)*speedOfSoundCM;
         float level = c.getCylinderHeight() - distance;
         float volume = (M_PI * c.getCylinderRadius() * c.getCylinderRadius()) * level;
+        //cout << "Hello after calculations" << endl;
+        //cout << volume << end1;
+        //cout << MaxVolume << end1;
+        if(volume >= c.getMaxVolume() || volume < 0)
+        {
+            continue;
+        }
         cout << c.getShapeID()+" Container with a volume of "+ to_string(volume)+" and has a water level of "+to_string(level) <<endl;
-      //  cout << "current number of cubes: " + to_string(Sensors::getNumberOfSensors()) << endl;
         cout <<"\n";
 
-        mysql_init(&mysql);
+        avgVolume = avgVolume + volume;
+        avgDistance = avgDistance + distance;
+        avgLevel = avgLevel + level;
+        counter++;
 
-	connection = mysql_real_connect(&mysql, ip, usr, pass, db, 0, NULL, 0);
+        if(counter == 10)
+        {
+            avgVolume = avgVolume/counter;
+            avgDistance = avgDistance/counter;
+            avgLevel = avgLevel/counter;
 
-	if (connection==NULL)
-	{
-		cout<<mysql_error(&mysql)<<endl;
-	}
+            if (connection==NULL){
+                cout<<mysql_error(&mysql)<<endl;
+            }
 
-	else
-	{
-        (mysql_query(connection, "INSERT into sensor VALUES (" . s.getSensorID() . "," . s.getDuration() . "," . s.getTemperature() << "," . distance . "," . volume . ");"));
-		cout << mysql_error(connection) << endl;
-		
-		}
-	}
-	mysql_close(&mysql);
+            else{
+                string q = "INSERT into sensor VALUES ('" + s.getSensorID() + "','" + to_string(s.getDuration()) + "','" + to_string(s.getTemperature()) + "','" + to_string(avgDistance) + "','" + to_string(avgVolume) + "','" + c.getShapeID() + "',CURRENT_TIMESTAMP());";
+                const char* query = q.c_str();  
+                mysql_query(connection,query);         
+                if (query_state !=0) {
+                    cout << mysql_error(connection) << endl;
+                }
+                cout << "Sending to db\n" << endl;
+            }
+            
+            counter = 0;
+            avgVolume = 0;
+            avgDistance = 0;
+            avgLevel = 0;
+        }
     }
+    mysql_close(&mysql);
 }
 
 void CuboidFunc(Cuboid c){
@@ -226,6 +288,9 @@ void CuboidFunc(Cuboid c){
     cout << "This is a " + c.getShapeID() << endl;
     cout << "It has a height, width and length of: " << to_string(c.getCuboidHeight()) + " cm, " + to_string(c.getCuboidWidth()) + " cm, " + to_string(c.getCuboidLength()) + "cm" << endl;
 
+    mysql_init(&mysql);
+    connection = mysql_real_connect(&mysql, ip, usr, pass, db, 0, NULL, 0);
+
     while(true){
         s.update();
         float speedOfSoundM = 331+0.6*s.getTemperature();
@@ -233,27 +298,47 @@ void CuboidFunc(Cuboid c){
         float distance = (s.getDuration()/2/1000000)*speedOfSoundCM;
         float level = c.getCuboidHeight() - distance;
         float volume = c.getCuboidLength() * c.getCuboidWidth() * level;
+
+         if(volume >= c.getMaxVolume() || volume < 0)
+        {
+            continue;
+        }
         cout << c.getShapeID()+" Container with a volume of "+ to_string(volume)+" cm cubed and has a water level of "+to_string(level) <<endl;
-      //  cout << "current number of cubes: " + to_string(Sensors::getNumberOfSensors()) << endl;
         cout <<"\n";
 
-        mysql_init(&mysql);
+        avgVolume = avgVolume + volume;
+        avgDistance = avgDistance + distance;
+        avgLevel = avgLevel + level;
+        counter++;
 
-	connection = mysql_real_connect(&mysql, ip, usr, pass, db, 0, NULL, 0);
+        if(counter == 10)
+        {
+            avgVolume = avgVolume/counter;
+            avgDistance = avgDistance/counter;
+            avgLevel = avgLevel/counter;
 
-	if (connection==NULL)
-	{
-		cout<<mysql_error(&mysql)<<endl;
-	}
+            if (connection==NULL)
+            {
+                cout<<mysql_error(&mysql)<<endl;
+            }
 
-	else
-	{
-        (mysql_query(connection, "INSERT into sensor VALUES (" . s.getSensorID() . "," . s.getDuration() . "," . s.getTemperature() << "," . distance . "," . volume . ");"));		
-        if (query_state !=0) {
-		cout << mysql_error(connection) << endl;
-		
-		}
-	}
-	mysql_close(&mysql);
+            else
+            {
+                string q = "INSERT into sensor VALUES ('" + s.getSensorID() + "','" + to_string(s.getDuration()) + "','" + to_string(s.getTemperature()) + "','" + to_string(distance) + "','" + to_string(volume) + "','" + c.getShapeID() + "', CURRENT_TIMESTAMP());";
+                const char* query = q.c_str();   
+                mysql_query(connection,query);
+                if (query_state !=0) {
+                    cout << mysql_error(connection) << endl;
+                }
+                cout << "Sending to db\n" << endl;
+            }
+
+            counter = 0;
+            avgVolume = 0;
+            avgDistance = 0;
+            avgLevel = 0;
+
+        }
     }
+    mysql_close(&mysql);
 }

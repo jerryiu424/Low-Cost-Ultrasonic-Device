@@ -25,6 +25,7 @@ void Sensors::update(){
     //if threres a line, read it and split
     std::string line;
     if (getline(inFile, line)){
+        //std::cout << "Hello from Sensors::update()" << std::endl; //remove me!
         std::stringstream ss(line);
         std::string duration;
         getline(ss,duration, ' ');
@@ -36,6 +37,7 @@ void Sensors::update(){
             SDuration = stof(duration);
             STemperature = stof(temperature);
         }
+        //std::cout << duration + '\t' + temperature << std::endl; //remove me!
     }
     inFile.close();
 }
