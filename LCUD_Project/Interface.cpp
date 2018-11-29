@@ -222,9 +222,9 @@ void CylinderFunc(Cylinder c){
     cout << "\nHello!\n" << endl;
 
     while(true){
-        cout << "\nHello 1\n" << endl;
+        cout << "Hello 1\n" << endl;
         s.update();
-        cout << "\nHello 2\n" << endl;
+        cout << "Hello 2\n" << endl;
         float speedOfSoundM = 331+0.6*s.getTemperature();
         float speedOfSoundCM = speedOfSoundM*100;
         float distance = (s.getDuration()/2/1000000)*speedOfSoundCM;
