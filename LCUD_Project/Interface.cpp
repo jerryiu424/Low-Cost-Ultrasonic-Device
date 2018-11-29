@@ -219,6 +219,8 @@ void CylinderFunc(Cylinder c){
     cout << "This is a " + c.getShapeID() << endl;
     cout << "It has a height, radius of: " << to_string(c.getCylinderHeight()) + " cm, " + to_string(c.getCylinderRadius()) + "cm" << endl;
 
+    cout << "\nHello!\n" << endl;
+
     while(true){
         s.update();
         float speedOfSoundM = 331+0.6*s.getTemperature();
