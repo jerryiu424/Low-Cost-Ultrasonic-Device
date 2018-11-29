@@ -222,6 +222,7 @@ void CylinderFunc(Cylinder c){
     cout << "\nHello!\n" << endl;
 
     mysql_init(&mysql);
+    connection = mysql_real_connect(&mysql, ip, usr, pass, db, 0, NULL, 0);
 
     while(true){
         cout << "Hello 1\n" << endl;
@@ -232,7 +233,7 @@ void CylinderFunc(Cylinder c){
         float distance = (s.getDuration()/2/1000000)*speedOfSoundCM;
         float level = c.getCylinderHeight() - distance;
         float volume = (M_PI * c.getCylinderRadius() * c.getCylinderRadius()) * level;
-        cout << "\nHello 3\n" << endl;
+        cout << "Hello 3\n" << endl;
 
         if(volume >= c.getMaxVolume() || volume < 0)
         {
@@ -243,7 +244,7 @@ void CylinderFunc(Cylinder c){
 
         //mysql_init(&mysql);
 
-        connection = mysql_real_connect(&mysql, ip, usr, pass, db, 0, NULL, 0);
+        //connection = mysql_real_connect(&mysql, ip, usr, pass, db, 0, NULL, 0);
 
         avgVolume = avgVolume + volume;
         avgDistance = avgDistance + distance;
