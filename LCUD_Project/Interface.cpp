@@ -196,7 +196,7 @@ void CubeFunc(Cube c){
             }
 
             else{
-                string q = "INSERT into sensor VALUES ('" + s.getSensorID() + "','" + to_string(s.getDuration()) + "','" + to_string(s.getTemperature()) + "','" + to_string(avgDistance) + "','" + to_string(avgVolume) + "','" + c.getShapeID() + "',CURRENT_TIMESTAMP());";
+                string q = "INSERT into sensor VALUES ('" + s.getSensorID() + "','" + to_string(s.getDuration()) + "','" + to_string(s.getTemperature()) + "','" + to_string(avgDistance) + "','" + to_string(avgVolume) + "','" + to_string(avgLevel) + "','" + to_string((avgLevel/c.getCubeSide())*100) + "','" + c.getShapeID() + "',CURRENT_TIMESTAMP());";
                 const char* query = q.c_str();  
                 mysql_query(connection,query);        
                 if (query_state !=0) {
@@ -227,12 +227,16 @@ void CylinderFunc(Cylinder c){
     connection = mysql_real_connect(&mysql, ip, usr, pass, db, 0, NULL, 0);
 
     while(true){
+       
         s.update();
         float speedOfSoundM = 331+0.6*s.getTemperature();
         float speedOfSoundCM = speedOfSoundM*100;
         float distance = (s.getDuration()/2/1000000)*speedOfSoundCM;
         float level = c.getCylinderHeight() - distance;
         float volume = (M_PI * c.getCylinderRadius() * c.getCylinderRadius()) * level;
+       
+    
+
         if(volume >= c.getMaxVolume() || volume < 0)
         {
             continue;
@@ -250,15 +254,16 @@ void CylinderFunc(Cylinder c){
             avgVolume = avgVolume/counter;
             avgDistance = avgDistance/counter;
             avgLevel = avgLevel/counter;
-
+            cout << avgLevel/c.getCylinderHeight() << endl;
             if (connection==NULL){
                 cout<<mysql_error(&mysql)<<endl;
             }
 
             else{
-                string q = "INSERT into sensor VALUES ('" + s.getSensorID() + "','" + to_string(s.getDuration()) + "','" + to_string(s.getTemperature()) + "','" + to_string(avgDistance) + "','" + to_string(avgVolume) + "','" + c.getShapeID() + "',CURRENT_TIMESTAMP());";
+                string q = "INSERT into sensor VALUES ('" + s.getSensorID() + "','" + to_string(s.getDuration()) + "','" + to_string(s.getTemperature()) + "','" + to_string(avgDistance) + "','" + to_string(avgVolume) + "','" + to_string(avgLevel) + "','" + to_string((avgLevel/c.getCylinderHeight()) * 100) + "','"  + c.getShapeID() + "',CURRENT_TIMESTAMP());";
                 const char* query = q.c_str();  
-                mysql_query(connection,query);         
+                mysql_query(connection,query);   
+                 
                 if (query_state !=0) {
                     cout << mysql_error(connection) << endl;
                 }
@@ -316,7 +321,7 @@ void CuboidFunc(Cuboid c){
 
             else
             {
-                string q = "INSERT into sensor VALUES ('" + s.getSensorID() + "','" + to_string(s.getDuration()) + "','" + to_string(s.getTemperature()) + "','" + to_string(distance) + "','" + to_string(volume) + "','" + c.getShapeID() + "', CURRENT_TIMESTAMP());";
+                string q = "INSERT into sensor VALUES ('" + s.getSensorID() + "','" + to_string(s.getDuration()) + "','" + to_string(s.getTemperature()) + "','" + to_string(avgDistance) + "','" + to_string(avgVolume) + "','" + to_string(avgLevel) + "','" + to_string((avgLevel/c.getCuboidHeight())*100) + "','"  + c.getShapeID() + "', CURRENT_TIMESTAMP());";
                 const char* query = q.c_str();   
                 mysql_query(connection,query);
                 if (query_state !=0) {
