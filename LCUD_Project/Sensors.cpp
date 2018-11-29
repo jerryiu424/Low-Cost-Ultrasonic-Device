@@ -3,7 +3,7 @@
  * 
  * @details
  *          This file implements the Sensors class member methods;
- *          It consists of the constructor, the destructor, the update function,
+ *          It consists of the constructor, the update function,
  *          and a toString method
  *
  * 
@@ -21,20 +21,28 @@
  *
  * @param
  * @return
+ * 
  * @author Vance Gullberg
  */
+
 Sensors::Sensors(){
-	int ID = 0; //sensorID;
+	int ID = 0;                       //sensorID;
     SensorID = std::to_string(ID);    //convert int to string
-    file = "/dev/ttyACM" + SensorID;
-    //NumSensors++;    //increment total number of sensors by 1
+    file = "/dev/ttyACM" + SensorID;  //setting file attribute to directory
 }
 
-//destructor
-Sensors::~Sensors(){
-}
-
-
+/**
+ * @brief Sensors constructor
+ * 
+ * @details
+ *          
+ *
+ * @param
+ * @return
+ * 
+ * @author Marco Manuel
+ * @author Morgan O'Brien
+ */
 void Sensors::update(){
     std::ifstream inFile;
     inFile.open(file);
@@ -58,7 +66,17 @@ void Sensors::update(){
     inFile.close();
 }
 
-//tostring
+/**
+ * @brief Sensors toString method
+ * 
+ * @details
+ *          
+ *
+ * @param
+ * @return
+ * 
+ * @author Vance Gullberg
+ */
 std::string Sensors::to_string(){
     return "Sensor number "+SensorID+" currently has duration "+std::to_string(SDuration)+" and temperature "+std::to_string(STemperature);
 }

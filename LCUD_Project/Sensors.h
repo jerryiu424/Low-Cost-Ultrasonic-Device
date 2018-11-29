@@ -24,7 +24,7 @@ class Sensors{
         std::string file;
     public:
         Sensors();      // Function declaration for the constructor
-        ~Sensors();     // Function declaration for the destructor
+        ~Sensors(){;}   // The destructor method
         void update();  // Function declaration for update()
 
         std::string getSensorID(){return SensorID;}
