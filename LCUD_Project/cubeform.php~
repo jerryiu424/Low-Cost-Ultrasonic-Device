@@ -21,8 +21,6 @@
 			file.writeline(shape);
 			file.writeline(side);
 			
-			console.log(side);
-			
 			file.close();
 		
 		}
