@@ -8,13 +8,13 @@
 #include <bits/stdc++.h>
 
 /** 
- *  \brief      The Sensor class for the device.
+ *  @brief      The Sensor class for the device.
  *
- *  \details    This class utilizes the sensor connected to the Arduino and stores the values it recieves
+ *  @details    This class utilizes the sensor connected to the Arduino and stores the values it recieves
  *              into attributes that can be used to calculate the volume in a container.
  *              The attributes of the class are the ID of the sensor, the duration, temperature 
  * 
- *  \author    Vance Gullberg
+ *  @author    Vance Gullberg
  */
 class Sensors{
     private:
