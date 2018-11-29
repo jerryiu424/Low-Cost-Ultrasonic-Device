@@ -4,6 +4,7 @@
 #include <iostream>
 #include <fstream>
 #include <math.h>
+#include <mysql/mysql.h>
 #include "Cube.h"
 #include "Cylinder.h"
 #include "Cuboid.h"

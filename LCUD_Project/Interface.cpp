@@ -1,7 +1,6 @@
-#include "Interface.h"
-#include <mysql/mysql.h>
+//g++ -o main_interface Interface.cpp Cube.cpp Cylinder.cpp Cuboid.cpp Container.cpp Sensors.cpp -L/usr/include/mysql -lmysqlclient -I/usr/include/mysql
 
-using namespace std;
+#include "Interface.h"
 ifstream inFile;
 
 MYSQL mysql,*connection;
@@ -18,11 +17,14 @@ float avgVolume;
 float avgDistance;
 float avgLevel;
 int counter = 0;
+
 int main(){
     string shape;
     inFile.open("data.txt");
+
     if(inFile){
         getline(inFile,shape);
+
         if(shape.compare("CUBE") == 0){
             string side;
             getline(inFile,side);
@@ -30,6 +32,7 @@ int main(){
             Cube cube (s);
             CubeFunc(cube);
         }
+
         else if(shape.compare("CYLINDER") == 0){
             string radius;
             getline(inFile,radius);
@@ -40,6 +43,7 @@ int main(){
             Cylinder cylinder (r,h);   
             CylinderFunc(cylinder);    
         }
+
         else if (shape.compare("CUBOID") == 0){
             string width;
             getline(inFile,width);
@@ -53,6 +57,7 @@ int main(){
             Cuboid cuboid (w,l,h);
             CuboidFunc(cuboid);
         }
+
     }
 
     else{
@@ -73,6 +78,7 @@ int main(){
             outFile.close();
             CubeFunc(cube);
         }
+
         else if(shape.compare("CYLINDER") == 0){
             Cylinder cylinder = createCylinder();
             float height = cylinder.getCylinderHeight();
@@ -83,6 +89,7 @@ int main(){
             outFile.close();
             CylinderFunc(cylinder);
         }
+
         else if(shape.compare("CUBOID") == 0){
             Cuboid cuboid = createCuboid();
             float length = cuboid.getCuboidLength();
@@ -95,9 +102,11 @@ int main(){
             outFile.close();
             CuboidFunc(cuboid);
         }
+
         else{
             cout << "Invalid shape" << endl;
         }
+
     }
 
     return 0;
@@ -163,46 +172,41 @@ void CubeFunc(Cube c){
         }
     
         cout << c.getShapeID()+" Container with a volume of "+ to_string(volume)+" and has a water level of "+to_string(level) <<endl;
-      //  cout << "current number of cubes: " + to_string(Sensors::getNumberOfSensors()) << endl;
         cout <<"\n";
 
         mysql_init(&mysql);
 
-	connection = mysql_real_connect(&mysql, ip, usr, pass, db, 0, NULL, 0);
+        connection = mysql_real_connect(&mysql, ip, usr, pass, db, 0, NULL, 0);
 
-    avgVolume = avgVolume + volume;
-    avgDistance = avgDistance + distance;
-    avgLevel = avgLevel + level;
-    counter++;
+        avgVolume = avgVolume + volume;
+        avgDistance = avgDistance + distance;
+        avgLevel = avgLevel + level;
+        counter++;
 
-    if(counter == 10)
-    {
-        avgVolume = avgVolume/counter;
-        avgDistance = avgDistance/counter;
-        avgLevel = avgLevel/counter;
-    
-        if (connection==NULL)
-        {
-            cout<<mysql_error(&mysql)<<endl;
+        if(counter == 10){
+            avgVolume = avgVolume/counter;
+            avgDistance = avgDistance/counter;
+            avgLevel = avgLevel/counter;
+        
+            if (connection==NULL){
+                cout<<mysql_error(&mysql)<<endl;
+            }
+
+            else{
+                string q = "INSERT into sensor VALUES ('" + s.getSensorID() + "','" + to_string(s.getDuration()) + "','" + to_string(s.getTemperature()) + "','" + to_string(avgDistance) + "','" + to_string(avgVolume) + "',CURRENT_TIMESTAMP());";
+                const char* query = q.c_str();  
+                mysql_query(connection,query);        
+                if (query_state !=0) {
+                    cout << mysql_error(connection) << endl;
+                }
+                cout << "Sending to db\n" << endl;
+            }
+            mysql_close(&mysql);
+            counter = 0;
+            avgVolume = 0;
+            avgDistance = 0;
+            avgLevel = 0;
         }
-
-        else
-        {
-            string q = "INSERT into sensor VALUES ('" + s.getSensorID() + "','" + to_string(s.getDuration()) + "','" + to_string(s.getTemperature()) + "','" + to_string(avgDistance) + "','" + to_string(avgVolume) + "',CURRENT_TIMESTAMP());";
-        const char* query = q.c_str();  
-        mysql_query(connection,query);        
-            if (query_state !=0) {
-            cout << mysql_error(connection) << endl;
-            
-		}
-        cout << "Sending to db" << endl;
-	}
-	mysql_close(&mysql);
-    counter = 0;
-    avgVolume = 0;
-    avgDistance = 0;
-    avgLevel = 0;
-    }
     
     }
 }
@@ -228,47 +232,43 @@ void CylinderFunc(Cylinder c){
             continue;
         }
         cout << c.getShapeID()+" Container with a volume of "+ to_string(volume)+" and has a water level of "+to_string(level) <<endl;
-      //  cout << "current number of cubes: " + to_string(Sensors::getNumberOfSensors()) << endl;
         cout <<"\n";
 
         mysql_init(&mysql);
 
-	connection = mysql_real_connect(&mysql, ip, usr, pass, db, 0, NULL, 0);
+        connection = mysql_real_connect(&mysql, ip, usr, pass, db, 0, NULL, 0);
 
-    avgVolume = avgVolume + volume;
-    avgDistance = avgDistance + distance;
-    avgLevel = avgLevel + level;
-    counter++;
+        avgVolume = avgVolume + volume;
+        avgDistance = avgDistance + distance;
+        avgLevel = avgLevel + level;
+        counter++;
 
-    if(counter == 10)
-    {
-        avgVolume = avgVolume/counter;
-        avgDistance = avgDistance/counter;
-        avgLevel = avgLevel/counter;
-
-        if (connection==NULL)
+        if(counter == 10)
         {
-            cout<<mysql_error(&mysql)<<endl;
+            avgVolume = avgVolume/counter;
+            avgDistance = avgDistance/counter;
+            avgLevel = avgLevel/counter;
+
+            if (connection==NULL){
+                cout<<mysql_error(&mysql)<<endl;
+            }
+
+            else{
+                string q = "INSERT into sensor VALUES ('" + s.getSensorID() + "','" + to_string(s.getDuration()) + "','" + to_string(s.getTemperature()) + "','" + to_string(avgDistance) + "','" + to_string(avgVolume) + "',CURRENT_TIMESTAMP());";
+                const char* query = q.c_str();  
+                mysql_query(connection,query);         
+                if (query_state !=0) {
+                    cout << mysql_error(connection) << endl;
+                }
+                cout << "Sending to db\n" << endl;
+            }
+            
+            mysql_close(&mysql);
+            counter = 0;
+            avgVolume = 0;
+            avgDistance = 0;
+            avgLevel = 0;
         }
-
-        else
-        {
-            string q = "INSERT into sensor VALUES ('" + s.getSensorID() + "','" + to_string(s.getDuration()) + "','" + to_string(s.getTemperature()) + "','" + to_string(avgDistance) + "','" + to_string(avgVolume) + "',CURRENT_TIMESTAMP());";
-            const char* query = q.c_str();  
-            mysql_query(connection,query);         
-            if (query_state !=0) {
-                cout << mysql_error(connection) << endl;
-		
-		}
-        cout << "Sending to db" << endl;
-    }
-	mysql_close(&mysql);
-    counter = 0;
-    avgVolume = 0;
-    avgDistance = 0;
-    avgLevel = 0;
-    }
-
     }
 }
 
@@ -293,47 +293,46 @@ void CuboidFunc(Cuboid c){
             continue;
         }
         cout << c.getShapeID()+" Container with a volume of "+ to_string(volume)+" cm cubed and has a water level of "+to_string(level) <<endl;
-      //  cout << "current number of cubes: " + to_string(Sensors::getNumberOfSensors()) << endl;
         cout <<"\n";
 
         mysql_init(&mysql);
 
-	connection = mysql_real_connect(&mysql, ip, usr, pass, db, 0, NULL, 0);
+        connection = mysql_real_connect(&mysql, ip, usr, pass, db, 0, NULL, 0);
 
-    avgVolume = avgVolume + volume;
-    avgDistance = avgDistance + distance;
-    avgLevel = avgLevel + level;
-    counter++;
+        avgVolume = avgVolume + volume;
+        avgDistance = avgDistance + distance;
+        avgLevel = avgLevel + level;
+        counter++;
 
-    if(counter == 10)
-    {
-        avgVolume = avgVolume/counter;
-        avgDistance = avgDistance/counter;
-        avgLevel = avgLevel/counter;
-
-        if (connection==NULL)
+        if(counter == 10)
         {
-            cout<<mysql_error(&mysql)<<endl;
+            avgVolume = avgVolume/counter;
+            avgDistance = avgDistance/counter;
+            avgLevel = avgLevel/counter;
+
+            if (connection==NULL)
+            {
+                cout<<mysql_error(&mysql)<<endl;
+            }
+
+            else
+            {
+                string q = "INSERT into sensor VALUES ('" + s.getSensorID() + "','" + to_string(s.getDuration()) + "','" + to_string(s.getTemperature()) + "','" + to_string(distance) + "','" + to_string(volume) + "', CURRENT_TIMESTAMP());";
+                const char* query = q.c_str();   
+                mysql_query(connection,query);
+                if (query_state !=0) {
+                    cout << mysql_error(connection) << endl;
+                }
+                cout << "Sending to db\n" << endl;
+            }
+
+            mysql_close(&mysql);
+            counter = 0;
+            avgVolume = 0;
+            avgDistance = 0;
+            avgLevel = 0;
+
+
         }
-
-        else
-        {
-            string q = "INSERT into sensor VALUES ('" + s.getSensorID() + "','" + to_string(s.getDuration()) + "','" + to_string(s.getTemperature()) + "','" + to_string(distance) + "','" + to_string(volume) + "', CURRENT_TIMESTAMP());";
-            const char* query = q.c_str();   
-        mysql_query(connection,query);
-            if (query_state !=0) {
-            cout << mysql_error(connection) << endl;
-		
-		}
-        cout << "Sending to db" << endl;
-	}
-	mysql_close(&mysql);
-    counter = 0;
-    avgVolume = 0;
-    avgDistance = 0;
-    avgLevel = 0;
-
-
-    }
     }
 }
