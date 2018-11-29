@@ -201,7 +201,7 @@ void CubeFunc(Cube c){
                 }
                 cout << "Sending to db\n" << endl;
             }
-            mysql_close(connection);
+            mysql_close(&mysql);
             counter = 0;
             avgVolume = 0;
             avgDistance = 0;
@@ -221,6 +221,8 @@ void CylinderFunc(Cylinder c){
 
     cout << "\nHello!\n" << endl;
 
+    mysql_init(&mysql);
+
     while(true){
         cout << "Hello 1\n" << endl;
         s.update();
@@ -239,7 +241,7 @@ void CylinderFunc(Cylinder c){
         cout << c.getShapeID()+" Container with a volume of "+ to_string(volume)+" and has a water level of "+to_string(level) <<endl;
         cout <<"\n";
 
-        mysql_init(&mysql);
+        //mysql_init(&mysql);
 
         connection = mysql_real_connect(&mysql, ip, usr, pass, db, 0, NULL, 0);
 
@@ -268,13 +270,14 @@ void CylinderFunc(Cylinder c){
                 cout << "Sending to db\n" << endl;
             }
             
-            mysql_close(connection);
+            //mysql_close(&mysql);
             counter = 0;
             avgVolume = 0;
             avgDistance = 0;
             avgLevel = 0;
         }
     }
+    mysql_close(&mysql);
 }
 
 void CuboidFunc(Cuboid c){
@@ -331,7 +334,7 @@ void CuboidFunc(Cuboid c){
                 cout << "Sending to db\n" << endl;
             }
 
-            mysql_close(connection);
+            mysql_close(&mysql);
             counter = 0;
             avgVolume = 0;
             avgDistance = 0;
