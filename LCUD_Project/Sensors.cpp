@@ -1,7 +1,9 @@
-#include <unistd.h>
-#include <dirent.h>
-#include <iostream>
-#include <bits/stdc++.h>
+/**
+ * /brief Sensors class methods
+ * 
+ * 
+ *
+ */
 #include "Sensors.h"
    
 //constructor
