@@ -237,8 +237,8 @@ void CylinderFunc(Cylinder c){
         float level = c.getCylinderHeight() - distance;
         float volume = (M_PI * c.getCylinderRadius() * c.getCylinderRadius()) * level;
         //cout << "Hello after calculations" << endl;
-        cout << volume << end1;
-        cout << MaxVolume << end1;
+    
+
         if(volume >= c.getMaxVolume() || volume < 0)
         {
             continue;
