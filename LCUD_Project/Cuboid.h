@@ -18,7 +18,7 @@ class Cuboid : public Container{
         Cuboid(float width,float length,float height);  // The function declaration of the constructor
         ~Cuboid(){;}                                    // The destructor method
 
-        std::string to_string();    // Function declaration for the to_string method, which will return a formatted string containing the volume and side lengths
+        std::string to_string();    // Function declaration for the to_string method, which will return a formatted string containing the volume
 
         /** 
          *  @brief      The getter method for the width of the cuboid.

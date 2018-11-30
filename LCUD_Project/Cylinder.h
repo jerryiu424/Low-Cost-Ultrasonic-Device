@@ -18,7 +18,7 @@ class Cylinder : public Container{
         Cylinder(float radius, float height);   // The function declaration of the constructor
         ~Cylinder(){;}                          // The destructor method
 
-        std::string to_string();    // Function declaration for the to_string method, which will return a formatted string containing the volume and side lengths
+        std::string to_string();    // Function declaration for the to_string method, which will return a formatted string containing the volume
 
         /** 
          *  @brief      The getter method for the radius of the cylinder.
