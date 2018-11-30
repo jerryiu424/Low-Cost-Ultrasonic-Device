@@ -1,19 +1,39 @@
 #ifndef CONTAINER_H
 #define CONTAINER_H
 #include "Sensors.h"
-     
+
+/** 
+ *  @brief      The Container class.
+ *
+ *  @details    This class is the parent class for the containers that will inherit the same basic attributes.
+ *              Since each shape that can be utilized will have different ways of calculating volume (in other
+ *              words, a cube and a cylinder do not share the same geometric properties), this class will be 
+ *              inherited such that each sub-class will have an attributed sensor, a maximum possible volume,
+ *              and a string that identifies the specific shape. 
+ * 
+ *  @author     Vance Gullberg
+ */ 
 class Container{
     protected:
-        //attributes
         Sensors s;
         float MaxVolume;
         std::string ShapeID;
     public:
-        //methods
-        Container();
-        ~Container(){;}
-        float getMaxVolume(){return MaxVolume;}
-        std::string getShapeID(){return ShapeID;}
-        Sensors returnSensor();
+        Container();        // Function header for the constructor
+        ~Container(){;}     // The destructor method
+
+        /**
+         *  @brief      The getter method for the max volume.
+         *  @return     the MaxVolume attribute.
+         */
+        float getMaxVolume(){return MaxVolume;}     
+
+        /**
+         *  @brief      The getter method for the type of container.
+         *  @return     the ShapeID attribute.
+         */
+        std::string getShapeID(){return ShapeID;}   
+
+        Sensors returnSensor();     // // Function declaration for the to_string method, which will return a formatted string containing the duration and temperature
 };
 #endif
