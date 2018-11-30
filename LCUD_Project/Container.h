@@ -19,7 +19,7 @@ class Container{
         float MaxVolume;
         std::string ShapeID;
     public:
-        Container();        // Function header for the constructor
+        Container(){}        // The constructor
         ~Container(){;}     // The destructor method
 
         /**
@@ -34,6 +34,10 @@ class Container{
          */
         std::string getShapeID(){return ShapeID;}   
 
-        Sensors returnSensor();     // // Function declaration for the to_string method, which will return a formatted string containing the duration and temperature
+        /** 
+         *  @brief      The getter method for the Sensors object attatched to this container.
+         *  @return     the Sensors attribute s.
+         */
+        Sensors returnSensor(){return s;}
 };
 #endif
