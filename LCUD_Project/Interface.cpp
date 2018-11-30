@@ -33,12 +33,14 @@ int main(){
             {
                 cout << "Error in configuration file, pointing you to create a new Cube!" << endl;
                 Cube cube = createCube();
+                CubeFunc(cube);
             }
             else{
             float s = stof(side);
             Cube cube (s);
-            }
             CubeFunc(cube);
+            }
+            
         }
 
         else if(shape.compare("CYLINDER") == 0){
@@ -51,6 +53,7 @@ int main(){
             {
                      cout << "Error in configuration file, pointing you to create a new Cylinder!" << endl;
                      Cylinder cylinder = createCylinder();
+                     CylinderFunc(cylinder); 
 
             }
             else {
@@ -59,9 +62,8 @@ int main(){
             cout << "Set values";
             Cylinder cylinder (r,h);
             cout << "Value Created";   
-
+            CylinderFunc(cylinder); 
             }
-             CylinderFunc(cylinder); 
             cout << "Never will be seen!";   
         }
 
@@ -76,14 +78,16 @@ int main(){
             {
                  cout << "Error in configuration file, pointing you to create a new Cylinder!" << endl;
                  Cuboid cuboid = createCuboid();
+                 CuboidFunc(cuboid);
             }
             else{
             float w = stof(width);
             float l = stof(length);
             float h = stof(height);
             Cuboid cuboid (w,l,h);
-            }
             CuboidFunc(cuboid);
+            }
+            
         }
 
     }
