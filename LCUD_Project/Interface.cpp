@@ -265,7 +265,7 @@ void CylinderFunc(Cylinder c){
 
         if(volume >= c.getMaxVolume() || volume < 0)
         {
-            cout << "measurement error" << endl;
+            cout << "measurement error: " << to_string(volume) << endl;
             continue;
         }
         cout << c.getShapeID()+" Container with a volume of "+ to_string(volume)+" and has a water level of "+to_string(level) <<endl;
