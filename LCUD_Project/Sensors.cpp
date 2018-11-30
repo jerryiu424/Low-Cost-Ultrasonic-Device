@@ -47,9 +47,7 @@ void Sensors::update(){
     //if threres a line, read it and split
     std::string line;
     if (getline(inFile, line)){
-        /*
-        uses string stream to split the line on the space
-        */
+        //uses string stream to split the line on the space        
         std::stringstream ss(line);
         std::string duration;
         getline(ss,duration, ' ');
