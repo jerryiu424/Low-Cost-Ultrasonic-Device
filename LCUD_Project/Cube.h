@@ -9,7 +9,7 @@
  *              the only measurement we require is side length. From this we can determine the max possible volume
  *              of the container.
  * 
- *  @author     Vance Gullberg
+ *  @author     Marco Manuel
  */ 
 class Cube : public Container{
     private:
@@ -21,7 +21,7 @@ class Cube : public Container{
         std::string to_string();            // Function declaration for the to_string method, which will return a formatted string containing the volume and side lengths 
 
         /** 
-         *  @brief      The getter method for the side length of the cube..
+         *  @brief      The getter method for the side length of the cube.
          *  @return     the side attribute.
          */
         float getCubeSide(){return side;}

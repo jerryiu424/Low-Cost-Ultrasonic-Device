@@ -1,27 +1,15 @@
 #include "Cuboid.h"
    
 //constructor
-Cuboid::Cuboid(float width,float length,float heigth){
+Cuboid::Cuboid(float width,float length,float height){
     Cwidth = width;
     Clength = length;
-    Cheigth = heigth;
+    Cheight = height;
 
-    MaxVolume = width*length*heigth;
+    MaxVolume = width*length*height;
     ShapeID = "Cuboid";
 }
 
-//get dimensions
-float Cuboid::getCuboidWidth(){
-    return Cwidth;
-}
-
-float Cuboid::getCuboidLength(){
-    return Clength;
-}
-
-float Cuboid::getCuboidHeight(){
-    return Cheigth;
-}
 std::string Cuboid::to_string(){
     return "Type Cuboid with volume: " + std::to_string(MaxVolume);
 }
