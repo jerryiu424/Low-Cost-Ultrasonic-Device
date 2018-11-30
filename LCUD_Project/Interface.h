@@ -28,12 +28,18 @@
 
 using namespace std;
 
+//function declaration for CubeFunc
 void CubeFunc(Cube);
+//function declaration for CylinderFunc
 void CylinderFunc(Cylinder);
+//function declaration for CuboidFunc
 void CuboidFunc(Cuboid);
 
+//function declaration for createCube
 Cube createCube();
+//function declaration for createCylinder
 Cylinder createCylinder();
+//function declaration for createCuboid
 Cuboid createCuboid();
 
 #endif
