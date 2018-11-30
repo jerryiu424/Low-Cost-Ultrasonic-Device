@@ -1,24 +1,37 @@
+/**
+ * @brief Cylinder class methods
+ * 
+ * @details
+ *          This file implements the cylinder class member methods;
+ *          It consists of the constructor, and a toString method
+ * 
+ * @author Jerry Iu
+ */
 #include "Cylinder.h"
    
-//constructor
-Cylinder::Cylinder(float radius, float heigth){
+/**
+ * @brief cylinder constructor
+ * 
+ * @details
+ *          calculates and sets the max volume, shapeid, radius, and height
+ * 
+ */
+Cylinder::Cylinder(float radius, float height){
     Cradius = radius;
-    Cheigth = heigth;
-    MaxVolume = 2*3.14*radius*heigth;
+    Cheight = height;
+    MaxVolume = 2*3.14*radius*height;
     ShapeID = "Cylinder";
 }
 
-//get dimensions
-float Cylinder::getCylinderRadius(){
-    return Cradius;
-}
-
-
-float Cylinder::getCylinderHeight(){
-    return Cheigth;
-}
-
-
+/**
+ * @brief cylinder toString method
+ * 
+ * @details
+ *          returns string of maxVolume
+ *          
+ * @return returns string of data
+ * 
+ */
 std::string Cylinder::to_string(){
     return "Type Cylinder with volume: " + std::to_string(MaxVolume);
 }

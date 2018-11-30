@@ -29,8 +29,15 @@ int main(){
         if(shape.compare("CUBE") == 0){
             string side;
             getline(inFile,side);
+            if(side==NULL)
+            {
+                cout << "Error in configuration file, pointing you to create a new Cube!" << endl;
+                Cube cube = createCube();
+            }
+            else{
             float s = stof(side);
             Cube cube (s);
+            }
             CubeFunc(cube);
         }
 
@@ -39,12 +46,22 @@ int main(){
             getline(inFile,radius);
             string height;
             getline(inFile,height);
+
+            if(radius == NULL || height == NULL)
+            {
+                     cout << "Error in configuration file, pointing you to create a new Cylinder!" << endl;
+                     Cylinder cylinder = createCylinder();
+
+            }
+            else {
             float r = stof(radius);
             float h = stof(height);
             cout << "Set values";
             Cylinder cylinder (r,h);
             cout << "Value Created";   
-            CylinderFunc(cylinder); 
+
+            }
+             CylinderFunc(cylinder); 
             cout << "Never will be seen!";   
         }
 
@@ -55,10 +72,17 @@ int main(){
             getline(inFile,length);
             string height;
             getline(inFile,height);
+            if(width==NULL || length==NULL || height==NULL)
+            {
+                 cout << "Error in configuration file, pointing you to create a new Cylinder!" << endl;
+                 Cuboid cuboid = createCuboid();
+            }
+            else{
             float w = stof(width);
             float l = stof(length);
             float h = stof(height);
             Cuboid cuboid (w,l,h);
+            }
             CuboidFunc(cuboid);
         }
 
@@ -204,10 +228,9 @@ void CubeFunc(Cube c){
                 }
                 cout << "Sending to db\n" << endl;
             }
-            counter = 0;
-            avgVolume = 0;
-            avgDistance = 0;
-            avgLevel = 0;
+
+            counter = avgVolume = avgDistance = avgLevel = 0;
+            
         }
     
     }
@@ -235,11 +258,10 @@ void CylinderFunc(Cylinder c){
         float distance = (s.getDuration()/2/1000000)*speedOfSoundCM;
         float level = c.getCylinderHeight() - distance;
         float volume = (M_PI * c.getCylinderRadius() * c.getCylinderRadius()) * level;
-       
-    
 
         if(volume >= c.getMaxVolume() || volume < 0)
         {
+            cout << "measurement error" << endl;
             continue;
         }
         cout << c.getShapeID()+" Container with a volume of "+ to_string(volume)+" and has a water level of "+to_string(level) <<endl;
@@ -271,11 +293,9 @@ void CylinderFunc(Cylinder c){
                 cout << "Sending to db\n" << endl;
             }
             
-            counter = 0;
-            avgVolume = 0;
-            avgDistance = 0;
-            avgLevel = 0;
+            counter = avgVolume = avgDistance = avgLevel = 0; //change back?
         }
+        
     }
     mysql_close(&mysql);
 }
@@ -299,7 +319,7 @@ void CuboidFunc(Cuboid c){
         float level = c.getCuboidHeight() - distance;
         float volume = c.getCuboidLength() * c.getCuboidWidth() * level;
 
-         if(volume >= c.getMaxVolume() || volume < 0)
+        if(volume >= c.getMaxVolume() || volume < 0)
         {
             continue;
         }
@@ -333,10 +353,7 @@ void CuboidFunc(Cuboid c){
                 cout << "Sending to db\n" << endl;
             }
 
-            counter = 0;
-            avgVolume = 0;
-            avgDistance = 0;
-            avgLevel = 0;
+            counter = avgVolume = avgDistance = avgLevel = 0;
 
         }
     }
