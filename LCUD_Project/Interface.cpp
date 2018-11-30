@@ -29,7 +29,7 @@ int main(){
         if(shape.compare("CUBE") == 0){
             string side;
             getline(inFile,side);
-            if(side==NULL)
+            if(side.empty())
             {
                 cout << "Error in configuration file, pointing you to create a new Cube!" << endl;
                 Cube cube = createCube();
@@ -47,7 +47,7 @@ int main(){
             string height;
             getline(inFile,height);
 
-            if(radius == NULL || height == NULL)
+            if(radius.empty() || height.empty())
             {
                      cout << "Error in configuration file, pointing you to create a new Cylinder!" << endl;
                      Cylinder cylinder = createCylinder();
@@ -72,7 +72,7 @@ int main(){
             getline(inFile,length);
             string height;
             getline(inFile,height);
-            if(width==NULL || length==NULL || height==NULL)
+            if(width.empty() || length.empty() || height.empty())
             {
                  cout << "Error in configuration file, pointing you to create a new Cylinder!" << endl;
                  Cuboid cuboid = createCuboid();
