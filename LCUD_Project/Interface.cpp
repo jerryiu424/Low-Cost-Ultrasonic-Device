@@ -3,8 +3,7 @@
 /** 
  *  @brief      The implementatio of the Interface program.
  *
- *  @details    
- *              This program starts by either loading a pre-existing container, or creates a new one;
+ *  @details    This program starts by either loading a pre-existing container, or creates a new one;
  *              it then reads data from the sensor to determind the volume of the fluid in the container.  
  *              We then periodically take an average of the data, and send it to our database.
  * 
