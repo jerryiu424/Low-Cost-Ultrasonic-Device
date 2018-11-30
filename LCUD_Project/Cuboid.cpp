@@ -14,6 +14,9 @@
  * 
  * @details
  *          calculates and sets the max volume, shapeid, and width, length, and height
+ * @param width Width of Cuboid
+ * @param length Length of cuboid
+ * @param height Heigth of Cuboid
  * 
  */
 Cuboid::Cuboid(float width,float length,float height){

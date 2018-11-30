@@ -15,6 +15,7 @@
  * 
  * @details
  *          calculates and sets the max volume, shapeid, and side
+ * @param side Side of cube.
  * 
  * @author Marco Manuel
  */

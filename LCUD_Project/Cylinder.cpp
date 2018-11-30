@@ -14,6 +14,8 @@
  * 
  * @details
  *          calculates and sets the max volume, shapeid, radius, and height
+ * @param radius
+ * @param height
  * 
  */
 Cylinder::Cylinder(float radius, float height){
