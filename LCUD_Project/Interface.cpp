@@ -29,16 +29,18 @@ int main(){
         if(shape.compare("CUBE") == 0){
             string side;
             getline(inFile,side);
-            if(side==NULL)
+            if(side.empty())
             {
                 cout << "Error in configuration file, pointing you to create a new Cube!" << endl;
                 Cube cube = createCube();
+                CubeFunc(cube);
             }
             else{
             float s = stof(side);
             Cube cube (s);
-            }
             CubeFunc(cube);
+            }
+            
         }
 
         else if(shape.compare("CYLINDER") == 0){
@@ -47,10 +49,11 @@ int main(){
             string height;
             getline(inFile,height);
 
-            if(radius == NULL || height == NULL)
+            if(radius.empty() || height.empty())
             {
                      cout << "Error in configuration file, pointing you to create a new Cylinder!" << endl;
                      Cylinder cylinder = createCylinder();
+                     CylinderFunc(cylinder); 
 
             }
             else {
@@ -59,9 +62,8 @@ int main(){
             cout << "Set values";
             Cylinder cylinder (r,h);
             cout << "Value Created";   
-
+            CylinderFunc(cylinder); 
             }
-             CylinderFunc(cylinder); 
             cout << "Never will be seen!";   
         }
 
@@ -72,18 +74,20 @@ int main(){
             getline(inFile,length);
             string height;
             getline(inFile,height);
-            if(width==NULL || length==NULL || height==NULL)
+            if(width.empty() || length.empty() || height.empty())
             {
                  cout << "Error in configuration file, pointing you to create a new Cylinder!" << endl;
                  Cuboid cuboid = createCuboid();
+                 CuboidFunc(cuboid);
             }
             else{
             float w = stof(width);
             float l = stof(length);
             float h = stof(height);
             Cuboid cuboid (w,l,h);
-            }
             CuboidFunc(cuboid);
+            }
+            
         }
 
     }
