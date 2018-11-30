@@ -29,8 +29,15 @@ int main(){
         if(shape.compare("CUBE") == 0){
             string side;
             getline(inFile,side);
+            if(side==NULL)
+            {
+                cout << "Error in configuration file, pointing you to create a new Cube!" << endl;
+                Cube cube = createCube();
+            }
+            else{
             float s = stof(side);
             Cube cube (s);
+            }
             CubeFunc(cube);
         }
 
@@ -39,12 +46,22 @@ int main(){
             getline(inFile,radius);
             string height;
             getline(inFile,height);
+
+            if(radius == NULL || height == NULL)
+            {
+                     cout << "Error in configuration file, pointing you to create a new Cylinder!" << endl;
+                     Cylinder cylinder = createCylinder();
+
+            }
+            else {
             float r = stof(radius);
             float h = stof(height);
             cout << "Set values";
             Cylinder cylinder (r,h);
             cout << "Value Created";   
-            CylinderFunc(cylinder); 
+
+            }
+             CylinderFunc(cylinder); 
             cout << "Never will be seen!";   
         }
 
@@ -55,10 +72,17 @@ int main(){
             getline(inFile,length);
             string height;
             getline(inFile,height);
+            if(width==NULL || length==NULL || height==NULL)
+            {
+                 cout << "Error in configuration file, pointing you to create a new Cylinder!" << endl;
+                 Cuboid cuboid = createCuboid();
+            }
+            else{
             float w = stof(width);
             float l = stof(length);
             float h = stof(height);
             Cuboid cuboid (w,l,h);
+            }
             CuboidFunc(cuboid);
         }
 
