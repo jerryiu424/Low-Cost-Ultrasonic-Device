@@ -9,6 +9,7 @@
 	background-color: #ddd;
 	transform: rotate(-90deg);
 	position: absolute;
+	border-style: solid;
 }
 
 #myBar {
@@ -17,6 +18,9 @@
 	height: 300px;
 	background-color: #4CAF50;
 	rotation: 90deg;
+	border-style: solid;
+	border-width: 0px 1px 0px 0px;
+	border-color: #006400;
 }
 
 </style>
@@ -69,12 +73,12 @@
 <a href="Group&#32;10.html"><img style="border: 0px solid ; width: 86px; height: 25px;" name="GI" alt="Group Info" title="Group Info" src="images/GI1.png" onmouseover="document.GI.src='images/GI2.png'" onmouseup="document.GI.src='images/GI1.png'" onmouseout="document.GI.src='images/GI1.png'"></a><br>
 
 <!-- Creates table that shows the sensor and its relevant data -->
-<div style="text-align: center;"><big style="font-weight: bold;"><big><big><span style="font-family: American Typewriter;">Low Cost Ultrasonic Device</span></big></big></big><br>
+<div style="text-align: center;"><big style="font-weight: bold;"><big><big><span style="font-family: Helvetica;">Low Cost Ultrasonic Device</span></big></big></big><br>
 <table style="text-align: left; width: 963px; height: 48px; margin-left: auto; margin-right: auto;" border="1" cellpadding="2" cellspacing="2">
   <tbody>
     <tr>
       <td style="vertical-align: top; background-color: rgb(153, 255, 255); width: 471px; text-align: center;">
-      <div style="background-color: white;"><span style="font-family: American Typewriter;"><br><br><br><br>
+      <div style="background-color: white;"><span style="font-family: Helvetica;"><br><br><br><br>
 Sensor Number: 1</span><br>
       <br><br><br><br>
       </div>
@@ -84,7 +88,7 @@ Sensor Number: 1</span><br>
       <div style="text-align: left; background-color: white;" id="content">
 		<div id="innerContent" style="span:nth-child(odd) {background: #grey;}">
 		  <!-- Data is pushed to database every 10s and is averaged before push, and data refreshes every 5s -->
-		  <span style="font-family: American Typewriter; margin:auto;"> <b>Database updated every 10s, data refreshes every 5s</b></span><br>      
+		  <span style="font-family: Helvetica; margin:auto;"> <b>Database updated every 10s, data refreshes every 5s</b></span><br>      
 		<?php
 			include "connectdb.php";
  			include "getdata.php";
