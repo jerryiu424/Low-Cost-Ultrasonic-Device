@@ -7,11 +7,6 @@ Cube::Cube(float s){
     side  = s;
 }
 
-//get sides
-float Cube::getCubeSide(){
-    return side;
-}
-
 std::string Cube::to_string(){
     return "Type cube with volume: " + std::to_string(MaxVolume) + " and side: " + std::to_string(side);
 }
