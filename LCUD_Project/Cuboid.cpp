@@ -26,10 +26,10 @@ Cuboid::Cuboid(float width,float length,float height){
 }
 
 /**
- * @brief cube toString method
+ * @brief cuboid toString method
  * 
  * @details
- *          returns string of maxVolume and side
+ *          returns string of maxVolume
  *          
  * @return returns string of data
  * 
