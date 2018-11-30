@@ -11,7 +11,7 @@ The LCUD is a low-cost, accurate (to 1 mL) ultrasonic and temperature sensor sys
 How to run and use the LCUD:
 
 Our Pi must be used (as it has a server and database running on it) with the Arduino and sensors connected. The interface can be seen at the pi’s IP address e.g.: 
-192.168.x.x/test/group10/LCUD_Project or can be seen from any internet connection via tunnel using ngrok.io. Then click the “Set Up” button and input the dimensions of your container. The code can then be run with ./Interface_main. The interface will automatically refresh every 15 seconds.
+192.168.x.x/test/group10/LCUD_Project or can be seen from any internet connection via tunnel using ngrok.io. Then click the “Set Up” button and input the dimensions of your container. To complile the code run g++ -o main_interface Interface.cpp Cube.cpp Cylinder.cpp Cuboid.cpp Sensors.cpp -L/usr/include/mysql -lmysqlclient -I/usr/include/mysql . The code can then be run with ./Interface_main. The interface will automatically refresh every 15 seconds.
 
 
 How to read the results:
