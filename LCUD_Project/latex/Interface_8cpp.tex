@@ -1,0 +1,217 @@
+\hypertarget{Interface_8cpp}{}\section{Interface.\+cpp File Reference}
+\label{Interface_8cpp}\index{Interface.\+cpp@{Interface.\+cpp}}
+{\ttfamily \#include \char`\"{}Interface.\+h\char`\"{}}\\*
+Include dependency graph for Interface.\+cpp\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{Interface_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\begin{DoxyCompactList}\small\item\em The main method of the program. \end{DoxyCompactList}\item 
+\hyperlink{classCube}{Cube} \hyperlink{Interface_8cpp_a127c88f2701edcd42b06eb18a571da5a}{create\+Cube} ()
+\begin{DoxyCompactList}\small\item\em Creates a new \hyperlink{classCube}{Cube} object from user input. \end{DoxyCompactList}\item 
+\hyperlink{classCylinder}{Cylinder} \hyperlink{Interface_8cpp_a0404a8aa760b899777433e7c3ca1e8d5}{create\+Cylinder} ()
+\begin{DoxyCompactList}\small\item\em Creates a new \hyperlink{classCylinder}{Cylinder} object from user input. \end{DoxyCompactList}\item 
+\hyperlink{classCuboid}{Cuboid} \hyperlink{Interface_8cpp_a14c31b0317c1f81bd568d61bb803183c}{create\+Cuboid} ()
+\begin{DoxyCompactList}\small\item\em Creates a new \hyperlink{classCuboid}{Cuboid} object from user input. \end{DoxyCompactList}\item 
+void \hyperlink{Interface_8cpp_a1f1aa9257d1da4e1d1d86f15328a5b2b}{Cube\+Func} (\hyperlink{classCube}{Cube} c)
+\begin{DoxyCompactList}\small\item\em Calculates volume data from sensor information and sends average to the database. \end{DoxyCompactList}\item 
+void \hyperlink{Interface_8cpp_af3a20ce37a2b886f2b4d91be392a9b5c}{Cylinder\+Func} (\hyperlink{classCylinder}{Cylinder} c)
+\begin{DoxyCompactList}\small\item\em Calculates volume data from sensor information and sends average to the database. \end{DoxyCompactList}\item 
+void \hyperlink{Interface_8cpp_a4a64adf67b307b76ba485dd3594ddf1e}{Cuboid\+Func} (\hyperlink{classCuboid}{Cuboid} c)
+\begin{DoxyCompactList}\small\item\em Calculates volume data from sensor information and sends average to the database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+ifstream \hyperlink{Interface_8cpp_a630fd41d2c27aa9f32f5ed6c53ad76aa}{in\+File}
+\begin{DoxyCompactList}\small\item\em The implementatio of the Interface program. \end{DoxyCompactList}\item 
+M\+Y\+S\+QL \hyperlink{Interface_8cpp_a79ca285a0c0e720422fa6fb6a4bba330}{mysql}
+\item 
+M\+Y\+S\+QL $\ast$ \hyperlink{Interface_8cpp_ae4548a84af8f12dc9b57ccc8515f9c22}{connection}
+\item 
+char $\ast$ \hyperlink{Interface_8cpp_afbc356cd0e25d1dbbece7c10fd025fa6}{ip} = (char$\ast$)\char`\"{}127.\+0.\+0.\+1\char`\"{}
+\item 
+char $\ast$ \hyperlink{Interface_8cpp_af970dc558650c101bf1d0a2b178c25f6}{usr} = (char$\ast$)\char`\"{}root\char`\"{}
+\item 
+char $\ast$ \hyperlink{Interface_8cpp_a543ce0d7b42f492162d73ad4880d58c4}{pass} = (char$\ast$)\char`\"{}group10\char`\"{}
+\item 
+char $\ast$ \hyperlink{Interface_8cpp_adaaf7a4d14eb852583604faeff4039ad}{db} = (char$\ast$)\char`\"{}group10\char`\"{}
+\item 
+int \hyperlink{Interface_8cpp_ab4013f96f17afa1fe08f962805a495ea}{query\+\_\+state}
+\item 
+float \hyperlink{Interface_8cpp_a23d66fa1bd70872a7799116f7d68cc2d}{avg\+Volume}
+\item 
+float \hyperlink{Interface_8cpp_ad0d50e20a723d7eaaa32a9427bc3c9fa}{avg\+Distance}
+\item 
+float \hyperlink{Interface_8cpp_a50aa47f6b096ef7b4ff489348c44ab24}{avg\+Level}
+\item 
+int \hyperlink{Interface_8cpp_a617a47c70795bcff659815ad0efd2266}{counter} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Interface.\+cpp@{Interface.\+cpp}!create\+Cube@{create\+Cube}}
+\index{create\+Cube@{create\+Cube}!Interface.\+cpp@{Interface.\+cpp}}
+\subsubsection[{\texorpdfstring{create\+Cube()}{createCube()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Cube} create\+Cube (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{Interface_8cpp_a127c88f2701edcd42b06eb18a571da5a}{}\label{Interface_8cpp_a127c88f2701edcd42b06eb18a571da5a}
+
+
+Creates a new \hyperlink{classCube}{Cube} object from user input. 
+
+\begin{DoxyReturn}{Returns}
+the created \hyperlink{classCube}{Cube} object. 
+\end{DoxyReturn}
+\index{Interface.\+cpp@{Interface.\+cpp}!create\+Cuboid@{create\+Cuboid}}
+\index{create\+Cuboid@{create\+Cuboid}!Interface.\+cpp@{Interface.\+cpp}}
+\subsubsection[{\texorpdfstring{create\+Cuboid()}{createCuboid()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Cuboid} create\+Cuboid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{Interface_8cpp_a14c31b0317c1f81bd568d61bb803183c}{}\label{Interface_8cpp_a14c31b0317c1f81bd568d61bb803183c}
+
+
+Creates a new \hyperlink{classCuboid}{Cuboid} object from user input. 
+
+\begin{DoxyReturn}{Returns}
+the created \hyperlink{classCuboid}{Cuboid} object. 
+\end{DoxyReturn}
+\index{Interface.\+cpp@{Interface.\+cpp}!create\+Cylinder@{create\+Cylinder}}
+\index{create\+Cylinder@{create\+Cylinder}!Interface.\+cpp@{Interface.\+cpp}}
+\subsubsection[{\texorpdfstring{create\+Cylinder()}{createCylinder()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Cylinder} create\+Cylinder (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{Interface_8cpp_a0404a8aa760b899777433e7c3ca1e8d5}{}\label{Interface_8cpp_a0404a8aa760b899777433e7c3ca1e8d5}
+
+
+Creates a new \hyperlink{classCylinder}{Cylinder} object from user input. 
+
+\begin{DoxyReturn}{Returns}
+the created \hyperlink{classCylinder}{Cylinder} object. 
+\end{DoxyReturn}
+\index{Interface.\+cpp@{Interface.\+cpp}!Cube\+Func@{Cube\+Func}}
+\index{Cube\+Func@{Cube\+Func}!Interface.\+cpp@{Interface.\+cpp}}
+\subsubsection[{\texorpdfstring{Cube\+Func(\+Cube c)}{CubeFunc(Cube c)}}]{\setlength{\rightskip}{0pt plus 5cm}void Cube\+Func (
+\begin{DoxyParamCaption}
+\item[{{\bf Cube}}]{c}
+\end{DoxyParamCaption}
+)}\hypertarget{Interface_8cpp_a1f1aa9257d1da4e1d1d86f15328a5b2b}{}\label{Interface_8cpp_a1f1aa9257d1da4e1d1d86f15328a5b2b}
+
+
+Calculates volume data from sensor information and sends average to the database. 
+
+This function takes in a \hyperlink{classCube}{Cube} object, uses the sensor connected to the container to get the duration and temperature. From there we calculate the level of the fluid and the volume. Every 10 times the information is calculated, the function averages this data, creates an S\+QL query and sends the query to the database.
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & The \hyperlink{classCube}{Cube} container that will be measured \\
+\hline
+\end{DoxyParams}
+\index{Interface.\+cpp@{Interface.\+cpp}!Cuboid\+Func@{Cuboid\+Func}}
+\index{Cuboid\+Func@{Cuboid\+Func}!Interface.\+cpp@{Interface.\+cpp}}
+\subsubsection[{\texorpdfstring{Cuboid\+Func(\+Cuboid c)}{CuboidFunc(Cuboid c)}}]{\setlength{\rightskip}{0pt plus 5cm}void Cuboid\+Func (
+\begin{DoxyParamCaption}
+\item[{{\bf Cuboid}}]{c}
+\end{DoxyParamCaption}
+)}\hypertarget{Interface_8cpp_a4a64adf67b307b76ba485dd3594ddf1e}{}\label{Interface_8cpp_a4a64adf67b307b76ba485dd3594ddf1e}
+
+
+Calculates volume data from sensor information and sends average to the database. 
+
+This function takes in a \hyperlink{classCuboid}{Cuboid} object, uses the sensor connected to the container to get the duration and temperature. From there we calculate the level of the fluid and the volume. Every 10 times the information is calculated, the function averages this data, creates an S\+QL query and sends the query to the database.
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & The \hyperlink{classCuboid}{Cuboid} container that will be measured \\
+\hline
+\end{DoxyParams}
+\index{Interface.\+cpp@{Interface.\+cpp}!Cylinder\+Func@{Cylinder\+Func}}
+\index{Cylinder\+Func@{Cylinder\+Func}!Interface.\+cpp@{Interface.\+cpp}}
+\subsubsection[{\texorpdfstring{Cylinder\+Func(\+Cylinder c)}{CylinderFunc(Cylinder c)}}]{\setlength{\rightskip}{0pt plus 5cm}void Cylinder\+Func (
+\begin{DoxyParamCaption}
+\item[{{\bf Cylinder}}]{c}
+\end{DoxyParamCaption}
+)}\hypertarget{Interface_8cpp_af3a20ce37a2b886f2b4d91be392a9b5c}{}\label{Interface_8cpp_af3a20ce37a2b886f2b4d91be392a9b5c}
+
+
+Calculates volume data from sensor information and sends average to the database. 
+
+This function takes in a \hyperlink{classCylinder}{Cylinder} object, uses the sensor connected to the container to get the duration and temperature. From there we calculate the level of the fluid and the volume. Every 10 times the information is calculated, the function averages this data, creates an S\+QL query and sends the query to the database.
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & The \hyperlink{classCylinder}{Cylinder} container that will be measured \\
+\hline
+\end{DoxyParams}
+\index{Interface.\+cpp@{Interface.\+cpp}!main@{main}}
+\index{main@{main}!Interface.\+cpp@{Interface.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{Interface_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{Interface_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+
+The main method of the program. 
+
+This method first checks to see if there is a text file that contains info on a container. If such a file exists, then create a container object from that file, otherwise prompt the user to enter information about the container using one of the create$<$shape$>$() functions. From there use the container object to calculate the volume of the fluid and send the data to the database using the appropriate $<$shape$>$func() functions. 
+
+\subsection{Variable Documentation}
+\index{Interface.\+cpp@{Interface.\+cpp}!avg\+Distance@{avg\+Distance}}
+\index{avg\+Distance@{avg\+Distance}!Interface.\+cpp@{Interface.\+cpp}}
+\subsubsection[{\texorpdfstring{avg\+Distance}{avgDistance}}]{\setlength{\rightskip}{0pt plus 5cm}float avg\+Distance}\hypertarget{Interface_8cpp_ad0d50e20a723d7eaaa32a9427bc3c9fa}{}\label{Interface_8cpp_ad0d50e20a723d7eaaa32a9427bc3c9fa}
+\index{Interface.\+cpp@{Interface.\+cpp}!avg\+Level@{avg\+Level}}
+\index{avg\+Level@{avg\+Level}!Interface.\+cpp@{Interface.\+cpp}}
+\subsubsection[{\texorpdfstring{avg\+Level}{avgLevel}}]{\setlength{\rightskip}{0pt plus 5cm}float avg\+Level}\hypertarget{Interface_8cpp_a50aa47f6b096ef7b4ff489348c44ab24}{}\label{Interface_8cpp_a50aa47f6b096ef7b4ff489348c44ab24}
+\index{Interface.\+cpp@{Interface.\+cpp}!avg\+Volume@{avg\+Volume}}
+\index{avg\+Volume@{avg\+Volume}!Interface.\+cpp@{Interface.\+cpp}}
+\subsubsection[{\texorpdfstring{avg\+Volume}{avgVolume}}]{\setlength{\rightskip}{0pt plus 5cm}float avg\+Volume}\hypertarget{Interface_8cpp_a23d66fa1bd70872a7799116f7d68cc2d}{}\label{Interface_8cpp_a23d66fa1bd70872a7799116f7d68cc2d}
+\index{Interface.\+cpp@{Interface.\+cpp}!connection@{connection}}
+\index{connection@{connection}!Interface.\+cpp@{Interface.\+cpp}}
+\subsubsection[{\texorpdfstring{connection}{connection}}]{\setlength{\rightskip}{0pt plus 5cm}M\+Y\+S\+QL $\ast$ connection}\hypertarget{Interface_8cpp_ae4548a84af8f12dc9b57ccc8515f9c22}{}\label{Interface_8cpp_ae4548a84af8f12dc9b57ccc8515f9c22}
+\index{Interface.\+cpp@{Interface.\+cpp}!counter@{counter}}
+\index{counter@{counter}!Interface.\+cpp@{Interface.\+cpp}}
+\subsubsection[{\texorpdfstring{counter}{counter}}]{\setlength{\rightskip}{0pt plus 5cm}int counter = 0}\hypertarget{Interface_8cpp_a617a47c70795bcff659815ad0efd2266}{}\label{Interface_8cpp_a617a47c70795bcff659815ad0efd2266}
+\index{Interface.\+cpp@{Interface.\+cpp}!db@{db}}
+\index{db@{db}!Interface.\+cpp@{Interface.\+cpp}}
+\subsubsection[{\texorpdfstring{db}{db}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ db = (char$\ast$)\char`\"{}group10\char`\"{}}\hypertarget{Interface_8cpp_adaaf7a4d14eb852583604faeff4039ad}{}\label{Interface_8cpp_adaaf7a4d14eb852583604faeff4039ad}
+\index{Interface.\+cpp@{Interface.\+cpp}!in\+File@{in\+File}}
+\index{in\+File@{in\+File}!Interface.\+cpp@{Interface.\+cpp}}
+\subsubsection[{\texorpdfstring{in\+File}{inFile}}]{\setlength{\rightskip}{0pt plus 5cm}ifstream in\+File}\hypertarget{Interface_8cpp_a630fd41d2c27aa9f32f5ed6c53ad76aa}{}\label{Interface_8cpp_a630fd41d2c27aa9f32f5ed6c53ad76aa}
+
+
+The implementatio of the Interface program. 
+
+This program starts by either loading a pre-\/existing container, or creates a new one; it then reads data from the sensor to determind the volume of the fluid in the container. We then periodically take an average of the data, and send it to our database.
+
+\begin{DoxyAuthor}{Author}
+Marco Manuel 
+
+Vance Gullberg 
+
+Morgan O\textquotesingle{}Brien 
+
+Jerry Iu 
+
+Joon Lee 
+
+Reid Jackson 
+\end{DoxyAuthor}
+\index{Interface.\+cpp@{Interface.\+cpp}!ip@{ip}}
+\index{ip@{ip}!Interface.\+cpp@{Interface.\+cpp}}
+\subsubsection[{\texorpdfstring{ip}{ip}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ ip = (char$\ast$)\char`\"{}127.\+0.\+0.\+1\char`\"{}}\hypertarget{Interface_8cpp_afbc356cd0e25d1dbbece7c10fd025fa6}{}\label{Interface_8cpp_afbc356cd0e25d1dbbece7c10fd025fa6}
+\index{Interface.\+cpp@{Interface.\+cpp}!mysql@{mysql}}
+\index{mysql@{mysql}!Interface.\+cpp@{Interface.\+cpp}}
+\subsubsection[{\texorpdfstring{mysql}{mysql}}]{\setlength{\rightskip}{0pt plus 5cm}M\+Y\+S\+QL mysql}\hypertarget{Interface_8cpp_a79ca285a0c0e720422fa6fb6a4bba330}{}\label{Interface_8cpp_a79ca285a0c0e720422fa6fb6a4bba330}
+\index{Interface.\+cpp@{Interface.\+cpp}!pass@{pass}}
+\index{pass@{pass}!Interface.\+cpp@{Interface.\+cpp}}
+\subsubsection[{\texorpdfstring{pass}{pass}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ pass = (char$\ast$)\char`\"{}group10\char`\"{}}\hypertarget{Interface_8cpp_a543ce0d7b42f492162d73ad4880d58c4}{}\label{Interface_8cpp_a543ce0d7b42f492162d73ad4880d58c4}
+\index{Interface.\+cpp@{Interface.\+cpp}!query\+\_\+state@{query\+\_\+state}}
+\index{query\+\_\+state@{query\+\_\+state}!Interface.\+cpp@{Interface.\+cpp}}
+\subsubsection[{\texorpdfstring{query\+\_\+state}{query_state}}]{\setlength{\rightskip}{0pt plus 5cm}int query\+\_\+state}\hypertarget{Interface_8cpp_ab4013f96f17afa1fe08f962805a495ea}{}\label{Interface_8cpp_ab4013f96f17afa1fe08f962805a495ea}
+\index{Interface.\+cpp@{Interface.\+cpp}!usr@{usr}}
+\index{usr@{usr}!Interface.\+cpp@{Interface.\+cpp}}
+\subsubsection[{\texorpdfstring{usr}{usr}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ usr = (char$\ast$)\char`\"{}root\char`\"{}}\hypertarget{Interface_8cpp_af970dc558650c101bf1d0a2b178c25f6}{}\label{Interface_8cpp_af970dc558650c101bf1d0a2b178c25f6}

@@ -1,0 +1,130 @@
+\hypertarget{classCube}{}\section{Cube Class Reference}
+\label{classCube}\index{Cube@{Cube}}
+
+
+The \hyperlink{classCube}{Cube} class.  
+
+
+
+
+{\ttfamily \#include $<$Cube.\+h$>$}
+
+
+
+Inheritance diagram for Cube\+:
+% FIG 0
+
+
+Collaboration diagram for Cube\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCube_a7f56a7208d6c1ba6120fa091d3c0cd7a}{Cube} (float \hyperlink{classContainer_a5f70d3b0713aff689d525e30ca1c9238}{s})
+\begin{DoxyCompactList}\small\item\em \hyperlink{classCube}{Cube} class methods. \end{DoxyCompactList}\item 
+\hyperlink{classCube_aa814e979cecb8c451fdb332ded2cea1e}{$\sim$\+Cube} ()
+\item 
+std\+::string \hyperlink{classCube_ae9140c70a224b9cdc972b223a9d13c80}{to\+\_\+string} ()
+\begin{DoxyCompactList}\small\item\em cube to\+String method \end{DoxyCompactList}\item 
+float \hyperlink{classCube_a88458f55307ccd9165f97cd598258be4}{get\+Cube\+Side} ()
+\begin{DoxyCompactList}\small\item\em The getter method for the side length of the cube. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{classCube_a2fd970f59cab380889a60c60e5b76593}{side}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classCube}{Cube} class. 
+
+This class is a child class of the \hyperlink{classContainer}{Container} class. Since the shape of this \hyperlink{classContainer}{Container} is a cube the only measurement we require is side length. From this we can determine the max possible volume of the container.
+
+\begin{DoxyAuthor}{Author}
+Marco Manuel 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Cube@{Cube}!Cube@{Cube}}
+\index{Cube@{Cube}!Cube@{Cube}}
+\subsubsection[{\texorpdfstring{Cube(float s)}{Cube(float s)}}]{\setlength{\rightskip}{0pt plus 5cm}Cube\+::\+Cube (
+\begin{DoxyParamCaption}
+\item[{float}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{classCube_a7f56a7208d6c1ba6120fa091d3c0cd7a}{}\label{classCube_a7f56a7208d6c1ba6120fa091d3c0cd7a}
+
+
+\hyperlink{classCube}{Cube} class methods. 
+
+This file implements the cube class member methods; It consists of the constructor, and a to\+String method
+
+\begin{DoxyAuthor}{Author}
+Marco Manuel cube constructor
+\end{DoxyAuthor}
+\begin{DoxyVerb}     calculates and sets the max volume, shapeid, and side
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em side} & Side of cube.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Marco Manuel 
+\end{DoxyAuthor}
+\index{Cube@{Cube}!````~Cube@{$\sim$\+Cube}}
+\index{````~Cube@{$\sim$\+Cube}!Cube@{Cube}}
+\subsubsection[{\texorpdfstring{$\sim$\+Cube()}{~Cube()}}]{\setlength{\rightskip}{0pt plus 5cm}Cube\+::$\sim$\+Cube (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classCube_aa814e979cecb8c451fdb332ded2cea1e}{}\label{classCube_aa814e979cecb8c451fdb332ded2cea1e}
+
+
+\subsection{Member Function Documentation}
+\index{Cube@{Cube}!get\+Cube\+Side@{get\+Cube\+Side}}
+\index{get\+Cube\+Side@{get\+Cube\+Side}!Cube@{Cube}}
+\subsubsection[{\texorpdfstring{get\+Cube\+Side()}{getCubeSide()}}]{\setlength{\rightskip}{0pt plus 5cm}float Cube\+::get\+Cube\+Side (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classCube_a88458f55307ccd9165f97cd598258be4}{}\label{classCube_a88458f55307ccd9165f97cd598258be4}
+
+
+The getter method for the side length of the cube. 
+
+\begin{DoxyReturn}{Returns}
+the side attribute. 
+\end{DoxyReturn}
+\index{Cube@{Cube}!to\+\_\+string@{to\+\_\+string}}
+\index{to\+\_\+string@{to\+\_\+string}!Cube@{Cube}}
+\subsubsection[{\texorpdfstring{to\+\_\+string()}{to_string()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Cube\+::to\+\_\+string (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classCube_ae9140c70a224b9cdc972b223a9d13c80}{}\label{classCube_ae9140c70a224b9cdc972b223a9d13c80}
+
+
+cube to\+String method 
+
+returns string of max\+Volume and side
+
+\begin{DoxyReturn}{Returns}
+returns string of data
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Marco Manuel 
+\end{DoxyAuthor}
+
+
+\subsection{Member Data Documentation}
+\index{Cube@{Cube}!side@{side}}
+\index{side@{side}!Cube@{Cube}}
+\subsubsection[{\texorpdfstring{side}{side}}]{\setlength{\rightskip}{0pt plus 5cm}float Cube\+::side\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classCube_a2fd970f59cab380889a60c60e5b76593}{}\label{classCube_a2fd970f59cab380889a60c60e5b76593}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Cube_8h}{Cube.\+h}\item 
+\hyperlink{Cube_8cpp}{Cube.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,148 @@
+\hypertarget{classCylinder}{}\section{Cylinder Class Reference}
+\label{classCylinder}\index{Cylinder@{Cylinder}}
+
+
+The \hyperlink{classCylinder}{Cylinder} class.  
+
+
+
+
+{\ttfamily \#include $<$Cylinder.\+h$>$}
+
+
+
+Inheritance diagram for Cylinder\+:
+% FIG 0
+
+
+Collaboration diagram for Cylinder\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCylinder_a7fc7f1cbffd048f423f7c0194c972348}{Cylinder} (float radius, float height)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classCylinder}{Cylinder} class methods. \end{DoxyCompactList}\item 
+\hyperlink{classCylinder_a05ab556f0ae3cd6e99d9d1f3caca80b3}{$\sim$\+Cylinder} ()
+\item 
+std\+::string \hyperlink{classCylinder_ab889918992534ba45ddb11a3e4b64481}{to\+\_\+string} ()
+\begin{DoxyCompactList}\small\item\em cylinder to\+String method \end{DoxyCompactList}\item 
+float \hyperlink{classCylinder_aafe370beb2f072d41fa79deb696e4d40}{get\+Cylinder\+Radius} ()
+\begin{DoxyCompactList}\small\item\em The getter method for the radius of the cylinder. \end{DoxyCompactList}\item 
+float \hyperlink{classCylinder_af7ffa75cdd7dd37d6c27f449330c4ce2}{get\+Cylinder\+Height} ()
+\begin{DoxyCompactList}\small\item\em The getter method for the height of the cylinder. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{classCylinder_a96b3a0758ef062f251f32073a3f701d8}{Cradius}
+\item 
+float \hyperlink{classCylinder_a23c7f930120143398ea5c6a7d4f9baca}{Cheight}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classCylinder}{Cylinder} class. 
+
+This class is a child class of the \hyperlink{classContainer}{Container} class. Since the shape of this \hyperlink{classContainer}{Container} is a cylinder the dimensions are radius and height. From this we can determine the max possible volume of the container.
+
+\begin{DoxyAuthor}{Author}
+Jerry Iu 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Cylinder@{Cylinder}!Cylinder@{Cylinder}}
+\index{Cylinder@{Cylinder}!Cylinder@{Cylinder}}
+\subsubsection[{\texorpdfstring{Cylinder(float radius, float height)}{Cylinder(float radius, float height)}}]{\setlength{\rightskip}{0pt plus 5cm}Cylinder\+::\+Cylinder (
+\begin{DoxyParamCaption}
+\item[{float}]{radius, }
+\item[{float}]{height}
+\end{DoxyParamCaption}
+)}\hypertarget{classCylinder_a7fc7f1cbffd048f423f7c0194c972348}{}\label{classCylinder_a7fc7f1cbffd048f423f7c0194c972348}
+
+
+\hyperlink{classCylinder}{Cylinder} class methods. 
+
+This file implements the cylinder class member methods; It consists of the constructor, and a to\+String method
+
+\begin{DoxyAuthor}{Author}
+Jerry Iu cylinder constructor
+\end{DoxyAuthor}
+\begin{DoxyVerb}     calculates and sets the max volume, shapeid, radius, and height
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em radius} & \\
+\hline
+{\em height} & \\
+\hline
+\end{DoxyParams}
+\index{Cylinder@{Cylinder}!````~Cylinder@{$\sim$\+Cylinder}}
+\index{````~Cylinder@{$\sim$\+Cylinder}!Cylinder@{Cylinder}}
+\subsubsection[{\texorpdfstring{$\sim$\+Cylinder()}{~Cylinder()}}]{\setlength{\rightskip}{0pt plus 5cm}Cylinder\+::$\sim$\+Cylinder (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classCylinder_a05ab556f0ae3cd6e99d9d1f3caca80b3}{}\label{classCylinder_a05ab556f0ae3cd6e99d9d1f3caca80b3}
+
+
+\subsection{Member Function Documentation}
+\index{Cylinder@{Cylinder}!get\+Cylinder\+Height@{get\+Cylinder\+Height}}
+\index{get\+Cylinder\+Height@{get\+Cylinder\+Height}!Cylinder@{Cylinder}}
+\subsubsection[{\texorpdfstring{get\+Cylinder\+Height()}{getCylinderHeight()}}]{\setlength{\rightskip}{0pt plus 5cm}float Cylinder\+::get\+Cylinder\+Height (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classCylinder_af7ffa75cdd7dd37d6c27f449330c4ce2}{}\label{classCylinder_af7ffa75cdd7dd37d6c27f449330c4ce2}
+
+
+The getter method for the height of the cylinder. 
+
+\begin{DoxyReturn}{Returns}
+the Cheight attribute. 
+\end{DoxyReturn}
+\index{Cylinder@{Cylinder}!get\+Cylinder\+Radius@{get\+Cylinder\+Radius}}
+\index{get\+Cylinder\+Radius@{get\+Cylinder\+Radius}!Cylinder@{Cylinder}}
+\subsubsection[{\texorpdfstring{get\+Cylinder\+Radius()}{getCylinderRadius()}}]{\setlength{\rightskip}{0pt plus 5cm}float Cylinder\+::get\+Cylinder\+Radius (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classCylinder_aafe370beb2f072d41fa79deb696e4d40}{}\label{classCylinder_aafe370beb2f072d41fa79deb696e4d40}
+
+
+The getter method for the radius of the cylinder. 
+
+\begin{DoxyReturn}{Returns}
+the Cradius attribute. 
+\end{DoxyReturn}
+\index{Cylinder@{Cylinder}!to\+\_\+string@{to\+\_\+string}}
+\index{to\+\_\+string@{to\+\_\+string}!Cylinder@{Cylinder}}
+\subsubsection[{\texorpdfstring{to\+\_\+string()}{to_string()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Cylinder\+::to\+\_\+string (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classCylinder_ab889918992534ba45ddb11a3e4b64481}{}\label{classCylinder_ab889918992534ba45ddb11a3e4b64481}
+
+
+cylinder to\+String method 
+
+returns string of max\+Volume
+
+\begin{DoxyReturn}{Returns}
+returns string of data 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\index{Cylinder@{Cylinder}!Cheight@{Cheight}}
+\index{Cheight@{Cheight}!Cylinder@{Cylinder}}
+\subsubsection[{\texorpdfstring{Cheight}{Cheight}}]{\setlength{\rightskip}{0pt plus 5cm}float Cylinder\+::\+Cheight\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classCylinder_a23c7f930120143398ea5c6a7d4f9baca}{}\label{classCylinder_a23c7f930120143398ea5c6a7d4f9baca}
+\index{Cylinder@{Cylinder}!Cradius@{Cradius}}
+\index{Cradius@{Cradius}!Cylinder@{Cylinder}}
+\subsubsection[{\texorpdfstring{Cradius}{Cradius}}]{\setlength{\rightskip}{0pt plus 5cm}float Cylinder\+::\+Cradius\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classCylinder_a96b3a0758ef062f251f32073a3f701d8}{}\label{classCylinder_a96b3a0758ef062f251f32073a3f701d8}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Cylinder_8h}{Cylinder.\+h}\item 
+\hyperlink{Cylinder_8cpp}{Cylinder.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,189 @@
+\hypertarget{classSensors}{}\section{Sensors Class Reference}
+\label{classSensors}\index{Sensors@{Sensors}}
+
+
+The Sensor class for the device.  
+
+
+
+
+{\ttfamily \#include $<$Sensors.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSensors_a68ef7a2ec8dd0ffd9b35b70b50c0ab09}{Sensors} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classSensors}{Sensors} class methods. \end{DoxyCompactList}\item 
+\hyperlink{classSensors_ae8757a85e47bb4d61ef3e33cdf3e0d87}{$\sim$\+Sensors} ()
+\item 
+void \hyperlink{classSensors_af0290d09b1ae4dd7726a2a6613bf354b}{update} ()
+\begin{DoxyCompactList}\small\item\em updates sensor data \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classSensors_a952bc25379490bd7cb61c670fe2a555a}{get\+Sensor\+ID} ()
+\begin{DoxyCompactList}\small\item\em The getter method for the Sensor\+ID. \end{DoxyCompactList}\item 
+float \hyperlink{classSensors_a12fb1e3907dfb0b41ac7fd9ed84ceaba}{get\+Duration} ()
+\begin{DoxyCompactList}\small\item\em The getter method for the duration. \end{DoxyCompactList}\item 
+float \hyperlink{classSensors_ac4c22766994b94a2a28158ed72dc4a0c}{get\+Temperature} ()
+\begin{DoxyCompactList}\small\item\em The getter method for the temperature. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classSensors_abc66329aec1385427c139fbb3990a051}{to\+\_\+string} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classSensors}{Sensors} to\+String method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classSensors_af958fb92b4e443b51edcff4a7991c927}{Sensor\+ID}
+\item 
+float \hyperlink{classSensors_a2ade524f8dd7fa8e562537baaeca7dbb}{S\+Duration}
+\item 
+float \hyperlink{classSensors_acdc1e3b69e2607f117ff52806a46011b}{S\+Temperature}
+\item 
+std\+::string \hyperlink{classSensors_a256d9de0039f3c934cac0e61b2746b0c}{file}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The Sensor class for the device. 
+
+This class utilizes the sensor connected to the Arduino and stores the values it recieves into attributes that can be used to calculate the volume in a container. The attributes of the class are the ID of the sensor, the duration, temperature and a string that contains the data from the physical sensor.
+
+\begin{DoxyAuthor}{Author}
+Vance Gullberg 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Sensors@{Sensors}!Sensors@{Sensors}}
+\index{Sensors@{Sensors}!Sensors@{Sensors}}
+\subsubsection[{\texorpdfstring{Sensors()}{Sensors()}}]{\setlength{\rightskip}{0pt plus 5cm}Sensors\+::\+Sensors (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classSensors_a68ef7a2ec8dd0ffd9b35b70b50c0ab09}{}\label{classSensors_a68ef7a2ec8dd0ffd9b35b70b50c0ab09}
+
+
+\hyperlink{classSensors}{Sensors} class methods. 
+
+This file implements the \hyperlink{classSensors}{Sensors} class member methods; It consists of the constructor, the update function, and a to\+String method
+
+\begin{DoxyAuthor}{Author}
+Vance Gullberg 
+
+Marco Manuel 
+
+Morgan O\textquotesingle{}Brien \hyperlink{classSensors}{Sensors} constructor
+\end{DoxyAuthor}
+\begin{DoxyVerb}     sets the sensor ID and the file address attribute
+\end{DoxyVerb}
+
+
+\begin{DoxyAuthor}{Author}
+Vance Gullberg 
+\end{DoxyAuthor}
+\index{Sensors@{Sensors}!````~Sensors@{$\sim$\+Sensors}}
+\index{````~Sensors@{$\sim$\+Sensors}!Sensors@{Sensors}}
+\subsubsection[{\texorpdfstring{$\sim$\+Sensors()}{~Sensors()}}]{\setlength{\rightskip}{0pt plus 5cm}Sensors\+::$\sim$\+Sensors (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classSensors_ae8757a85e47bb4d61ef3e33cdf3e0d87}{}\label{classSensors_ae8757a85e47bb4d61ef3e33cdf3e0d87}
+
+
+\subsection{Member Function Documentation}
+\index{Sensors@{Sensors}!get\+Duration@{get\+Duration}}
+\index{get\+Duration@{get\+Duration}!Sensors@{Sensors}}
+\subsubsection[{\texorpdfstring{get\+Duration()}{getDuration()}}]{\setlength{\rightskip}{0pt plus 5cm}float Sensors\+::get\+Duration (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classSensors_a12fb1e3907dfb0b41ac7fd9ed84ceaba}{}\label{classSensors_a12fb1e3907dfb0b41ac7fd9ed84ceaba}
+
+
+The getter method for the duration. 
+
+This method returns the time it took the ultrasonic wave emmited by the sensor to travel from the sensor and come back. \begin{DoxyReturn}{Returns}
+the S\+Duration attribute. 
+\end{DoxyReturn}
+\index{Sensors@{Sensors}!get\+Sensor\+ID@{get\+Sensor\+ID}}
+\index{get\+Sensor\+ID@{get\+Sensor\+ID}!Sensors@{Sensors}}
+\subsubsection[{\texorpdfstring{get\+Sensor\+I\+D()}{getSensorID()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Sensors\+::get\+Sensor\+ID (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classSensors_a952bc25379490bd7cb61c670fe2a555a}{}\label{classSensors_a952bc25379490bd7cb61c670fe2a555a}
+
+
+The getter method for the Sensor\+ID. 
+
+\begin{DoxyReturn}{Returns}
+the Sensor\+ID attribute. 
+\end{DoxyReturn}
+\index{Sensors@{Sensors}!get\+Temperature@{get\+Temperature}}
+\index{get\+Temperature@{get\+Temperature}!Sensors@{Sensors}}
+\subsubsection[{\texorpdfstring{get\+Temperature()}{getTemperature()}}]{\setlength{\rightskip}{0pt plus 5cm}float Sensors\+::get\+Temperature (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classSensors_ac4c22766994b94a2a28158ed72dc4a0c}{}\label{classSensors_ac4c22766994b94a2a28158ed72dc4a0c}
+
+
+The getter method for the temperature. 
+
+This method returns the temperature of the environment the container is in. \begin{DoxyReturn}{Returns}
+the S\+Temperature attribute. 
+\end{DoxyReturn}
+\index{Sensors@{Sensors}!to\+\_\+string@{to\+\_\+string}}
+\index{to\+\_\+string@{to\+\_\+string}!Sensors@{Sensors}}
+\subsubsection[{\texorpdfstring{to\+\_\+string()}{to_string()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Sensors\+::to\+\_\+string (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classSensors_abc66329aec1385427c139fbb3990a051}{}\label{classSensors_abc66329aec1385427c139fbb3990a051}
+
+
+\hyperlink{classSensors}{Sensors} to\+String method. 
+
+returns string of sensor ID, current duration, and temperature
+
+\begin{DoxyReturn}{Returns}
+returns string of data
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Vance Gullberg 
+\end{DoxyAuthor}
+\index{Sensors@{Sensors}!update@{update}}
+\index{update@{update}!Sensors@{Sensors}}
+\subsubsection[{\texorpdfstring{update()}{update()}}]{\setlength{\rightskip}{0pt plus 5cm}void Sensors\+::update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classSensors_af0290d09b1ae4dd7726a2a6613bf354b}{}\label{classSensors_af0290d09b1ae4dd7726a2a6613bf354b}
+
+
+updates sensor data 
+
+Reads a line of the file, which consists of duration and temperature, splits it on the space, and stores it in the respective attributes, thereby updating the information
+
+\begin{DoxyAuthor}{Author}
+Marco Manuel 
+
+Morgan O\textquotesingle{}Brien 
+\end{DoxyAuthor}
+
+
+\subsection{Member Data Documentation}
+\index{Sensors@{Sensors}!file@{file}}
+\index{file@{file}!Sensors@{Sensors}}
+\subsubsection[{\texorpdfstring{file}{file}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Sensors\+::file\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSensors_a256d9de0039f3c934cac0e61b2746b0c}{}\label{classSensors_a256d9de0039f3c934cac0e61b2746b0c}
+\index{Sensors@{Sensors}!S\+Duration@{S\+Duration}}
+\index{S\+Duration@{S\+Duration}!Sensors@{Sensors}}
+\subsubsection[{\texorpdfstring{S\+Duration}{SDuration}}]{\setlength{\rightskip}{0pt plus 5cm}float Sensors\+::\+S\+Duration\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSensors_a2ade524f8dd7fa8e562537baaeca7dbb}{}\label{classSensors_a2ade524f8dd7fa8e562537baaeca7dbb}
+\index{Sensors@{Sensors}!Sensor\+ID@{Sensor\+ID}}
+\index{Sensor\+ID@{Sensor\+ID}!Sensors@{Sensors}}
+\subsubsection[{\texorpdfstring{Sensor\+ID}{SensorID}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Sensors\+::\+Sensor\+ID\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSensors_af958fb92b4e443b51edcff4a7991c927}{}\label{classSensors_af958fb92b4e443b51edcff4a7991c927}
+\index{Sensors@{Sensors}!S\+Temperature@{S\+Temperature}}
+\index{S\+Temperature@{S\+Temperature}!Sensors@{Sensors}}
+\subsubsection[{\texorpdfstring{S\+Temperature}{STemperature}}]{\setlength{\rightskip}{0pt plus 5cm}float Sensors\+::\+S\+Temperature\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSensors_acdc1e3b69e2607f117ff52806a46011b}{}\label{classSensors_acdc1e3b69e2607f117ff52806a46011b}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Sensors_8h}{Sensors.\+h}\item 
+\hyperlink{Sensors_8cpp}{Sensors.\+cpp}\end{DoxyCompactItemize}
