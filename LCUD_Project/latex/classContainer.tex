@@ -1,0 +1,131 @@
+\hypertarget{classContainer}{}\section{Container Class Reference}
+\label{classContainer}\index{Container@{Container}}
+
+
+The \hyperlink{classContainer}{Container} class.  
+
+
+
+
+{\ttfamily \#include $<$Container.\+h$>$}
+
+
+
+Inheritance diagram for Container\+:
+% FIG 0
+
+
+Collaboration diagram for Container\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classContainer_a1b0c5515d6863c1bc98cc93b65952f42}{Container} ()
+\item 
+\hyperlink{classContainer_ae9f5d07bfc3defda274aa06091c19f56}{$\sim$\+Container} ()
+\item 
+float \hyperlink{classContainer_ae822b32fdb80e41ffe4bfa7fab56408b}{get\+Max\+Volume} ()
+\begin{DoxyCompactList}\small\item\em The getter method for the max volume. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classContainer_a871bd6043bad7e483f1e1c8060849271}{get\+Shape\+ID} ()
+\begin{DoxyCompactList}\small\item\em The getter method for the type of container. \end{DoxyCompactList}\item 
+\hyperlink{classSensors}{Sensors} \hyperlink{classContainer_a48995d9018fd74cc78f25f4e9abf2617}{return\+Sensor} ()
+\begin{DoxyCompactList}\small\item\em The getter method for the \hyperlink{classSensors}{Sensors} object attatched to this container. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSensors}{Sensors} \hyperlink{classContainer_a5f70d3b0713aff689d525e30ca1c9238}{s}
+\item 
+float \hyperlink{classContainer_a31011c5bc823f6dc403a67617c04ef23}{Max\+Volume}
+\item 
+std\+::string \hyperlink{classContainer_acf404f2619a77f41c70cc7a562381855}{Shape\+ID}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classContainer}{Container} class. 
+
+This class is the parent class for the containers that will inherit the same basic attributes. Since each shape that can be utilized will have different ways of calculating volume (in other words, a cube and a cylinder do not share the same geometric properties), this class will be inherited such that each sub-\/class will have an attributed sensor, a maximum possible volume, and a string that identifies the specific shape.
+
+\begin{DoxyAuthor}{Author}
+Vance Gullberg 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Container@{Container}!Container@{Container}}
+\index{Container@{Container}!Container@{Container}}
+\subsubsection[{\texorpdfstring{Container()}{Container()}}]{\setlength{\rightskip}{0pt plus 5cm}Container\+::\+Container (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classContainer_a1b0c5515d6863c1bc98cc93b65952f42}{}\label{classContainer_a1b0c5515d6863c1bc98cc93b65952f42}
+\index{Container@{Container}!````~Container@{$\sim$\+Container}}
+\index{````~Container@{$\sim$\+Container}!Container@{Container}}
+\subsubsection[{\texorpdfstring{$\sim$\+Container()}{~Container()}}]{\setlength{\rightskip}{0pt plus 5cm}Container\+::$\sim$\+Container (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classContainer_ae9f5d07bfc3defda274aa06091c19f56}{}\label{classContainer_ae9f5d07bfc3defda274aa06091c19f56}
+
+
+\subsection{Member Function Documentation}
+\index{Container@{Container}!get\+Max\+Volume@{get\+Max\+Volume}}
+\index{get\+Max\+Volume@{get\+Max\+Volume}!Container@{Container}}
+\subsubsection[{\texorpdfstring{get\+Max\+Volume()}{getMaxVolume()}}]{\setlength{\rightskip}{0pt plus 5cm}float Container\+::get\+Max\+Volume (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classContainer_ae822b32fdb80e41ffe4bfa7fab56408b}{}\label{classContainer_ae822b32fdb80e41ffe4bfa7fab56408b}
+
+
+The getter method for the max volume. 
+
+\begin{DoxyReturn}{Returns}
+the Max\+Volume attribute. 
+\end{DoxyReturn}
+\index{Container@{Container}!get\+Shape\+ID@{get\+Shape\+ID}}
+\index{get\+Shape\+ID@{get\+Shape\+ID}!Container@{Container}}
+\subsubsection[{\texorpdfstring{get\+Shape\+I\+D()}{getShapeID()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Container\+::get\+Shape\+ID (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classContainer_a871bd6043bad7e483f1e1c8060849271}{}\label{classContainer_a871bd6043bad7e483f1e1c8060849271}
+
+
+The getter method for the type of container. 
+
+\begin{DoxyReturn}{Returns}
+the Shape\+ID attribute. 
+\end{DoxyReturn}
+\index{Container@{Container}!return\+Sensor@{return\+Sensor}}
+\index{return\+Sensor@{return\+Sensor}!Container@{Container}}
+\subsubsection[{\texorpdfstring{return\+Sensor()}{returnSensor()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sensors} Container\+::return\+Sensor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classContainer_a48995d9018fd74cc78f25f4e9abf2617}{}\label{classContainer_a48995d9018fd74cc78f25f4e9abf2617}
+
+
+The getter method for the \hyperlink{classSensors}{Sensors} object attatched to this container. 
+
+\begin{DoxyReturn}{Returns}
+the \hyperlink{classSensors}{Sensors} attribute s. 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\index{Container@{Container}!Max\+Volume@{Max\+Volume}}
+\index{Max\+Volume@{Max\+Volume}!Container@{Container}}
+\subsubsection[{\texorpdfstring{Max\+Volume}{MaxVolume}}]{\setlength{\rightskip}{0pt plus 5cm}float Container\+::\+Max\+Volume\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classContainer_a31011c5bc823f6dc403a67617c04ef23}{}\label{classContainer_a31011c5bc823f6dc403a67617c04ef23}
+\index{Container@{Container}!s@{s}}
+\index{s@{s}!Container@{Container}}
+\subsubsection[{\texorpdfstring{s}{s}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sensors} Container\+::s\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classContainer_a5f70d3b0713aff689d525e30ca1c9238}{}\label{classContainer_a5f70d3b0713aff689d525e30ca1c9238}
+\index{Container@{Container}!Shape\+ID@{Shape\+ID}}
+\index{Shape\+ID@{Shape\+ID}!Container@{Container}}
+\subsubsection[{\texorpdfstring{Shape\+ID}{ShapeID}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Container\+::\+Shape\+ID\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classContainer_acf404f2619a77f41c70cc7a562381855}{}\label{classContainer_acf404f2619a77f41c70cc7a562381855}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Container_8h}{Container.\+h}\item 
+\hyperlink{Container_8cpp}{Container.\+cpp}\end{DoxyCompactItemize}

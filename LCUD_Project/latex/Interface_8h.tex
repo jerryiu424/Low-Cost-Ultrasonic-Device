@@ -1,0 +1,157 @@
+\hypertarget{Interface_8h}{}\section{Interface.\+h File Reference}
+\label{Interface_8h}\index{Interface.\+h@{Interface.\+h}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$math.\+h$>$}\\*
+{\ttfamily \#include $<$mysql/mysql.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}Cube.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Cylinder.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Cuboid.\+h\char`\"{}}\\*
+Include dependency graph for Interface.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{Interface_8h_ae71449b1cc6e6250b91f539153a7a0d3}{M\+\_\+\+PI}~3.\+14159265358979323846  /$\ast$ pi $\ast$/
+\begin{DoxyCompactList}\small\item\em The Interface program. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{Interface_8h_ac9e9c6b13aff3e569455f92eacec8bc2}{Cube\+Func} (\hyperlink{classCube}{Cube})
+\begin{DoxyCompactList}\small\item\em Calculates volume data from sensor information and sends average to the database. \end{DoxyCompactList}\item 
+void \hyperlink{Interface_8h_a635c26eed224962084cf57e5b75f19cb}{Cylinder\+Func} (\hyperlink{classCylinder}{Cylinder})
+\begin{DoxyCompactList}\small\item\em Calculates volume data from sensor information and sends average to the database. \end{DoxyCompactList}\item 
+void \hyperlink{Interface_8h_a39cfbb2ddc40f45c134644ecb2e9deb6}{Cuboid\+Func} (\hyperlink{classCuboid}{Cuboid})
+\begin{DoxyCompactList}\small\item\em Calculates volume data from sensor information and sends average to the database. \end{DoxyCompactList}\item 
+\hyperlink{classCube}{Cube} \hyperlink{Interface_8h_a127c88f2701edcd42b06eb18a571da5a}{create\+Cube} ()
+\begin{DoxyCompactList}\small\item\em Creates a new \hyperlink{classCube}{Cube} object from user input. \end{DoxyCompactList}\item 
+\hyperlink{classCylinder}{Cylinder} \hyperlink{Interface_8h_a0404a8aa760b899777433e7c3ca1e8d5}{create\+Cylinder} ()
+\begin{DoxyCompactList}\small\item\em Creates a new \hyperlink{classCylinder}{Cylinder} object from user input. \end{DoxyCompactList}\item 
+\hyperlink{classCuboid}{Cuboid} \hyperlink{Interface_8h_a14c31b0317c1f81bd568d61bb803183c}{create\+Cuboid} ()
+\begin{DoxyCompactList}\small\item\em Creates a new \hyperlink{classCuboid}{Cuboid} object from user input. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{Interface.\+h@{Interface.\+h}!M\+\_\+\+PI@{M\+\_\+\+PI}}
+\index{M\+\_\+\+PI@{M\+\_\+\+PI}!Interface.\+h@{Interface.\+h}}
+\subsubsection[{\texorpdfstring{M\+\_\+\+PI}{M_PI}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+\_\+\+PI~3.\+14159265358979323846  /$\ast$ pi $\ast$/}\hypertarget{Interface_8h_ae71449b1cc6e6250b91f539153a7a0d3}{}\label{Interface_8h_ae71449b1cc6e6250b91f539153a7a0d3}
+
+
+The Interface program. 
+
+This program starts by either loading a pre-\/existing container, or creates a new one; it then reads data from the sensor to determind the volume of the fluid in the container. We then periodically take an average of the data, and send it to our database.
+
+\begin{DoxyAuthor}{Author}
+Marco Manuel 
+
+Vance Gullberg 
+
+Morgan O\textquotesingle{}Brien 
+
+Jerry Iu 
+
+Joon Lee 
+
+Reid Jackson 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\index{Interface.\+h@{Interface.\+h}!create\+Cube@{create\+Cube}}
+\index{create\+Cube@{create\+Cube}!Interface.\+h@{Interface.\+h}}
+\subsubsection[{\texorpdfstring{create\+Cube()}{createCube()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Cube} create\+Cube (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{Interface_8h_a127c88f2701edcd42b06eb18a571da5a}{}\label{Interface_8h_a127c88f2701edcd42b06eb18a571da5a}
+
+
+Creates a new \hyperlink{classCube}{Cube} object from user input. 
+
+\begin{DoxyReturn}{Returns}
+the created \hyperlink{classCube}{Cube} object. 
+\end{DoxyReturn}
+\index{Interface.\+h@{Interface.\+h}!create\+Cuboid@{create\+Cuboid}}
+\index{create\+Cuboid@{create\+Cuboid}!Interface.\+h@{Interface.\+h}}
+\subsubsection[{\texorpdfstring{create\+Cuboid()}{createCuboid()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Cuboid} create\+Cuboid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{Interface_8h_a14c31b0317c1f81bd568d61bb803183c}{}\label{Interface_8h_a14c31b0317c1f81bd568d61bb803183c}
+
+
+Creates a new \hyperlink{classCuboid}{Cuboid} object from user input. 
+
+\begin{DoxyReturn}{Returns}
+the created \hyperlink{classCuboid}{Cuboid} object. 
+\end{DoxyReturn}
+\index{Interface.\+h@{Interface.\+h}!create\+Cylinder@{create\+Cylinder}}
+\index{create\+Cylinder@{create\+Cylinder}!Interface.\+h@{Interface.\+h}}
+\subsubsection[{\texorpdfstring{create\+Cylinder()}{createCylinder()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Cylinder} create\+Cylinder (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{Interface_8h_a0404a8aa760b899777433e7c3ca1e8d5}{}\label{Interface_8h_a0404a8aa760b899777433e7c3ca1e8d5}
+
+
+Creates a new \hyperlink{classCylinder}{Cylinder} object from user input. 
+
+\begin{DoxyReturn}{Returns}
+the created \hyperlink{classCylinder}{Cylinder} object. 
+\end{DoxyReturn}
+\index{Interface.\+h@{Interface.\+h}!Cube\+Func@{Cube\+Func}}
+\index{Cube\+Func@{Cube\+Func}!Interface.\+h@{Interface.\+h}}
+\subsubsection[{\texorpdfstring{Cube\+Func(\+Cube)}{CubeFunc(Cube)}}]{\setlength{\rightskip}{0pt plus 5cm}void Cube\+Func (
+\begin{DoxyParamCaption}
+\item[{{\bf Cube}}]{c}
+\end{DoxyParamCaption}
+)}\hypertarget{Interface_8h_ac9e9c6b13aff3e569455f92eacec8bc2}{}\label{Interface_8h_ac9e9c6b13aff3e569455f92eacec8bc2}
+
+
+Calculates volume data from sensor information and sends average to the database. 
+
+This function takes in a \hyperlink{classCube}{Cube} object, uses the sensor connected to the container to get the duration and temperature. From there we calculate the level of the fluid and the volume. Every 10 times the information is calculated, the function averages this data, creates an S\+QL query and sends the query to the database.
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & The \hyperlink{classCube}{Cube} container that will be measured \\
+\hline
+\end{DoxyParams}
+\index{Interface.\+h@{Interface.\+h}!Cuboid\+Func@{Cuboid\+Func}}
+\index{Cuboid\+Func@{Cuboid\+Func}!Interface.\+h@{Interface.\+h}}
+\subsubsection[{\texorpdfstring{Cuboid\+Func(\+Cuboid)}{CuboidFunc(Cuboid)}}]{\setlength{\rightskip}{0pt plus 5cm}void Cuboid\+Func (
+\begin{DoxyParamCaption}
+\item[{{\bf Cuboid}}]{c}
+\end{DoxyParamCaption}
+)}\hypertarget{Interface_8h_a39cfbb2ddc40f45c134644ecb2e9deb6}{}\label{Interface_8h_a39cfbb2ddc40f45c134644ecb2e9deb6}
+
+
+Calculates volume data from sensor information and sends average to the database. 
+
+This function takes in a \hyperlink{classCuboid}{Cuboid} object, uses the sensor connected to the container to get the duration and temperature. From there we calculate the level of the fluid and the volume. Every 10 times the information is calculated, the function averages this data, creates an S\+QL query and sends the query to the database.
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & The \hyperlink{classCuboid}{Cuboid} container that will be measured \\
+\hline
+\end{DoxyParams}
+\index{Interface.\+h@{Interface.\+h}!Cylinder\+Func@{Cylinder\+Func}}
+\index{Cylinder\+Func@{Cylinder\+Func}!Interface.\+h@{Interface.\+h}}
+\subsubsection[{\texorpdfstring{Cylinder\+Func(\+Cylinder)}{CylinderFunc(Cylinder)}}]{\setlength{\rightskip}{0pt plus 5cm}void Cylinder\+Func (
+\begin{DoxyParamCaption}
+\item[{{\bf Cylinder}}]{c}
+\end{DoxyParamCaption}
+)}\hypertarget{Interface_8h_a635c26eed224962084cf57e5b75f19cb}{}\label{Interface_8h_a635c26eed224962084cf57e5b75f19cb}
+
+
+Calculates volume data from sensor information and sends average to the database. 
+
+This function takes in a \hyperlink{classCylinder}{Cylinder} object, uses the sensor connected to the container to get the duration and temperature. From there we calculate the level of the fluid and the volume. Every 10 times the information is calculated, the function averages this data, creates an S\+QL query and sends the query to the database.
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & The \hyperlink{classCylinder}{Cylinder} container that will be measured \\
+\hline
+\end{DoxyParams}

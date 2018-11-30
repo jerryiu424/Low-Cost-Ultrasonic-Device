@@ -1,0 +1,172 @@
+\hypertarget{classCuboid}{}\section{Cuboid Class Reference}
+\label{classCuboid}\index{Cuboid@{Cuboid}}
+
+
+The \hyperlink{classCuboid}{Cuboid} class.  
+
+
+
+
+{\ttfamily \#include $<$Cuboid.\+h$>$}
+
+
+
+Inheritance diagram for Cuboid\+:
+% FIG 0
+
+
+Collaboration diagram for Cuboid\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCuboid_acac2c8d1fb8f6702d1461f3fd4db1407}{Cuboid} (float width, float length, float height)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classCuboid}{Cuboid} class methods. \end{DoxyCompactList}\item 
+\hyperlink{classCuboid_aba010c63b64540741c25b5e89b7fabbb}{$\sim$\+Cuboid} ()
+\item 
+std\+::string \hyperlink{classCuboid_adc91ccac4a02d1afe77271e1590b27e8}{to\+\_\+string} ()
+\begin{DoxyCompactList}\small\item\em cuboid to\+String method \end{DoxyCompactList}\item 
+float \hyperlink{classCuboid_adf7b30445189bc0ef14a608ceb8ea710}{get\+Cuboid\+Width} ()
+\begin{DoxyCompactList}\small\item\em The getter method for the width of the cuboid. \end{DoxyCompactList}\item 
+float \hyperlink{classCuboid_a49831ed499078fe5dfea7d6b6129542e}{get\+Cuboid\+Length} ()
+\begin{DoxyCompactList}\small\item\em The getter method for the length of the cuboid. \end{DoxyCompactList}\item 
+float \hyperlink{classCuboid_afff4e73d9eca880115b82962db9a0a81}{get\+Cuboid\+Height} ()
+\begin{DoxyCompactList}\small\item\em The getter method for the height of the cuboid. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{classCuboid_af74f3dfda4a5c2a1589d6a3c4eb011cd}{Cwidth}
+\item 
+float \hyperlink{classCuboid_a81c027d89a60cf2e4ea2ea1439e6be33}{Clength}
+\item 
+float \hyperlink{classCuboid_a3a154b6556269c3fe860adc2b94c72f0}{Cheight}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classCuboid}{Cuboid} class. 
+
+This class is a child class of the \hyperlink{classContainer}{Container} class. Since the shape of this \hyperlink{classContainer}{Container} is a cuboid the dimensions are width, length and height. From this we can determine the max possible volume of the container.
+
+\begin{DoxyAuthor}{Author}
+Reid Jackson 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Cuboid@{Cuboid}!Cuboid@{Cuboid}}
+\index{Cuboid@{Cuboid}!Cuboid@{Cuboid}}
+\subsubsection[{\texorpdfstring{Cuboid(float width, float length, float height)}{Cuboid(float width, float length, float height)}}]{\setlength{\rightskip}{0pt plus 5cm}Cuboid\+::\+Cuboid (
+\begin{DoxyParamCaption}
+\item[{float}]{width, }
+\item[{float}]{length, }
+\item[{float}]{height}
+\end{DoxyParamCaption}
+)}\hypertarget{classCuboid_acac2c8d1fb8f6702d1461f3fd4db1407}{}\label{classCuboid_acac2c8d1fb8f6702d1461f3fd4db1407}
+
+
+\hyperlink{classCuboid}{Cuboid} class methods. 
+
+This file implements the cuboid class member methods; It consists of the constructor, and a to\+String method
+
+\begin{DoxyAuthor}{Author}
+Reid Jackson cuboid constructor
+\end{DoxyAuthor}
+\begin{DoxyVerb}     calculates and sets the max volume, shapeid, and width, length, and height
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em width} & Width of \hyperlink{classCuboid}{Cuboid} \\
+\hline
+{\em length} & Length of cuboid \\
+\hline
+{\em height} & Heigth of \hyperlink{classCuboid}{Cuboid} \\
+\hline
+\end{DoxyParams}
+\index{Cuboid@{Cuboid}!````~Cuboid@{$\sim$\+Cuboid}}
+\index{````~Cuboid@{$\sim$\+Cuboid}!Cuboid@{Cuboid}}
+\subsubsection[{\texorpdfstring{$\sim$\+Cuboid()}{~Cuboid()}}]{\setlength{\rightskip}{0pt plus 5cm}Cuboid\+::$\sim$\+Cuboid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classCuboid_aba010c63b64540741c25b5e89b7fabbb}{}\label{classCuboid_aba010c63b64540741c25b5e89b7fabbb}
+
+
+\subsection{Member Function Documentation}
+\index{Cuboid@{Cuboid}!get\+Cuboid\+Height@{get\+Cuboid\+Height}}
+\index{get\+Cuboid\+Height@{get\+Cuboid\+Height}!Cuboid@{Cuboid}}
+\subsubsection[{\texorpdfstring{get\+Cuboid\+Height()}{getCuboidHeight()}}]{\setlength{\rightskip}{0pt plus 5cm}float Cuboid\+::get\+Cuboid\+Height (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classCuboid_afff4e73d9eca880115b82962db9a0a81}{}\label{classCuboid_afff4e73d9eca880115b82962db9a0a81}
+
+
+The getter method for the height of the cuboid. 
+
+\begin{DoxyReturn}{Returns}
+the Cheight attribute. 
+\end{DoxyReturn}
+\index{Cuboid@{Cuboid}!get\+Cuboid\+Length@{get\+Cuboid\+Length}}
+\index{get\+Cuboid\+Length@{get\+Cuboid\+Length}!Cuboid@{Cuboid}}
+\subsubsection[{\texorpdfstring{get\+Cuboid\+Length()}{getCuboidLength()}}]{\setlength{\rightskip}{0pt plus 5cm}float Cuboid\+::get\+Cuboid\+Length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classCuboid_a49831ed499078fe5dfea7d6b6129542e}{}\label{classCuboid_a49831ed499078fe5dfea7d6b6129542e}
+
+
+The getter method for the length of the cuboid. 
+
+\begin{DoxyReturn}{Returns}
+the Clength attribute. 
+\end{DoxyReturn}
+\index{Cuboid@{Cuboid}!get\+Cuboid\+Width@{get\+Cuboid\+Width}}
+\index{get\+Cuboid\+Width@{get\+Cuboid\+Width}!Cuboid@{Cuboid}}
+\subsubsection[{\texorpdfstring{get\+Cuboid\+Width()}{getCuboidWidth()}}]{\setlength{\rightskip}{0pt plus 5cm}float Cuboid\+::get\+Cuboid\+Width (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classCuboid_adf7b30445189bc0ef14a608ceb8ea710}{}\label{classCuboid_adf7b30445189bc0ef14a608ceb8ea710}
+
+
+The getter method for the width of the cuboid. 
+
+\begin{DoxyReturn}{Returns}
+the Cwidth attribute. 
+\end{DoxyReturn}
+\index{Cuboid@{Cuboid}!to\+\_\+string@{to\+\_\+string}}
+\index{to\+\_\+string@{to\+\_\+string}!Cuboid@{Cuboid}}
+\subsubsection[{\texorpdfstring{to\+\_\+string()}{to_string()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Cuboid\+::to\+\_\+string (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classCuboid_adc91ccac4a02d1afe77271e1590b27e8}{}\label{classCuboid_adc91ccac4a02d1afe77271e1590b27e8}
+
+
+cuboid to\+String method 
+
+returns string of max\+Volume
+
+\begin{DoxyReturn}{Returns}
+returns string of data 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\index{Cuboid@{Cuboid}!Cheight@{Cheight}}
+\index{Cheight@{Cheight}!Cuboid@{Cuboid}}
+\subsubsection[{\texorpdfstring{Cheight}{Cheight}}]{\setlength{\rightskip}{0pt plus 5cm}float Cuboid\+::\+Cheight\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classCuboid_a3a154b6556269c3fe860adc2b94c72f0}{}\label{classCuboid_a3a154b6556269c3fe860adc2b94c72f0}
+\index{Cuboid@{Cuboid}!Clength@{Clength}}
+\index{Clength@{Clength}!Cuboid@{Cuboid}}
+\subsubsection[{\texorpdfstring{Clength}{Clength}}]{\setlength{\rightskip}{0pt plus 5cm}float Cuboid\+::\+Clength\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classCuboid_a81c027d89a60cf2e4ea2ea1439e6be33}{}\label{classCuboid_a81c027d89a60cf2e4ea2ea1439e6be33}
+\index{Cuboid@{Cuboid}!Cwidth@{Cwidth}}
+\index{Cwidth@{Cwidth}!Cuboid@{Cuboid}}
+\subsubsection[{\texorpdfstring{Cwidth}{Cwidth}}]{\setlength{\rightskip}{0pt plus 5cm}float Cuboid\+::\+Cwidth\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classCuboid_af74f3dfda4a5c2a1589d6a3c4eb011cd}{}\label{classCuboid_af74f3dfda4a5c2a1589d6a3c4eb011cd}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Cuboid_8h}{Cuboid.\+h}\item 
+\hyperlink{Cuboid_8cpp}{Cuboid.\+cpp}\end{DoxyCompactItemize}
