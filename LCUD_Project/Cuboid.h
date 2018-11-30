@@ -3,10 +3,10 @@
 #include "Container.h"
 
 /** 
- *  @brief      The Cube class.
+ *  @brief      The Cuboid class.
  *
  *  @details    This class is a child class of the Container class. Since the shape of this Container is a cuboid
- *              the only dimensions are width, length and height. From this we can determine the max possible volume
+ *              the dimensions are width, length and height. From this we can determine the max possible volume
  *              of the container.
  * 
  *  @author     Reid Jackson

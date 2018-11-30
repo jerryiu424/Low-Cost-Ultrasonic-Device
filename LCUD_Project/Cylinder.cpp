@@ -1,23 +1,12 @@
 #include "Cylinder.h"
    
 //constructor
-Cylinder::Cylinder(float radius, float heigth){
+Cylinder::Cylinder(float radius, float height){
     Cradius = radius;
-    Cheigth = heigth;
-    MaxVolume = 2*3.14*radius*heigth;
+    Cheight = height;
+    MaxVolume = 2*3.14*radius*height;
     ShapeID = "Cylinder";
 }
-
-//get dimensions
-float Cylinder::getCylinderRadius(){
-    return Cradius;
-}
-
-
-float Cylinder::getCylinderHeight(){
-    return Cheigth;
-}
-
 
 std::string Cylinder::to_string(){
     return "Type Cylinder with volume: " + std::to_string(MaxVolume);
