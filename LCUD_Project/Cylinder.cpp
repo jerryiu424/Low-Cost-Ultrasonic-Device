@@ -19,7 +19,7 @@
 Cylinder::Cylinder(float radius, float height){
     Cradius = radius;
     Cheight = height;
-    MaxVolume = 2*3.14*radius*height;
+    MaxVolume = 3.14*radius*radius*height;
     ShapeID = "Cylinder";
 }
 
