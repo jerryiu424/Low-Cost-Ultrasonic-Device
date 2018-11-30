@@ -14,6 +14,19 @@ Our Pi must be used (as it has a server and database running on it) with the Ard
 192.168.x.x/test/group10/LCUD_Project or can be seen from any internet connection via tunnel using ngrok.io. Then click the “Set Up” button and input the dimensions of your container. The code can then be run with ./Interface_main. The interface will automatically refresh every 15 seconds.
 
 
+How to read the results:
+
+Duration: The time it takes for the ultrasonic particle to bounce off the surface and return to the sensor.
+Temperature: Room temperature in degrees celsius.
+Distance: Distance from sensor to surface.
+Volume: Volume of substance in container
+Current Level: Height of substance level.
+Percent Full: Amount in % of container that is full.
+Shape: Shape of the container.
+Date and Time: Current date and time.
+
+
+
 Group Members:
 
 Vance Gullberg
